@@ -1,6 +1,58 @@
-# Portfolio
+# 💼 Meu Portfólio
+Aplicação desenvolvida com Angular 20 para apresentar meus projetos, habilidades e experiência como desenvolvedor de software full-stack.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.9.
+## 🌐 Acesse
+👉 https://meu-portfolio.com
+
+# Estrutura
+Baseado em feature-based (por funcionalidade).
+
+## 🧪 Tecnologias
+- Angular 20
+- TypeScript
+- SCSS
+- Signals
+- Standalone Components
+
+## 🧩 Conceitos aplicados
+
+- Arquitetura baseada em features
+- Lazy loading com loadComponent
+- Gerenciamento de estado com Signals
+- Componentização e reutilização
+
+## ▶️ Rodando o projeto
+
+```bash
+# instalar dependências
+npm install
+
+# rodar local
+ng serve
+
+---
+
+## 📁 7. Estrutura do projeto
+
+```md id="21xgtd"
+## 📂 Estrutura
+
+src/app/
+  core/
+  shared/
+  features/
+  layout/
+
+
+## 📱 Responsivo
+
+Aplicação adaptada para mobile, tablet e desktop.
+
+## 👤 Autor
+
+Jackciel Felix
+LinkedIn: https://...
+GitHub: https://...
 
 ## Development server
 
@@ -57,3 +109,4 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
