@@ -33,16 +33,18 @@ ng serve
 ```
 
 ## 📁 7. Estrutura do projeto
+
+```bash
 src/app/
   core/
   shared/
   features/
   layout/
+```
 
 ## 📱 Responsivo
 Aplicação adaptada para mobile, tablet e desktop.
 
 ## 👤 Autor
-Jackciel Felix
-LinkedIn: https://www.linkedin.com/in/jackcielf
-GitHub: https://github.com/dev-jakki
+- LinkedIn: https://www.linkedin.com/in/jackcielf
+- GitHub: https://github.com/dev-jakki
