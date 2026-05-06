@@ -2,15 +2,14 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
-      <p class="hero-subtitle">Olá, eu sou</p>
-      <h1 class="hero-title">Jackcielf Dev</h1>
+      <p class="hero-subtitle">{{ 'home.greeting' | translate }}</p>
+      <h1 class="hero-title">{{ 'home.name' | translate }}</h1>
       <p class="hero-description">
-        Desenvolvedor Full Stack por formação, apaixonado por criar 
-        experiências web modernas, acessíveis e performáticas.
+        {{ 'home.description' | translate }}
       </p>
       <div class="hero-buttons">
-        <app-button variant="primary">Ver Projetos</app-button>
-        <app-button variant="outline">Entrar em contato</app-button>
+        <app-button variant="primary">{{ 'home.viewProjects' | translate }}</app-button>
+        <app-button variant="outline">{{ 'home.getInTouch' | translate }}</app-button>
       </div>
     </div>
     <div class="hero-visual">
@@ -21,40 +20,37 @@
   <!-- Stats Section -->
   <section class="stats">
     <div class="stat-item">
-      <div class="stat-number">2+</div>
-      <div class="stat-label">Anos de experiência</div>
+      <div class="stat-number">{{ 'home.experienceYears' | translate }}</div>
+      <div class="stat-label">{{ 'home.experienceLabel' | translate }}</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">10+</div>
-      <div class="stat-label">Projetos concluídos</div>
+      <div class="stat-number">{{ 'home.projectsCount' | translate }}</div>
+      <div class="stat-label">{{ 'home.projectsLabel' | translate }}</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">100%</div>
-      <div class="stat-label">Comprometimento com qualidade</div>
+      <div class="stat-number">{{ 'home.qualityPercentage' | translate }}</div>
+      <div class="stat-label">{{ 'home.qualityLabel' | translate }}</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number">∞</div>
-      <div class="stat-label">Sempre aprendendo</div>
+      <div class="stat-number">{{ 'home.infinitySymbol' | translate }}</div>
+      <div class="stat-label">{{ 'home.learningLabel' | translate }}</div>
     </div>
   </section>
 
   <!-- About Section -->
-  <app-section title="Sobre Mim" subtitle="Minha trajetória e diferenciais">
+  <app-section [title]="'about.title' | translate" [subtitle]="'about.subtitle' | translate">
     <div class="about-content">
       <p>
-        Sou desenvolvedor frontend especializado em criar interfaces incríveis 
-        com as melhores tecnologias do mercado. Tenho uma base sólida em desenvolvimento 
-        full-stack, conseguindo resolver problemas do backend quando necessário.
+        {{ 'home.fullDescription' | translate }}
       </p>
       <p>
-        Meu foco é em construir aplicações escaláveis, acessíveis e com excelente 
-        performance. Sempre buscando aprender novas tecnologias e boas práticas.
+        {{ 'home.additionalDescription' | translate }}
       </p>
     </div>
   </app-section>
 
   <!-- Featured Projects -->
-  <app-section title="Alguns Trabalhos em Destaque">
+  <app-section [title]="'home.featuredProjects' | translate">
     <div class="projects-grid">
       @for (project of portfolioService.getProjects()(); track project.id; let i = $index) {
         @if (i < 3) {
@@ -86,14 +82,14 @@
       }
     </div>
     <div class="view-all-projects">
-      <app-button variant="secondary">Ver todos os projetos</app-button>
+      <app-button variant="secondary">{{ 'home.viewAllProjects' | translate }}</app-button>
     </div>
   </app-section>
 
   <!-- CTA Section -->
   <section class="cta">
-    <h2>Vamos trabalhar juntos?</h2>
-    <p>Estou sempre aberto a novos desafios e oportunidades</p>
-    <app-button variant="primary">Entrar em contato</app-button>
+    <h2>{{ 'home.ctaTitle' | translate }}</h2>
+    <p>{{ 'home.ctaDescription' | translate }}</p>
+    <app-button variant="primary">{{ 'home.getInTouch' | translate }}</app-button>
   </section>
 </div>

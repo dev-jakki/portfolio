@@ -24,17 +24,43 @@
       aria-label="Main navigation"
     >
       <ul class="nav-links">
-        <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
-        <li><a href="#projects" (click)="closeMenu()">Projetos</a></li>
-        <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
-        <li><a href="#experience" (click)="closeMenu()">Experiência</a></li>
-        <li><a href="#contact" (click)="closeMenu()" class="nav-cta">Contato</a></li>
+        <li><a routerLink="/" (click)="closeMenu()">{{ 'nav.home' | translate }}</a></li>
+        <li><a href="#projects" (click)="closeMenu()">{{ 'nav.projects' | translate }}</a></li>
+        <li><a href="#skills" (click)="closeMenu()">{{ 'nav.skills' | translate }}</a></li>
+        <li><a href="#experience" (click)="closeMenu()">{{ 'nav.experience' | translate }}</a></li>
+        <li><a href="#contact" (click)="closeMenu()" class="nav-cta">{{ 'nav.contact' | translate }}</a></li>
       </ul>
     </nav>
 
     <div class="header-actions">
+      <div class="language-selector">
+        <button 
+          class="language-btn"
+          (click)="toggleLanguageDropdown()"
+          [attr.aria-expanded]="languageDropdownOpen()"
+          aria-label="Select language"
+        >
+          <i class="ph ph-globe"></i>
+          <span>{{ getCurrentLanguageName() }}</span>
+        </button>
+        
+        @if (languageDropdownOpen()) {
+          <div class="language-dropdown">
+            @for (lang of languages; track lang.code) {
+              <button
+                class="language-option"
+                [class.active]="translateService.getLanguage() === lang.code"
+                (click)="selectLanguage(lang.code)"
+              >
+                {{ lang.name }}
+              </button>
+            }
+          </div>
+        }
+      </div>
+
       <a href="#" class="download-cv">
-        Download CV
+        {{ 'header.downloadCV' | translate }}
         <i class="ph ph-arrow-line-down"></i>
       </a>
     </div>

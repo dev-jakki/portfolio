@@ -1,9 +1,9 @@
-<app-section title="Entre em Contato" subtitle="Vamos conversar sobre novas oportunidades">
+<app-section [title]="'contact.title' | translate" [subtitle]="'contact.subtitle' | translate">
   <div class="contact-container">
     <div class="contact-form">
       <form (ngSubmit)="onSubmit()">
         <div class="form-group">
-          <label for="name">Nome</label>
+          <label for="name">{{ 'contact.name' | translate }}</label>
           <input 
             id="name"
             type="text" 
@@ -11,12 +11,12 @@
             (ngModelChange)="updateForm('name', $event)"
             name="name"
             required
-            placeholder="Seu nome"
+            [placeholder]="'contact.namePlaceholder' | translate"
           />
         </div>
 
         <div class="form-group">
-          <label for="email">Email</label>
+          <label for="email">{{ 'contact.email' | translate }}</label>
           <input 
             id="email"
             type="email" 
@@ -24,12 +24,12 @@
             (ngModelChange)="updateForm('email', $event)"
             name="email"
             required
-            placeholder="seu.email@example.com"
+            [placeholder]="'contact.emailPlaceholder' | translate"
           />
         </div>
 
         <div class="form-group">
-          <label for="subject">Assunto</label>
+          <label for="subject">{{ 'contact.subject' | translate }}</label>
           <input 
             id="subject"
             type="text" 
@@ -37,47 +37,47 @@
             (ngModelChange)="updateForm('subject', $event)"
             name="subject"
             required
-            placeholder="Assunto da mensagem"
+            [placeholder]="'contact.subjectPlaceholder' | translate"
           />
         </div>
 
         <div class="form-group">
-          <label for="message">Mensagem</label>
+          <label for="message">{{ 'contact.message' | translate }}</label>
           <textarea 
             id="message"
             [ngModel]="formData().message" 
             (ngModelChange)="updateForm('message', $event)"
             name="message"
             required
-            placeholder="Sua mensagem..."
+            [placeholder]="'contact.messagePlaceholder' | translate"
             rows="5"
           ></textarea>
         </div>
 
-        <app-button variant="primary">Enviar Mensagem</app-button>
+        <app-button variant="primary">{{ 'contact.sendMessage' | translate }}</app-button>
       </form>
     </div>
 
     <div class="contact-info">
       <div class="info-item">
-        <h3>Email</h3>
+        <h3>{{ 'contact.emailLabel' | translate }}</h3>
         <a [href]="'mailto:' + contact.email">{{ contact.email }}</a>
       </div>
 
       <div class="info-item">
-        <h3>Redes Sociais</h3>
+        <h3>{{ 'footer.social' | translate }}</h3>
         <div class="social-links">
-          <a [href]="contact.linkedin" target="_blank" rel="noopener">LinkedIn</a>
-          <a [href]="contact.github" target="_blank" rel="noopener">GitHub</a>
+          <a [href]="contact.linkedin" target="_blank" rel="noopener">{{ 'footer.linkedin' | translate }}</a>
+          <a [href]="contact.github" target="_blank" rel="noopener">{{ 'footer.github' | translate }}</a>
           @if (contact.instagram) {
-            <a [href]="contact.instagram" target="_blank" rel="noopener">Instagram</a>
+            <a [href]="contact.instagram" target="_blank" rel="noopener">{{ 'footer.instagram' | translate }}</a>
           }
         </div>
       </div>
 
       <div class="info-item">
-        <h3>Disponibilidade</h3>
-        <p>Disponível para projetos freelancer e oportunidades full-time. Respondo em até 24 horas.</p>
+        <h3>{{ 'contact.availability' | translate }}</h3>
+        <p>{{ 'contact.availabilityDescription' | translate }}</p>
       </div>
     </div>
   </div>

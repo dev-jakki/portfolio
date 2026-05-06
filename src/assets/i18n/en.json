@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experience": "Experience",
+    "contact": "Contact"
+  },
+  "header": {
+    "downloadCV": "Download CV",
+    "language": "Language",
+    "pt": "Portuguese",
+    "en": "English"
+  },
+  "home": {
+    "greeting": "Hello, I am",
+    "name": "Jackcielf Dev",
+    "description": "Full Stack Developer by training, passionate about creating modern, accessible and high-performance web experiences.",
+    "viewProjects": "View Projects",
+    "getInTouch": "Get In Touch",
+    "experienceYears": "2+",
+    "experienceLabel": "Years of experience",
+    "projectsCount": "10+",
+    "projectsLabel": "Projects completed",
+    "qualityPercentage": "100%",
+    "qualityLabel": "Commitment to quality",
+    "infinitySymbol": "∞",
+    "learningLabel": "Always learning",
+    "fullDescription": "I am a frontend developer specialized in creating amazing interfaces with the best technologies on the market. I have a solid foundation in full-stack development, being able to solve backend problems when necessary.",
+    "additionalDescription": "My focus is on building scalable, accessible applications with excellent performance. Always seeking to learn new technologies and best practices.",
+    "featuredProjects": "Featured Works",
+    "viewAllProjects": "View all projects",
+    "ctaTitle": "Let's work together?",
+    "ctaDescription": "I'm always open to new challenges and opportunities"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "My trajectory and differentials"
+  },
+  "projects": {
+    "title": "My Projects",
+    "subtitle": "Works and professional experiences"
+  },
+  "skills": {
+    "title": "My Skills",
+    "subtitle": "Technologies I use daily",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
+  "experience": {
+    "title": "My Experience",
+    "subtitle": "Professional trajectory"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Let's talk about new opportunities",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your.email@example.com",
+    "subjectPlaceholder": "Message subject",
+    "messagePlaceholder": "Your message...",
+    "sendMessage": "Send Message",
+    "emailLabel": "Email",
+    "availability": "Availability",
+    "availabilityDescription": "Available for freelance projects and full-time opportunities. I respond within 24 hours."
+  },
+  "footer": {
+    "title": "Jackcielf Dev",
+    "description": "Full Stack Developer passionate about creating amazing web experiences.",
+    "navigation": "Navigation",
+    "social": "Social Networks",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "rights": "© 2024 Jackcielf. All rights reserved.",
+    "developed": "Developed with ❤️ using Angular"
+  }
+}
+

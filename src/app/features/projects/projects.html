@@ -1,4 +1,4 @@
-<app-section title="Meus Projetos" subtitle="Trabalhos e experiências profissionais">
+<app-section [title]="'projects.title' | translate" [subtitle]="'projects.subtitle' | translate">
   <div class="projects-grid">
     @for (project of portfolioService.getProjects()(); track project.id) {
       <app-card>

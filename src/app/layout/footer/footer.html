@@ -2,27 +2,27 @@
   <div class="footer-container">
     <div class="footer-content">
       <div class="footer-section">
-        <h3>Jackcielf Dev</h3>
-        <p>Desenvolvedor Full Stack apaixonado por criar experiências web incríveis.</p>
+        <h3>{{ 'footer.title' | translate }}</h3>
+        <p>{{ 'footer.description' | translate }}</p>
       </div>
 
       <div class="footer-section">
-        <h3>Navegação</h3>
+        <h3>{{ 'footer.navigation' | translate }}</h3>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="#projects">Projetos</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experiência</a></li>
+          <li><a href="/">{{ 'nav.home' | translate }}</a></li>
+          <li><a href="#projects">{{ 'nav.projects' | translate }}</a></li>
+          <li><a href="#skills">{{ 'nav.skills' | translate }}</a></li>
+          <li><a href="#experience">{{ 'nav.experience' | translate }}</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
-        <h3>Redes Sociais</h3>
+        <h3>{{ 'footer.social' | translate }}</h3>
         <ul>
-          <li><a [href]="contact.linkedin" target="_blank">LinkedIn</a></li>
-          <li><a [href]="contact.github" target="_blank">GitHub</a></li>
+          <li><a [href]="contact.linkedin" target="_blank">{{ 'footer.linkedin' | translate }}</a></li>
+          <li><a [href]="contact.github" target="_blank">{{ 'footer.github' | translate }}</a></li>
           @if (contact.instagram) {
-            <li><a [href]="contact.instagram" target="_blank">Instagram</a></li>
+            <li><a [href]="contact.instagram" target="_blank">{{ 'footer.instagram' | translate }}</a></li>
           }
         </ul>
       </div>
@@ -34,9 +34,9 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2024 Jackcielf. Todos os direitos reservados.</p>
+      <p>{{ 'footer.rights' | translate }}</p>
       <div class="footer-credits">
-        <p>Desenvolvido com ❤️ usando Angular</p>
+        <p>{{ 'footer.developed' | translate }}</p>
       </div>
     </div>
   </div>

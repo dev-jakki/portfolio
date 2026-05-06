@@ -1,4 +1,4 @@
-<app-section title="Minha Experiência" subtitle="Trajetória profissional">
+<app-section [title]="'experience.title' | translate" [subtitle]="'experience.subtitle' | translate">
   <div class="experience-timeline">
     @for (exp of portfolioService.getExperience()(); track exp.id; let i = $index) {
       <div class="timeline-item">

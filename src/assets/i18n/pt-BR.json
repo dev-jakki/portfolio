@@ -1,0 +1,83 @@
+{
+  "nav": {
+    "home": "Início",
+    "projects": "Projetos",
+    "skills": "Skills",
+    "experience": "Experiência",
+    "contact": "Contato"
+  },
+  "header": {
+    "downloadCV": "Download CV",
+    "language": "Idioma",
+    "pt": "Português",
+    "en": "English"
+  },
+  "home": {
+    "greeting": "Olá, eu sou",
+    "name": "Jackcielf Dev",
+    "description": "Desenvolvedor Full Stack por formação, apaixonado por criar experiências web modernas, acessíveis e performáticas.",
+    "viewProjects": "Ver Projetos",
+    "getInTouch": "Entrar em contato",
+    "experienceYears": "2+",
+    "experienceLabel": "Anos de experiência",
+    "projectsCount": "10+",
+    "projectsLabel": "Projetos concluídos",
+    "qualityPercentage": "100%",
+    "qualityLabel": "Comprometimento com qualidade",
+    "infinitySymbol": "∞",
+    "learningLabel": "Sempre aprendendo",
+    "fullDescription": "Sou desenvolvedor frontend especializado em criar interfaces incríveis com as melhores tecnologias do mercado. Tenho uma base sólida em desenvolvimento full-stack, conseguindo resolver problemas do backend quando necessário.",
+    "additionalDescription": "Meu foco é em construir aplicações escaláveis, acessíveis e com excelente performance. Sempre buscando aprender novas tecnologias e boas práticas.",
+    "featuredProjects": "Alguns Trabalhos em Destaque",
+    "viewAllProjects": "Ver todos os projetos",
+    "ctaTitle": "Vamos trabalhar juntos?",
+    "ctaDescription": "Estou sempre aberto a novos desafios e oportunidades"
+  },
+  "about": {
+    "title": "Sobre Mim",
+    "subtitle": "Minha trajetória e diferenciais"
+  },
+  "projects": {
+    "title": "Meus Projetos",
+    "subtitle": "Trabalhos e experiências profissionais"
+  },
+  "skills": {
+    "title": "Minhas Habilidades",
+    "subtitle": "Tecnologias que utilizo no dia a dia",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Ferramentas"
+  },
+  "experience": {
+    "title": "Minha Experiência",
+    "subtitle": "Trajetória profissional"
+  },
+  "contact": {
+    "title": "Entre em Contato",
+    "subtitle": "Vamos conversar sobre novas oportunidades",
+    "name": "Nome",
+    "email": "Email",
+    "subject": "Assunto",
+    "message": "Mensagem",
+    "namePlaceholder": "Seu nome",
+    "emailPlaceholder": "seu.email@example.com",
+    "subjectPlaceholder": "Assunto da mensagem",
+    "messagePlaceholder": "Sua mensagem...",
+    "sendMessage": "Enviar Mensagem",
+    "emailLabel": "Email",
+    "availability": "Disponibilidade",
+    "availabilityDescription": "Disponível para projetos freelancer e oportunidades full-time. Respondo em até 24 horas."
+  },
+  "footer": {
+    "title": "Jackcielf Dev",
+    "description": "Desenvolvedor Full Stack apaixonado por criar experiências web incríveis.",
+    "navigation": "Navegação",
+    "social": "Redes Sociais",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "rights": "© 2024 Jackcielf. Todos os direitos reservados.",
+    "developed": "Desenvolvido com ❤️ usando Angular"
+  }
+}
+
