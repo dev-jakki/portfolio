@@ -27,7 +27,7 @@
 
 .hero-subtitle {
   font-size: 1.1rem;
-  color: #6366F1;
+  color: var(--primary-gradient-start);
   font-weight: 600;
   margin: 0 0 10px 0;
 }
@@ -37,7 +37,7 @@
   font-weight: 900;
   line-height: 1.2;
   margin: 0 0 20px 0;
-  color: #E5E7EB;
+  color: var(--text-primary);
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -46,7 +46,7 @@
 
 .hero-description {
   font-size: 1.1rem;
-  color: #9CA3AF;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 30px;
   max-width: 500px;
@@ -135,7 +135,7 @@
   .stat-number {
     font-size: 2.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #6366F1, #A855F7);
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -144,7 +144,7 @@
 
   .stat-label {
     font-size: 1rem;
-    color: #9CA3AF;
+    color: var(--text-secondary);
   }
 }
 
@@ -185,12 +185,12 @@
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
-  background: #0F172A;
+  background: var(--bg-secondary);
 
   .placeholder-image {
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #6366F1, #A855F7);
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
     opacity: 0.2;
   }
 }
@@ -224,7 +224,7 @@
 
 .tech-badge {
   background: rgba(99, 102, 241, 0.2);
-  color: #6366F1;
+  color: var(--primary-gradient-start);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
@@ -236,13 +236,13 @@
   gap: 15px;
 
   a {
-    color: #6366F1;
+    color: var(--primary-gradient-start);
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
 
     &:hover {
-      color: #A855F7;
+      color: var(--primary-gradient-end);
     }
   }
 }

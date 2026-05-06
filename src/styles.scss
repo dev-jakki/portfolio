@@ -19,6 +19,8 @@
   --text-primary: #E5E7EB;
   --text-secondary: #9CA3AF;
   --text-tertiary: #6B7280;
+
+  --white: #FFFFFF;
   
   --border-color: #1F2937;
   
@@ -55,12 +57,10 @@ html {
 body {
   background: var(--bg-primary);
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.6;
 }
 

@@ -14,13 +14,13 @@ button {
   }
 
   &:focus-visible {
-    outline: 2px solid #6366F1;
+    outline: 2px solid var(--primary-gradient-start);
     outline-offset: 2px;
   }
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #6366F1, #A855F7);
+  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
   color: white;
 
   &:hover:not(:disabled) {
@@ -30,20 +30,20 @@ button {
 }
 
 .btn-secondary {
-  background: #111827;
-  color: #E5E7EB;
-  border: 1px solid #9CA3AF;
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid var(--text-secondary);
 
   &:hover:not(:disabled) {
-    background: #1F2937;
+    background: var(--border-color);
     border-color: #D1D5DB;
   }
 }
 
 .btn-outline {
   background: transparent;
-  color: #6366F1;
-  border: 2px solid #6366F1;
+  color: var(--primary-gradient-start);
+  border: 2px solid var(--primary-gradient-start);
 
   &:hover:not(:disabled) {
     background: rgba(99, 102, 241, 0.1);

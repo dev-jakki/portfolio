@@ -11,7 +11,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 30px;
-  color: #E5E7EB;
+  color: var(--text-primary);
   text-align: center;
 }
 
@@ -44,6 +44,6 @@
 .skill-name {
   font-size: 0.95rem;
   font-weight: 600;
-  color: #E5E7EB;
+  color: var(--text-primary);
   line-height: 1.4;
 }

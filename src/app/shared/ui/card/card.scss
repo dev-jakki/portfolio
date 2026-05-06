@@ -1,12 +1,12 @@
 .card {
-  background: #111827;
-  border: 1px solid #1F2937;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 24px;
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: #6366F1;
+    border-color: var(--primary-gradient-start);
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
   }
 }
