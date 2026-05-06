@@ -1,4 +1,5 @@
 /* Global Styles */
+@import url('./assets/styles/animations.scss');
 
 :root {
   /* Colors */
@@ -7,7 +8,10 @@
   --bg-tertiary: #111827;
   
   --primary-gradient-start: #6366F1;
-  --primary-gradient-end: #A855F7;
+  --primary-gradient-start--alpha: #6365f13f;
+  --primary-gradient-end: #0e48e9;
+  --primary-gradient-end--alpha: #0e48e946;
+  
   --primary-purple: #8B5CF6;
   
   --accent-cyan: #22D3EE;
@@ -248,4 +252,31 @@ select {
 *:focus-visible {
   outline: 2px solid var(--primary-gradient-start);
   outline-offset: 2px;
+}
+
+.section {
+  &__title {
+    padding-top: 200px;
+    font-size: 1rem;
+    // margin: 0 0 16px 0;
+    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin: 0;
+
+    span {
+      background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
 }

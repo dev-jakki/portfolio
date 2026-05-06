@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Início",
+    "about": "Sobre",
     "projects": "Projetos",
     "skills": "Skills",
     "experience": "Experiência",
@@ -35,49 +36,110 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "subtitle": "Minha trajetória e diferenciais"
+    "subtitle": "Minha trajetória e diferenciais",
+    "softSkillsExperience": {
+      "value": "+3",
+      "description": "Anos de experiência"
+    },
+    "softSkillsTeamwork": {
+      "value": "85%",
+      "description": "Trabalho em Equipe",
+      "obs": "Colaboração eficaz em ambientes dinâmicos."
+    },
+    "softSkillsProblemSolving": {
+      "value": "95%",
+      "description": "Resolução de Problemas"
+    }
   },
   "projects": {
-    "title": "Meus Projetos",
-    "subtitle": "Trabalhos e experiências profissionais"
+    "title": "Projetos",
+    "subtitle": "Trabalhos e experiências profissionais",
+    "devstudies": {
+      "title": "DevStudies",
+      "description": "Plataforma de estudos com gerenciamento de cronograma de estudos com gráficos e análise de progresso."
+    },
+    "dashboard": {
+      "title": "Dashboard Financeiro",
+      "description": "Dashboard interativo com gráficos em tempo real para controle de finanças pessoais."
+    },
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "Plataforma de e-commerce completa com integração de pagamentos e gerenciamento de produtos."
+    },
+    "taskmanager": {
+      "title": "Task Manager App",
+      "description": "Aplicação web para gerenciamento de tarefas com sincronização em tempo real."
+    }
   },
   "skills": {
-    "title": "Minhas Habilidades",
+    "title": "Habilidades",
     "subtitle": "Tecnologias que utilizo no dia a dia",
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Ferramentas"
   },
   "experience": {
-    "title": "Minha Experiência",
-    "subtitle": "Trajetória profissional"
+    "title": "Experiência",
+    "subtitle": "Trajetória profissional",
+    "freelancer": {
+      "company": "Desenvolvedor Frontend",
+      "position": "Freelancer",
+      "period": "Atualmente",
+      "description": "Desenvolvendo interfaces modernas, componentes reutilizáveis e experiências digitais com as melhores tecnologias do mercado."
+    },
+    "techxyz": {
+      "company": "Empresa Tech XYZ",
+      "position": "Desenvolvedor Full Stack",
+      "period": "2023 - 2024",
+      "description": "Desenvolvimento de aplicações web escaláveis, APIs REST e otimização de performance. Trabalhando em equipe ágil."
+    },
+    "startupabc": {
+      "company": "Startup ABC",
+      "position": "Desenvolvedor Frontend",
+      "period": "2022 - 2023",
+      "description": "Criação de interfaces responsivas, componentes reutilizáveis e implementação de testes unitários."
+    }
   },
   "contact": {
-    "title": "Entre em Contato",
+    "title": "Contato",
     "subtitle": "Vamos conversar sobre novas oportunidades",
     "name": "Nome",
     "email": "Email",
     "subject": "Assunto",
     "message": "Mensagem",
     "namePlaceholder": "Seu nome",
-    "emailPlaceholder": "seu.email@example.com",
+    "emailPlaceholder": "seu.email@exemplo.com",
     "subjectPlaceholder": "Assunto da mensagem",
     "messagePlaceholder": "Sua mensagem...",
     "sendMessage": "Enviar Mensagem",
     "emailLabel": "Email",
-    "availability": "Disponibilidade",
-    "availabilityDescription": "Disponível para projetos freelancer e oportunidades full-time. Respondo em até 24 horas."
-  },
-  "footer": {
-    "title": "Jackcielf Dev",
-    "description": "Desenvolvedor Full Stack apaixonado por criar experiências web incríveis.",
-    "navigation": "Navegação",
     "social": "Redes Sociais",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "instagram": "Instagram",
-    "rights": "© 2024 Jackcielf. Todos os direitos reservados.",
-    "developed": "Desenvolvido com ❤️ usando Angular"
+    "availability": "Disponibilidade",
+    "availabilityDescription": "Disponível para projetos freelancer e oportunidades full-time. Respondo em até 24 horas."
+  },
+  "footer": {
+    "title": "Vamos construir algo juntos",
+    "description": "Interessado em trabalhar junto? Fale comigo por e-mail ou redes sociais.",
+    "navigation": "Navegação",
+    "social": "Social",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "contact": "Contato",
+    "rights": "Todos os direitos reservados.",
+    "developed": "Desenvolvido por Jackcielf"
+  },
+  "languages": {
+    "pt-BR": {
+      "name": "Português",
+      "flag": "BR"
+    },
+    "en": {
+      "name": "English",
+      "flag": "US"
+    }
   }
 }
-

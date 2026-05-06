@@ -1,5 +1,5 @@
 import { Injectable, signal } from '@angular/core';
-import { Project, Skill, Experience, ContactData } from '../models/portfolio.model';
+import { Project, Skill, Experience, ContactData, AboutData } from '../models/portfolio.model';
 
 @Injectable({
   providedIn: 'root'
@@ -8,8 +8,8 @@ export class PortfolioService {
   private readonly projects = signal<Project[]>([
     {
       id: 1,
-      title: 'DevStudies',
-      description: 'Plataforma de estudos com gerenciamento de cronograma de estudos com gráficos e análise de progresso.',
+      title: 'projects.devstudies.title',
+      description: 'projects.devstudies.description',
       image: '/assets/images/dev-studies.png',
       technologies: ['React', 'TypeScript', 'TailwindCSS'],
       demoUrl: '#',
@@ -18,8 +18,8 @@ export class PortfolioService {
     },
     {
       id: 2,
-      title: 'Dashboard Financeiro',
-      description: 'Dashboard interativo com gráficos em tempo real para controle de finanças pessoais.',
+      title: 'projects.dashboard.title',
+      description: 'projects.dashboard.description',
       image: '/assets/images/dashboard.png',
       technologies: ['Next.js', 'TypeScript', 'Chart.js'],
       demoUrl: '#',
@@ -28,8 +28,8 @@ export class PortfolioService {
     },
     {
       id: 3,
-      title: 'E-commerce Platform',
-      description: 'Plataforma de e-commerce completa com integração de pagamentos e gerenciamento de produtos.',
+      title: 'projects.ecommerce.title',
+      description: 'projects.ecommerce.description',
       image: '/assets/images/ecommerce.png',
       technologies: ['React', 'Node.js', 'MongoDB'],
       demoUrl: '#',
@@ -37,8 +37,8 @@ export class PortfolioService {
     },
     {
       id: 4,
-      title: 'Task Manager App',
-      description: 'Aplicação web para gerenciamento de tarefas com sincronização em tempo real.',
+      title: 'projects.taskmanager.title',
+      description: 'projects.taskmanager.description',
       image: '/assets/images/task-manager.png',
       technologies: ['Angular', 'Firebase', 'TypeScript'],
       demoUrl: '#',
@@ -71,29 +71,49 @@ export class PortfolioService {
   private readonly experience = signal<Experience[]>([
     {
       id: 1,
-      company: 'Desenvolvedor Frontend',
-      position: 'Freelancer',
-      period: 'Atualmente',
-      description: 'Desenvolvendo interfaces modernas, componentes reutilizáveis e experiências digitais com as melhores tecnologias do mercado.',
+      company: 'experience.freelancer.company',
+      position: 'experience.freelancer.position',
+      period: 'experience.freelancer.period',
+      description: 'experience.freelancer.description',
       technologies: ['React', 'Next.js', 'TypeScript', 'TailwindCSS']
     },
     {
       id: 2,
-      company: 'Empresa Tech XYZ',
-      position: 'Desenvolvedor Full Stack',
-      period: '2023 - 2024',
-      description: 'Desenvolvimento de aplicações web escaláveis, APIs REST e otimização de performance. Trabalhando em equipe ágil.',
+      company: 'experience.techxyz.company',
+      position: 'experience.techxyz.position',
+      period: 'experience.techxyz.period',
+      description: 'experience.techxyz.description',
       technologies: ['React', 'Node.js', 'MongoDB', 'Docker']
     },
     {
       id: 3,
-      company: 'Startup ABC',
-      position: 'Desenvolvedor Frontend',
-      period: '2022 - 2023',
-      description: 'Criação de interfaces responsivas, componentes reutilizáveis e implementação de testes unitários.',
+      company: 'experience.startupabc.company',
+      position: 'experience.startupabc.position',
+      period: 'experience.startupabc.period',
+      description: 'experience.startupabc.description',
       technologies: ['React', 'TypeScript', 'Jest', 'Storybook']
     }
   ]);
+
+  private readonly about = signal<AboutData>({
+    title: 'about.title',
+    subtitle: 'about.subtitle',
+    softSkills: [
+      {
+        value: 'about.softSkillsExperience.value',
+        description: 'about.softSkillsExperience.description'
+      },
+      {
+        value: 'about.softSkillsTeamwork.value',
+        description: 'about.softSkillsTeamwork.description',
+        obs: 'about.softSkillsTeamwork.obs'
+      },
+      {
+        value: 'about.softSkillsProblemSolving.value',
+        description: 'about.softSkillsProblemSolving.description'
+      }
+    ]
+  });
 
   private readonly contact: ContactData = {
     email: 'jackcielf@gmail.com',
@@ -116,5 +136,9 @@ export class PortfolioService {
 
   getContact() {
     return this.contact;
+  }
+
+  getAbout() {
+    return this.about;
   }
 }

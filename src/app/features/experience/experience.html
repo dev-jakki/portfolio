@@ -1,28 +1,33 @@
-<app-section [title]="'experience.title' | translate" [subtitle]="'experience.subtitle' | translate">
-  <div class="experience-timeline">
+<section id="experience" class="section experience-section">
+  <div class="anime-up">
+    <h2 class="section__title">{{ 'experience.title' | translate }}</h2>
+    <p class="section__subtitle">{{ 'experience.subtitle' | translate }}</p>
+  </div>
+
+  <div class="experience-section__timeline">
     @for (exp of portfolioService.getExperience()(); track exp.id; let i = $index) {
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
+      <div class="experience-section__item">
+        <div class="experience-section__dot"></div>
+        <div class="experience-section__content">
           <app-card>
-            <div class="experience-card">
-              <div class="exp-header">
-                <h3>{{ exp.company }}</h3>
-                <span class="exp-period">{{ exp.period }}</span>
-              </div>
-              <h4 class="exp-position">{{ exp.position }}</h4>
-              <p class="exp-description">{{ exp.description }}</p>
+            <article class="experience-card">
+              <header class="experience-card__header">
+                <h3 class="experience-card__company">{{ exp.company | translate }}</h3>
+                <span class="experience-card__period">{{ exp.period | translate }}</span>
+              </header>
+              <h4 class="experience-card__position">{{ exp.position | translate }}</h4>
+              <p class="experience-card__description">{{ exp.description | translate }}</p>
               @if (exp.technologies && exp.technologies.length > 0) {
-                <div class="exp-technologies">
+                <div class="experience-card__technologies">
                   @for (tech of exp.technologies; track tech) {
-                    <span class="tech-tag">{{ tech }}</span>
+                    <span class="experience-card__tech-tag">{{ tech }}</span>
                   }
                 </div>
               }
-            </div>
+            </article>
           </app-card>
         </div>
       </div>
     }
   </div>
-</app-section>
+</section>

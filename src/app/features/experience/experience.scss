@@ -1,91 +1,93 @@
-.experience-timeline {
-  max-width: 800px;
-  margin: 0 auto;
-  position: relative;
-  padding: 20px;
+.experience-section {
+  &__timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    padding: 20px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
 
-    @media (max-width: 768px) {
-      left: 10px;
+      @media (max-width: 768px) {
+        left: 10px;
+      }
     }
   }
-}
 
-.timeline-item {
-  margin-bottom: 50px;
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: center;
-  gap: 40px;
-  position: relative;
+  &__item {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 40px;
+    position: relative;
 
-  @media (max-width: 768px) {
-    grid-template-columns: auto 1fr;
-    gap: 20px;
-    padding-left: 30px;
+    @media (max-width: 768px) {
+      grid-template-columns: auto 1fr;
+      gap: 20px;
+      padding-left: 30px;
+
+      &:nth-child(odd) {
+        .experience-section__content {
+          grid-column: 2;
+        }
+      }
+
+      &:nth-child(even) {
+        .experience-section__content {
+          grid-column: 2;
+        }
+      }
+    }
 
     &:nth-child(odd) {
-      .timeline-content {
-        grid-column: 2;
+      @media (min-width: 769px) {
+        grid-template-columns: 1fr auto 1fr;
+
+        .experience-section__content {
+          grid-column: 1;
+          text-align: right;
+        }
       }
     }
 
     &:nth-child(even) {
-      .timeline-content {
-        grid-column: 2;
+      @media (min-width: 769px) {
+        grid-template-columns: auto 1fr;
+
+        .experience-section__content {
+          grid-column: 3;
+        }
       }
     }
   }
 
-  &:nth-child(odd) {
-    @media (min-width: 769px) {
-      grid-template-columns: 1fr auto 1fr;
-
-      .timeline-content {
-        grid-column: 1;
-        text-align: right;
-      }
-    }
-  }
-
-  &:nth-child(even) {
-    @media (min-width: 769px) {
-      grid-template-columns: auto 1fr;
-
-      .timeline-content {
-        grid-column: 3;
-      }
-    }
-  }
-}
-
-.timeline-dot {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--primary-gradient-start);
-  border: 3px solid var(--bg-primary);
-  z-index: 10;
-  grid-column: 2;
-
-  @media (max-width: 768px) {
-    grid-column: 1;
-  }
-}
-
-.timeline-content {
-  grid-column: 2;
-
-  @media (max-width: 768px) {
+  &__dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary-gradient-start);
+    border: 3px solid var(--bg-primary);
+    z-index: 10;
     grid-column: 2;
+
+    @media (max-width: 768px) {
+      grid-column: 1;
+    }
+  }
+
+  &__content {
+    grid-column: 2;
+
+    @media (max-width: 768px) {
+      grid-column: 2;
+    }
   }
 }
 
@@ -93,7 +95,7 @@
   padding: 30px;
 }
 
-.exp-header {
+.experience-card__header {
   display: flex;
   justify-content: space-between;
   align-items: start;
@@ -108,7 +110,7 @@
   }
 }
 
-.exp-period {
+.experience-card__period {
   background: rgba(99, 102, 241, 0.2);
   color: var(--primary-gradient-start);
   padding: 4px 12px;
@@ -118,27 +120,27 @@
   white-space: nowrap;
 }
 
-.exp-position {
+.experience-card__position {
   font-size: 1.1rem;
   font-weight: 600;
   color: #A855F7;
   margin: 0 0 15px 0;
 }
 
-.exp-description {
+.experience-card__description {
   color: #D1D5DB;
   line-height: 1.6;
   margin: 0;
 }
 
-.exp-technologies {
+.experience-card__technologies {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 15px;
 }
 
-.tech-tag {
+.experience-card__tech-tag {
   background: rgba(168, 85, 247, 0.1);
   color: #A855F7;
   padding: 4px 12px;

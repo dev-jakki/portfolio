@@ -1,7 +1,7 @@
-<div class="home">
+<div id="home" class="home">
   <!-- Hero Section -->
   <section class="hero">
-    <div class="hero-content">
+    <div class="anime-left">
       <p class="hero-subtitle">{{ 'home.greeting' | translate }}</p>
       <h1 class="hero-title">{{ 'home.name' | translate }}</h1>
       <p class="hero-description">
@@ -13,44 +13,12 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="glow-circle"></div>
+      <div class="glow-circle anime-float"></div>
     </div>
   </section>
-
-  <!-- Stats Section -->
-  <section class="stats">
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.experienceYears' | translate }}</div>
-      <div class="stat-label">{{ 'home.experienceLabel' | translate }}</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.projectsCount' | translate }}</div>
-      <div class="stat-label">{{ 'home.projectsLabel' | translate }}</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.qualityPercentage' | translate }}</div>
-      <div class="stat-label">{{ 'home.qualityLabel' | translate }}</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.infinitySymbol' | translate }}</div>
-      <div class="stat-label">{{ 'home.learningLabel' | translate }}</div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <app-section [title]="'about.title' | translate" [subtitle]="'about.subtitle' | translate">
-    <div class="about-content">
-      <p>
-        {{ 'home.fullDescription' | translate }}
-      </p>
-      <p>
-        {{ 'home.additionalDescription' | translate }}
-      </p>
-    </div>
-  </app-section>
 
   <!-- Featured Projects -->
-  <app-section [title]="'home.featuredProjects' | translate">
+  <!-- <app-section [title]="'home.featuredProjects' | translate">
     <div class="projects-grid">
       @for (project of portfolioService.getProjects()(); track project.id; let i = $index) {
         @if (i < 3) {
@@ -84,12 +52,14 @@
     <div class="view-all-projects">
       <app-button variant="secondary">{{ 'home.viewAllProjects' | translate }}</app-button>
     </div>
-  </app-section>
+  </app-section> -->
 
   <!-- CTA Section -->
-  <section class="cta">
+  <!-- <section class="cta">
     <h2>{{ 'home.ctaTitle' | translate }}</h2>
     <p>{{ 'home.ctaDescription' | translate }}</p>
     <app-button variant="primary">{{ 'home.getInTouch' | translate }}</app-button>
-  </section>
+  </section> -->
+
+
 </div>

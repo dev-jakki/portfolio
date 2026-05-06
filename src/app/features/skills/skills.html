@@ -1,21 +1,50 @@
-<app-section [title]="'skills.title' | translate" [subtitle]="'skills.subtitle' | translate">
-  <div class="skills-container">
-    @for (category of ['frontend', 'backend', 'tools']; track category) {
-      <div class="skills-category">
-        <h3 class="category-title">
-          {{ getCategoryName(category) | translate }}
-        </h3>
-        <div class="skills-grid">
-          @for (skill of getSkillsByCategory(category); track skill.name) {
-            <app-card>
-              <div class="skill-item">
-                <div class="skill-icon">{{ skill.icon }}</div>
-                <div class="skill-name">{{ skill.name }}</div>
-              </div>
-            </app-card>
-          }
-        </div>
-      </div>
-    }
+<section id="skills" class="section skills-section">
+  <div class="anime-up">
+    <h2 class="section__title">{{ 'skills.title' | translate }}</h2>
+    <p class="section__subtitle">{{ 'skills.subtitle' | translate }}</p>
   </div>
-</app-section>
+
+  <div class="skills-section__container">
+    <div class="skills-section__category">
+      <h3 class="skills-section__category-title">{{ 'skills.frontend' | translate }}</h3>
+      <div class="skills-section__grid">
+        @for (skill of getSkillsByCategory('frontend'); track skill.name) {
+          <app-card>
+            <div class="skill-card">
+              <div class="skill-card__icon">{{ skill.icon }}</div>
+              <div class="skill-card__name">{{ skill.name }}</div>
+            </div>
+          </app-card>
+        }
+      </div>
+    </div>
+
+    <div class="skills-section__category">
+      <h3 class="skills-section__category-title">{{ 'skills.backend' | translate }}</h3>
+      <div class="skills-section__grid">
+        @for (skill of getSkillsByCategory('backend'); track skill.name) {
+          <app-card>
+            <div class="skill-card">
+              <div class="skill-card__icon">{{ skill.icon }}</div>
+              <div class="skill-card__name">{{ skill.name }}</div>
+            </div>
+          </app-card>
+        }
+      </div>
+    </div>
+
+    <div class="skills-section__category">
+      <h3 class="skills-section__category-title">{{ 'skills.tools' | translate }}</h3>
+      <div class="skills-section__grid">
+        @for (skill of getSkillsByCategory('tools'); track skill.name) {
+          <app-card>
+            <div class="skill-card">
+              <div class="skill-card__icon">{{ skill.icon }}</div>
+              <div class="skill-card__name">{{ skill.name }}</div>
+            </div>
+          </app-card>
+        }
+      </div>
+    </div>
+  </div>
+</section>

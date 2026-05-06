@@ -31,3 +31,15 @@ export interface ContactData {
   github: string;
   instagram?: string;
 }
+
+export interface AboutData {
+  title: string;
+  subtitle: string;
+  softSkills: SoftSkillsData[];
+}
+
+export interface SoftSkillsData {
+  value: string;
+  description: string;
+  obs?: string;
+}

@@ -1,6 +1,7 @@
 {
   "nav": {
     "home": "Home",
+    "about": "About me",
     "projects": "Projects",
     "skills": "Skills",
     "experience": "Experience",
@@ -35,25 +36,72 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "My trajectory and differentials"
+    "subtitle": "My trajectory and differentials",
+    "softSkillsExperience": {
+      "value": "+3",
+      "description": "Years of experience"
+    },
+    "softSkillsTeamwork": {
+      "value": "85%",
+      "description": "Teamwork",
+      "obs": "Effective collaboration in dynamic environments."
+    },
+    "softSkillsProblemSolving": {
+      "value": "95%",
+      "description": "Problem Solving"
+    }
   },
   "projects": {
-    "title": "My Projects",
-    "subtitle": "Works and professional experiences"
+    "title": "Projects",
+    "subtitle": "Works and professional experiences",
+    "devstudies": {
+      "title": "DevStudies",
+      "description": "Study platform with study schedule management with charts and progress analysis."
+    },
+    "dashboard": {
+      "title": "Financial Dashboard",
+      "description": "Interactive dashboard with real-time charts for personal finance control."
+    },
+    "ecommerce": {
+      "title": "E-commerce Platform",
+      "description": "Complete e-commerce platform with payment integration and product management."
+    },
+    "taskmanager": {
+      "title": "Task Manager App",
+      "description": "Web application for task management with real-time synchronization."
+    }
   },
   "skills": {
-    "title": "My Skills",
+    "title": "Skills",
     "subtitle": "Technologies I use daily",
     "frontend": "Frontend",
     "backend": "Backend",
     "tools": "Tools"
   },
   "experience": {
-    "title": "My Experience",
-    "subtitle": "Professional trajectory"
+    "title": "Experience",
+    "subtitle": "Professional trajectory",
+    "freelancer": {
+      "company": "Frontend Developer",
+      "position": "Freelancer",
+      "period": "Currently",
+      "description": "Developing modern interfaces, reusable components and digital experiences with the best technologies on the market."
+    },
+    "techxyz": {
+      "company": "Tech XYZ Company",
+      "position": "Full Stack Developer",
+      "period": "2023 - 2024",
+      "description": "Development of scalable web applications, REST APIs and performance optimization. Working in agile team."
+    },
+    "startupabc": {
+      "company": "ABC Startup",
+      "position": "Frontend Developer",
+      "period": "2022 - 2023",
+      "description": "Creation of responsive interfaces, reusable components and implementation of unit tests."
+    }
   },
   "contact": {
-    "title": "Get In Touch",
+    "title": "Contact",
     "subtitle": "Let's talk about new opportunities",
     "name": "Name",
     "email": "Email",
@@ -65,19 +113,33 @@
     "messagePlaceholder": "Your message...",
     "sendMessage": "Send Message",
     "emailLabel": "Email",
-    "availability": "Availability",
-    "availabilityDescription": "Available for freelance projects and full-time opportunities. I respond within 24 hours."
-  },
-  "footer": {
-    "title": "Jackcielf Dev",
-    "description": "Full Stack Developer passionate about creating amazing web experiences.",
-    "navigation": "Navigation",
     "social": "Social Networks",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "instagram": "Instagram",
-    "rights": "© 2024 Jackcielf. All rights reserved.",
-    "developed": "Developed with ❤️ using Angular"
+    "availability": "Availability",
+    "availabilityDescription": "Available for freelance projects and full-time opportunities. I respond within 24 hours."
+  },
+  "footer": {
+    "title": "Let's build something together",
+    "description": "Interested in working together? Feel free to reach out via email or social networks.",
+    "navigation": "Navigation",
+    "social": "Social",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "instagram": "Instagram",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "developed": "Developed by Jackcielf"
+  },
+  "languages": {
+    "pt-BR": {
+      "name": "Portuguese",
+      "flag": "BR"
+    },
+    "en": {
+      "name": "English",
+      "flag": "US"
+    }
   }
 }
-

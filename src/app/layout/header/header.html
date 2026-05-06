@@ -18,21 +18,39 @@
       <span></span>
     </button>
 
-    <nav 
+    <nav
       class="nav" 
       [class.nav-open]="menuOpen()"
       aria-label="Main navigation"
     >
       <ul class="nav-links">
-        <li><a routerLink="/" (click)="closeMenu()">{{ 'nav.home' | translate }}</a></li>
-        <li><a href="#projects" (click)="closeMenu()">{{ 'nav.projects' | translate }}</a></li>
-        <li><a href="#skills" (click)="closeMenu()">{{ 'nav.skills' | translate }}</a></li>
-        <li><a href="#experience" (click)="closeMenu()">{{ 'nav.experience' | translate }}</a></li>
-        <li><a href="#contact" (click)="closeMenu()" class="nav-cta">{{ 'nav.contact' | translate }}</a></li>
+        <li [class.active]="menuActive('')">
+          <a href="#home" (click)="closeMenu()">{{ 'nav.home' | translate }}</a>
+        </li>
+        <li [class.active]="menuActive('about-me')">
+          <a href="#about-me" (click)="closeMenu()">{{ 'nav.about' | translate }}</a>
+        </li>
+        <li [class.active]="menuActive('projects')">
+          <a href="#projects" (click)="closeMenu()">{{ 'nav.projects' | translate }}</a>
+        </li>
+        <li [class.active]="menuActive('skills')">
+          <a href="#skills" (click)="closeMenu()">{{ 'nav.skills' | translate }}</a>
+        </li>
+        <li [class.active]="menuActive('experience')">
+          <a href="#experience" (click)="closeMenu()">{{ 'nav.experience' | translate }}</a>
+        </li>
+        <li [class.active]="menuActive('contact')">
+          <a href="#contact" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a>
+        </li>
       </ul>
     </nav>
 
     <div class="header-actions">
+      <a href="#" class="download-cv">
+        {{ 'header.downloadCV' | translate }}
+        <i class="ph ph-arrow-line-down"></i>
+      </a>
+
       <div class="language-selector">
         <button 
           class="language-btn"
@@ -40,8 +58,12 @@
           [attr.aria-expanded]="languageDropdownOpen()"
           aria-label="Select language"
         >
-          <i class="ph ph-globe"></i>
-          <span>{{ getCurrentLanguageName() }}</span>
+          <img 
+            [src]="getCurrentLanguageImage()" 
+            alt="image"
+            class="image-icon"
+          />
+          <span>{{ getCurrentLanguageFlag() }}</span>
         </button>
         
         @if (languageDropdownOpen()) {
@@ -52,17 +74,17 @@
                 [class.active]="translateService.getLanguage() === lang.code"
                 (click)="selectLanguage(lang.code)"
               >
-                {{ lang.name }}
+                <img 
+                  [src]="lang.image" 
+                  alt="{{ lang.name }}"
+                  class="image-icon"
+                />
+                <span>{{ lang.name }}</span>
               </button>
             }
           </div>
         }
       </div>
-
-      <a href="#" class="download-cv">
-        {{ 'header.downloadCV' | translate }}
-        <i class="ph ph-arrow-line-down"></i>
-      </a>
     </div>
   </div>
 </header>
