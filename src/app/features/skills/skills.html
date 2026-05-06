@@ -1,0 +1,25 @@
+<app-section title="Minhas Habilidades" subtitle="Tecnologias que utilizo no dia a dia">
+  <div class="skills-container">
+    @for (category of ['frontend', 'backend', 'tools']; track category) {
+      <div class="skills-category">
+        <h3 class="category-title">
+          @switch(category) {
+            @case('frontend') { Frontend }
+            @case('backend') { Backend }
+            @case('tools') { Ferramentas }
+          }
+        </h3>
+        <div class="skills-grid">
+          @for (skill of getSkillsByCategory(category); track skill.name) {
+            <app-card>
+              <div class="skill-item">
+                <div class="skill-icon">{{ skill.icon }}</div>
+                <div class="skill-name">{{ skill.name }}</div>
+              </div>
+            </app-card>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</app-section>

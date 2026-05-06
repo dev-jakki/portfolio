@@ -1,0 +1,43 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Jackcielf Dev</h3>
+        <p>Desenvolvedor Full Stack apaixonado por criar experiências web incríveis.</p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="#projects">Projetos</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experiência</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Redes Sociais</h3>
+        <ul>
+          <li><a [href]="contact.linkedin" target="_blank">LinkedIn</a></li>
+          <li><a [href]="contact.github" target="_blank">GitHub</a></li>
+          @if (contact.instagram) {
+            <li><a [href]="contact.instagram" target="_blank">Instagram</a></li>
+          }
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contato</h3>
+        <a [href]="'mailto:' + contact.email" class="contact-email">{{ contact.email }}</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Jackcielf. Todos os direitos reservados.</p>
+      <div class="footer-credits">
+        <p>Desenvolvido com ❤️ usando Angular</p>
+      </div>
+    </div>
+  </div>
+</footer>

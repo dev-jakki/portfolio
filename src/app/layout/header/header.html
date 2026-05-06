@@ -1,1 +1,39 @@
-<p>header works!</p>
+<header class="header">
+  <div class="header-container">
+    <div class="logo">
+      <a routerLink="/">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-text">Jackcielf</span>
+      </a>
+    </div>
+
+    <button 
+      class="mobile-menu-toggle" 
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav 
+      class="nav" 
+      [class.nav-open]="menuOpen()"
+      aria-label="Main navigation"
+    >
+      <ul class="nav-links">
+        <li><a routerLink="/" (click)="closeMenu()">Home</a></li>
+        <li><a href="#projects" (click)="closeMenu()">Projetos</a></li>
+        <li><a href="#skills" (click)="closeMenu()">Skills</a></li>
+        <li><a href="#experience" (click)="closeMenu()">Experiência</a></li>
+        <li><a href="#contact" (click)="closeMenu()" class="nav-cta">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <a href="#" class="download-cv">Download CV</a>
+    </div>
+  </div>
+</header>

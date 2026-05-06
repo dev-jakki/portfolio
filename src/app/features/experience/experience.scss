@@ -1,0 +1,148 @@
+.experience-timeline {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(135deg, #6366F1, #A855F7);
+
+    @media (max-width: 768px) {
+      left: 10px;
+    }
+  }
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    padding-left: 30px;
+
+    &:nth-child(odd) {
+      .timeline-content {
+        grid-column: 2;
+      }
+    }
+
+    &:nth-child(even) {
+      .timeline-content {
+        grid-column: 2;
+      }
+    }
+  }
+
+  &:nth-child(odd) {
+    @media (min-width: 769px) {
+      grid-template-columns: 1fr auto 1fr;
+
+      .timeline-content {
+        grid-column: 1;
+        text-align: right;
+      }
+    }
+  }
+
+  &:nth-child(even) {
+    @media (min-width: 769px) {
+      grid-template-columns: auto 1fr;
+
+      .timeline-content {
+        grid-column: 3;
+      }
+    }
+  }
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #6366F1;
+  border: 3px solid #0B0F1A;
+  z-index: 10;
+  grid-column: 2;
+
+  @media (max-width: 768px) {
+    grid-column: 1;
+  }
+}
+
+.timeline-content {
+  grid-column: 2;
+
+  @media (max-width: 768px) {
+    grid-column: 2;
+  }
+}
+
+.experience-card {
+  padding: 30px;
+}
+
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 10px;
+  gap: 20px;
+
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0;
+    color: #E5E7EB;
+  }
+}
+
+.exp-period {
+  background: rgba(99, 102, 241, 0.2);
+  color: #6366F1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.exp-position {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #A855F7;
+  margin: 0 0 15px 0;
+}
+
+.exp-description {
+  color: #D1D5DB;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.exp-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.tech-tag {
+  background: rgba(168, 85, 247, 0.1);
+  color: #A855F7;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}

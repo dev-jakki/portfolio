@@ -1,0 +1,30 @@
+<app-section title="Meus Projetos" subtitle="Trabalhos e experiências profissionais">
+  <div class="projects-grid">
+    @for (project of portfolioService.getProjects()(); track project.id) {
+      <app-card>
+        <div class="project-card">
+          <div class="project-image">
+            <div class="placeholder-image"></div>
+          </div>
+          <div class="project-info">
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description }}</p>
+            <div class="project-tech">
+              @for (tech of project.technologies; track tech) {
+                <span class="tech-badge">{{ tech }}</span>
+              }
+            </div>
+            <div class="project-links">
+              @if (project.demoUrl) {
+                <a [href]="project.demoUrl" target="_blank">Demo →</a>
+              }
+              @if (project.githubUrl) {
+                <a [href]="project.githubUrl" target="_blank">GitHub →</a>
+              }
+            </div>
+          </div>
+        </div>
+      </app-card>
+    }
+  </div>
+</app-section>

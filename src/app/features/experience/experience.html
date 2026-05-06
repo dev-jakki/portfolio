@@ -1,0 +1,28 @@
+<app-section title="Minha Experiência" subtitle="Trajetória profissional">
+  <div class="experience-timeline">
+    @for (exp of portfolioService.getExperience()(); track exp.id; let i = $index) {
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <app-card>
+            <div class="experience-card">
+              <div class="exp-header">
+                <h3>{{ exp.company }}</h3>
+                <span class="exp-period">{{ exp.period }}</span>
+              </div>
+              <h4 class="exp-position">{{ exp.position }}</h4>
+              <p class="exp-description">{{ exp.description }}</p>
+              @if (exp.technologies && exp.technologies.length > 0) {
+                <div class="exp-technologies">
+                  @for (tech of exp.technologies; track tech) {
+                    <span class="tech-tag">{{ tech }}</span>
+                  }
+                </div>
+              }
+            </div>
+          </app-card>
+        </div>
+      </div>
+    }
+  </div>
+</app-section>

@@ -1,0 +1,13 @@
+<section [class.section]="true">
+  @if (title()) {
+    <div class="section-header">
+      <h2 class="section-title">{{ title() }}</h2>
+      @if (subtitle()) {
+        <p class="section-subtitle">{{ subtitle() }}</p>
+      }
+    </div>
+  }
+  <div class="section-content">
+    <ng-content></ng-content>
+  </div>
+</section>
