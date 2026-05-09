@@ -7,17 +7,6 @@
       </a>
     </div>
 
-    <button 
-      class="mobile-menu-toggle" 
-      (click)="toggleMenu()"
-      [attr.aria-expanded]="menuOpen()"
-      aria-label="Toggle navigation menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
     <nav
       class="nav" 
       [class.nav-open]="menuOpen()"
@@ -51,6 +40,19 @@
         <i class="ph ph-arrow-line-down"></i>
       </a>
 
+      <div class="theme-switcher">
+        <button
+          class="theme-btn"
+          type="button"
+          (click)="toggleTheme()"
+          [attr.aria-label]="theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+          [class.light]="theme() === 'light'"
+          [class.dark]="theme() === 'dark'"
+        >
+          <span class="theme-icon"></span>
+        </button>
+      </div>
+
       <div class="language-selector">
         <button 
           class="language-btn"
@@ -67,7 +69,7 @@
         </button>
         
         @if (languageDropdownOpen()) {
-          <div class="language-dropdown">
+          <div class="language-dropdown anime-slide-down">
             @for (lang of languages; track lang.code) {
               <button
                 class="language-option"
@@ -85,6 +87,19 @@
           </div>
         }
       </div>
+
+
     </div>
+
+    <button 
+      class="mobile-menu-toggle" 
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="menuOpen()"
+      aria-label="Toggle navigation menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>

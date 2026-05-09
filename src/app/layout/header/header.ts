@@ -20,12 +20,28 @@ import { TranslateAppService } from '../../core/services/translate.service';
 export class Header {
   menuOpen = signal(false);
   languageDropdownOpen = signal(false);
+  theme = signal<'dark' | 'light'>('dark');
   activeSection: string = '';
 
   constructor(
     public translateService: TranslateAppService,
     private elementRef: ElementRef,
-  ) {}
+  ) {
+    this.initializeTheme();
+  }
+
+  initializeTheme(): void {
+    const savedTheme = localStorage.getItem('theme') as 'dark' | 'light' | null;
+    const theme = savedTheme ?? 'dark';
+    this.theme.set(theme);
+    this.applyTheme(theme);
+  }
+
+  applyTheme(theme: 'dark' | 'light'): void {
+    document.body.classList.toggle('light-theme', theme === 'light');
+    document.body.classList.toggle('dark-theme', theme === 'dark');
+    localStorage.setItem('theme', theme);
+  }
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
@@ -74,6 +90,12 @@ export class Header {
 
   toggleLanguageDropdown() {
     this.languageDropdownOpen.update((open) => !open);
+  }
+
+  toggleTheme() {
+    const nextTheme = this.theme() === 'dark' ? 'light' : 'dark';
+    this.theme.set(nextTheme);
+    this.applyTheme(nextTheme);
   }
 
   selectLanguage(lang: string) {

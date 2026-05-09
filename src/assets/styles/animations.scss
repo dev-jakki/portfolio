@@ -10,6 +10,10 @@
   animation: float 6s ease-in-out infinite;
 }
 
+.anime-slide-down {
+  animation: slideDown 0.5s ease;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -40,3 +44,15 @@
     transform: translateY(-30px);
   }
 }
+
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
