@@ -157,7 +157,7 @@
 }
 
 .download-cv {
-  padding: 8px 16px;
+  padding: 6px 14px;
   border: 1px solid transparent;
   border-radius: 30px;
   background: 
@@ -175,194 +175,6 @@
   }
 
   @include hover-alpha;
-}
-
-.theme-switcher {
-  display: flex;
-  align-items: center;
-}
-
-.theme-btn {
-  width: 44px;
-  height: 44px;
-  border: 1px solid transparent;
-  border-radius: 9999px;
-  background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
-  color: var(--text-primary);
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
-
-  &:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 14px 30px rgba(99, 102, 241, 0.16);
-  }
-
-  &.light {
-    background: linear-gradient(90deg, #FACC15, #F97316);
-  }
-
-  &.dark {
-    background: linear-gradient(135deg, #1F2937, #111827);
-  }
-}
-
-.theme-icon {
-  position: relative;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--bg-secondary);
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.12);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    transition: all 0.3s ease;
-  }
-}
-
-.theme-btn.dark .theme-icon {
-  background: #111827;
-  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.08);
-
-  &::before {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: var(--bg-primary);
-    top: 4px;
-    left: 4px;
-    box-shadow: -3px -1px 0 0 rgba(255, 255, 255, 0.08);
-  }
-
-  &::after {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--bg-secondary);
-    top: 4px;
-    left: 8px;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
-  }
-}
-
-.theme-btn.light .theme-icon {
-  background: #FFE69D;
-  box-shadow: inset 0 0 0 2px rgba(15, 23, 42, 0.12);
-
-  &::before {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #FB923C;
-    top: 6px;
-    left: 6px;
-  }
-
-  &::after {
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 12px;
-    background: #F97316;
-    transform: translate(-50%, -50%);
-    box-shadow:
-      0 -14px 0 0 #F97316,
-      10px -10px 0 0 #F97316,
-      14px 0 0 0 #F97316,
-      10px 10px 0 0 #F97316,
-      0 14px 0 0 #F97316,
-      -10px 10px 0 0 #F97316,
-      -14px 0 0 0 #F97316,
-      -10px -10px 0 0 #F97316;
-  }
-}
-
-.language-selector {
-  position: relative;
-}
-
-.language-btn {
-  padding: 3px 8px;
-  border: 1px solid transparent;
-  border-radius: 30px;
-  background: 
-    linear-gradient(var(--bg-color, var(--bg-primary)), var(--bg-color, var(--bg-primary))) padding-box,
-    linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end)) border-box;
-  color: var(--text-primary);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.3s ease;
-
-  i {
-    font-size: 1rem;
-  }
-
-  @include hover-alpha;
-}
-
-.language-dropdown {
-  position: absolute;
-  top: calc(100% + 8px);
-  right: 0;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px var(--shadow);
-  backdrop-filter: blur(5px);
-  min-width: 150px;
-  z-index: 1000;
-}
-
-.language-option {
-  width: 100%;
-  padding: 8px 12px;
-  border: none;
-  background: transparent;
-  color: var(--text-primary);
-  cursor: pointer;
-  text-align: left;
-  transition: all 0.2s ease;
-  font-size: 0.95rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  &:hover {
-    background: var(--primary-gradient-end--focus);
-    color: var(--primary-gradient-start);
-  }
-
-  &.active {
-    background: linear-gradient(135deg, var(--primary-gradient-start--focus), var(--primary-gradient-end--focus));
-    color: var(--primary-gradient-start);
-    font-weight: 600;
-
-    &::before {
-      content: '✓ ';
-      margin-right: 4px;
-    }
-  }
-
-  &:first-child {
-    border-radius: 12px 12px 0 0;
-  }
-
-  &:last-child {
-    border-radius: 0 0 12px 12px;
-  }
-}
-
-.image-icon {
-  width: 22px;
-  height: 22px;
-  object-fit: cover;
 }
 
 @media (max-width: 768px) {
@@ -404,5 +216,9 @@
 
   .header-actions {
     gap: 8px;
+
+    .download-cv span {
+      display: none;
+    }
   }
 }

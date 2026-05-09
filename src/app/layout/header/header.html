@@ -36,59 +36,13 @@
 
     <div class="header-actions">
       <a href="#" class="download-cv">
-        {{ 'header.downloadCV' | translate }}
+        <span>{{ 'header.downloadCV' | translate }}</span>
         <i class="ph ph-arrow-line-down"></i>
       </a>
 
-      <div class="theme-switcher">
-        <button
-          class="theme-btn"
-          type="button"
-          (click)="toggleTheme()"
-          [attr.aria-label]="theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
-          [class.light]="theme() === 'light'"
-          [class.dark]="theme() === 'dark'"
-        >
-          <span class="theme-icon"></span>
-        </button>
-      </div>
+      <app-theme-button></app-theme-button>
 
-      <div class="language-selector">
-        <button 
-          class="language-btn"
-          (click)="toggleLanguageDropdown()"
-          [attr.aria-expanded]="languageDropdownOpen()"
-          aria-label="Select language"
-        >
-          <img 
-            [src]="getCurrentLanguageImage()" 
-            alt="image"
-            class="image-icon"
-          />
-          <span>{{ getCurrentLanguageFlag() }}</span>
-        </button>
-        
-        @if (languageDropdownOpen()) {
-          <div class="language-dropdown anime-slide-down">
-            @for (lang of languages; track lang.code) {
-              <button
-                class="language-option"
-                [class.active]="translateService.getLanguage() === lang.code"
-                (click)="selectLanguage(lang.code)"
-              >
-                <img 
-                  [src]="lang.image" 
-                  alt="{{ lang.name }}"
-                  class="image-icon"
-                />
-                <span>{{ lang.name }}</span>
-              </button>
-            }
-          </div>
-        }
-      </div>
-
-
+      <app-language-selector></app-language-selector>
     </div>
 
     <button 

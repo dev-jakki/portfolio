@@ -1,0 +1,12 @@
+<div class="theme-switcher">
+  <button
+    class="theme-btn"
+    type="button"
+    (click)="toggleTheme()"
+    [attr.aria-label]="theme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'"
+    [class.light]="theme() === 'light'"
+    [class.dark]="theme() === 'dark'"
+  >
+    <span class="theme-icon"></span>
+  </button>
+</div>
