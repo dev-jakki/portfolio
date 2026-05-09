@@ -1,19 +1,20 @@
-import {
-  Component,
-  ChangeDetectionStrategy,
-  signal,
-  HostListener,
-} from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { TranslateAppService } from '../../core/services/translate.service';
 import { ThemeButtonComponent } from '../../shared/ui/theme-button/theme-button';
-import { LanguageSelectorComponent } from "../../shared/ui/language-selector/language-selector";
+import { LanguageSelectorComponent } from '../../shared/ui/language-selector/language-selector';
 
 @Component({
   selector: 'app-header',
-  imports: [CommonModule, RouterLink, TranslateModule, ThemeButtonComponent, LanguageSelectorComponent],
+  imports: [
+    CommonModule,
+    RouterLink,
+    TranslateModule,
+    ThemeButtonComponent,
+    LanguageSelectorComponent,
+  ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

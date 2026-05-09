@@ -9,7 +9,7 @@
   border: 1px solid transparent;
   border-radius: 30px;
   background: 
-    linear-gradient(var(--bg-color, var(--bg-primary)), var(--bg-color, var(--bg-primary))) padding-box,
+    linear-gradient(90deg, var(--bg-primary), var(--bg-primary)) padding-box,
     linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end)) border-box;
   color: var(--text-primary);
   cursor: pointer;
@@ -61,11 +61,6 @@
     background: linear-gradient(135deg, var(--primary-gradient-start--focus), var(--primary-gradient-end--focus));
     color: var(--primary-gradient-start);
     font-weight: 600;
-
-    &::before {
-      content: '✓ ';
-      margin-right: 4px;
-    }
   }
 
   &:first-child {

@@ -11,7 +11,7 @@ import { PortfolioService } from '../../core/services/portfolio.service';
   imports: [CommonModule, TranslateModule],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Footer {
   private portfolioService = inject(PortfolioService);

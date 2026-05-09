@@ -16,6 +16,10 @@
   "home": {
     "greeting": "Olá, eu sou",
     "name": "Jackciel Felix",
+    "subtitle_jog": "Desenvolvedor",
+    "subtitle_jog_1": "Full Stack",
+    "subtitle_jog_2": "Frontend",
+    "subtitle_jog_3": "de Software",
     "description": "Desenvolvedor Full Stack por formação, apaixonado por criar experiências web modernas, acessíveis e performáticas.",
     "viewProjects": "Ver Projetos",
     "getInTouch": "Entrar em contato",

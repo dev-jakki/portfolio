@@ -7,11 +7,7 @@
       </a>
     </div>
 
-    <nav
-      class="nav" 
-      [class.nav-open]="menuOpen()"
-      aria-label="Main navigation"
-    >
+    <nav class="nav" [class.nav-open]="menuOpen()" aria-label="Main navigation">
       <ul class="nav-links">
         <li [class.active]="menuActive('')">
           <a href="#home" (click)="closeMenu()">{{ 'nav.home' | translate }}</a>
@@ -45,8 +41,8 @@
       <app-language-selector></app-language-selector>
     </div>
 
-    <button 
-      class="mobile-menu-toggle" 
+    <button
+      class="mobile-menu-toggle"
       (click)="toggleMenu()"
       [attr.aria-expanded]="menuOpen()"
       aria-label="Toggle navigation menu"

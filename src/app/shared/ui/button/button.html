@@ -4,5 +4,6 @@
   [class.btn-outline]="variant() === 'outline'"
   [disabled]="disabled()"
 >
-  <ng-content></ng-content>
+  <span>{{ text() }}</span>
+  <i [class]="icon()"></i>
 </button>

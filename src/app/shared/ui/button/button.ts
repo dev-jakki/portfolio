@@ -7,6 +7,8 @@ import { Component, input, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ButtonComponent {
+  text = input('');
+  icon = input('');
   variant = input<'primary' | 'secondary' | 'outline'>('primary');
   disabled = input(false);
 }

@@ -15,7 +15,11 @@
   },
   "home": {
     "greeting": "Hello, I am",
-    "name": "Jackcielf Dev",
+    "name": "Jackciel Felix",
+    "subtitle_jog": "Developer",
+    "subtitle_jog_1": "Full Stack",
+    "subtitle_jog_2": "Frontend",
+    "subtitle_jog_3": "Software",
     "description": "Full Stack Developer by training, passionate about creating modern, accessible and high-performance web experiences.",
     "viewProjects": "View Projects",
     "getInTouch": "Get In Touch",
@@ -130,7 +134,7 @@
     "instagram": "Instagram",
     "contact": "Contact",
     "rights": "All rights reserved.",
-    "developed": "Developed by Jackcielf"
+    "developed": "Developed by @dev_jakki"
   },
   "languages": {
     "pt-BR": {

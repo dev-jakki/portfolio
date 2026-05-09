@@ -9,20 +9,34 @@
       <div class="footer-section">
         <h3>{{ 'footer.navigation' | translate }}</h3>
         <ul>
-          <li><a href="/">{{ 'nav.home' | translate }}</a></li>
-          <li><a href="#projects">{{ 'nav.projects' | translate }}</a></li>
-          <li><a href="#skills">{{ 'nav.skills' | translate }}</a></li>
-          <li><a href="#experience">{{ 'nav.experience' | translate }}</a></li>
+          <li>
+            <a href="/">{{ 'nav.home' | translate }}</a>
+          </li>
+          <li>
+            <a href="#projects">{{ 'nav.projects' | translate }}</a>
+          </li>
+          <li>
+            <a href="#skills">{{ 'nav.skills' | translate }}</a>
+          </li>
+          <li>
+            <a href="#experience">{{ 'nav.experience' | translate }}</a>
+          </li>
         </ul>
       </div>
 
       <div class="footer-section">
         <h3>{{ 'footer.social' | translate }}</h3>
         <ul>
-          <li><a [href]="contact.linkedin" target="_blank">{{ 'footer.linkedin' | translate }}</a></li>
-          <li><a [href]="contact.github" target="_blank">{{ 'footer.github' | translate }}</a></li>
+          <li>
+            <a [href]="contact.linkedin" target="_blank">{{ 'footer.linkedin' | translate }}</a>
+          </li>
+          <li>
+            <a [href]="contact.github" target="_blank">{{ 'footer.github' | translate }}</a>
+          </li>
           @if (contact.instagram) {
-            <li><a [href]="contact.instagram" target="_blank">{{ 'footer.instagram' | translate }}</a></li>
+            <li>
+              <a [href]="contact.instagram" target="_blank">{{ 'footer.instagram' | translate }}</a>
+            </li>
           }
         </ul>
       </div>

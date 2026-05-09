@@ -12,7 +12,11 @@
       transform: translateX(-50%);
       width: 2px;
       height: 100%;
-      background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      background: linear-gradient(
+        135deg,
+        var(--primary-gradient-start),
+        var(--primary-gradient-end)
+      );
 
       @media (max-width: 768px) {
         left: 10px;
@@ -123,12 +127,12 @@
 .experience-card__position {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #A855F7;
+  color: #a855f7;
   margin: 0 0 15px 0;
 }
 
 .experience-card__description {
-  color: #D1D5DB;
+  color: #d1d5db;
   line-height: 1.6;
   margin: 0;
 }
@@ -142,7 +146,7 @@
 
 .experience-card__tech-tag {
   background: rgba(168, 85, 247, 0.1);
-  color: #A855F7;
+  color: #a855f7;
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.8rem;

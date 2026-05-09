@@ -21,7 +21,9 @@
         </div>
 
         <div class="contact-section__field">
-          <label class="contact-section__label" for="email">{{ 'contact.email' | translate }}</label>
+          <label class="contact-section__label" for="email">{{
+            'contact.email' | translate
+          }}</label>
           <input
             class="contact-section__input"
             type="email"
@@ -34,7 +36,9 @@
         </div>
 
         <div class="contact-section__field">
-          <label class="contact-section__label" for="subject">{{ 'contact.subject' | translate }}</label>
+          <label class="contact-section__label" for="subject">{{
+            'contact.subject' | translate
+          }}</label>
           <input
             class="contact-section__input"
             type="text"
@@ -47,7 +51,9 @@
         </div>
 
         <div class="contact-section__field">
-          <label class="contact-section__label" for="message">{{ 'contact.message' | translate }}</label>
+          <label class="contact-section__label" for="message">{{
+            'contact.message' | translate
+          }}</label>
           <textarea
             class="contact-section__textarea"
             [ngModel]="formData().message"
@@ -59,30 +65,52 @@
           ></textarea>
         </div>
 
-        <app-button variant="primary">{{ 'contact.sendMessage' | translate }}</app-button>
+        <app-button variant="primary" [text]="'contact.sendMessage' | translate"></app-button>
       </form>
     </div>
 
     <aside class="contact-section__info">
       <div class="contact-section__info-item">
         <h3 class="contact-section__info-title">{{ 'contact.emailLabel' | translate }}</h3>
-        <a class="contact-section__info-link" [href]="'mailto:' + contact.email">{{ contact.email }}</a>
+        <a class="contact-section__info-link" [href]="'mailto:' + contact.email">{{
+          contact.email
+        }}</a>
       </div>
 
       <div class="contact-section__info-item">
         <h3 class="contact-section__info-title">{{ 'contact.social' | translate }}</h3>
         <div class="contact-section__social-links">
-          <a class="contact-section__social-link" [href]="contact.linkedin" target="_blank" rel="noopener">{{ 'contact.linkedin' | translate }}</a>
-          <a class="contact-section__social-link" [href]="contact.github" target="_blank" rel="noopener">{{ 'contact.github' | translate }}</a>
+          <a
+            class="contact-section__social-link"
+            [href]="contact.linkedin"
+            target="_blank"
+            rel="noopener"
+            >{{ 'contact.linkedin' | translate }}</a
+          >
+          <a
+            class="contact-section__social-link"
+            [href]="contact.github"
+            target="_blank"
+            rel="noopener"
+            >{{ 'contact.github' | translate }}</a
+          >
           @if (contact.instagram) {
-            <a class="contact-section__social-link" [href]="contact.instagram" target="_blank" rel="noopener">{{ 'contact.instagram' | translate }}</a>
+            <a
+              class="contact-section__social-link"
+              [href]="contact.instagram"
+              target="_blank"
+              rel="noopener"
+              >{{ 'contact.instagram' | translate }}</a
+            >
           }
         </div>
       </div>
 
       <div class="contact-section__info-item">
         <h3 class="contact-section__info-title">{{ 'contact.availability' | translate }}</h3>
-        <p class="contact-section__info-text">{{ 'contact.availabilityDescription' | translate }}</p>
+        <p class="contact-section__info-text">
+          {{ 'contact.availabilityDescription' | translate }}
+        </p>
       </div>
     </aside>
   </div>

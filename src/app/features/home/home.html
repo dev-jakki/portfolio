@@ -1,19 +1,32 @@
 <div id="home" class="home">
-  <!-- Hero Section -->
-  <section class="hero">
+  <section class="home__hero">
     <div class="anime-left">
-      <p class="hero-subtitle">{{ 'home.greeting' | translate }}</p>
-      <h1 class="hero-title">{{ 'home.name' | translate }}</h1>
-      <p class="hero-description">
+      <a class="home__hero__greeting">{{ 'home.greeting' | translate }}</a>
+      <h1 class="home__hero__title">{{ 'home.name' | translate }}</h1>
+
+      <div class="home__hero__subtitle">
+        <div>{{ 'home.subtitle_jog' | translate }}</div>
+        <div class="home__hero__job">
+          @for (subtitleKey of subtitleKeys; track subtitleKey; let i = $index) {
+            <span [class.active]="currentSubtitleIndex() === i">
+              {{ subtitleKey | translate }}
+            </span>
+          }
+        </div>
+      </div>
+
+      <p class="home__hero__description">
         {{ 'home.description' | translate }}
       </p>
-      <div class="hero-buttons">
-        <app-button variant="primary">{{ 'home.viewProjects' | translate }}</app-button>
-        <app-button variant="outline">{{ 'home.getInTouch' | translate }}</app-button>
+
+      <div class="home__hero__buttons">
+        <app-button variant="primary" [text]="'home.viewProjects' | translate" icon="ph ph-arrow-right"></app-button>
+        <app-button variant="outline" [text]="'home.getInTouch' | translate" icon="ph ph-paper-plane-tilt"></app-button>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="glow-circle anime-float"></div>
+
+    <div class="home__hero__visual">
+      <div class="home__hero__glow-circle anime-float"></div>
     </div>
   </section>
 
@@ -60,6 +73,4 @@
     <p>{{ 'home.ctaDescription' | translate }}</p>
     <app-button variant="primary">{{ 'home.getInTouch' | translate }}</app-button>
   </section> -->
-
-
 </div>
