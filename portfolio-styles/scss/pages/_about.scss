@@ -98,19 +98,3 @@
 ::ng-deep .ace-one-dark .ace_gutter {
   background: var(--color-secondary) !important;
 }
-
-// @media (max-width: $breakpoint-lg) {
-//   .about-me {
-//     &__content {
-//       display: flex;
-//       flex-direction: column;
-//       gap: 20px;
-//     }
-
-//     &__soft-skills {
-//       display: grid;
-//       grid-template-columns: 1fr 1fr 1fr 1fr;
-//       gap: 20px;
-//     }
-//   }
-// }

@@ -1,3 +1,5 @@
+@use '../abstracts/breakpoints' as *;
+
 .skills-section {
   &__container {
     max-width: 1000px;
@@ -21,7 +23,7 @@
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
 
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: $breakpoint-md) {
       grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
       gap: 15px;
     }

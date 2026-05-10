@@ -15,11 +15,11 @@
         <li [class.active]="menuActive('about-me')">
           <a href="#about-me" (click)="closeMenu()">{{ 'nav.about' | translate }}</a>
         </li>
-        <li [class.active]="menuActive('projects')">
-          <a href="#projects" (click)="closeMenu()">{{ 'nav.projects' | translate }}</a>
-        </li>
         <li [class.active]="menuActive('skills')">
           <a href="#skills" (click)="closeMenu()">{{ 'nav.skills' | translate }}</a>
+        </li>
+        <li [class.active]="menuActive('projects')">
+          <a href="#projects" (click)="closeMenu()">{{ 'nav.projects' | translate }}</a>
         </li>
         <li [class.active]="menuActive('experience')">
           <a href="#experience" (click)="closeMenu()">{{ 'nav.experience' | translate }}</a>

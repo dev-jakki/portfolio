@@ -1,3 +1,5 @@
+@use '../abstracts/breakpoints' as *;
+
 .contact-section {
   &__body {
     display: grid;
@@ -6,7 +8,7 @@
     max-width: 1000px;
     margin: 0 auto;
 
-    @media (max-width: var(--breakpoint-md)) {
+    @media (max-width: $breakpoint-md) {
       grid-template-columns: 1fr;
       gap: 40px;
     }
