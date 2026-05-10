@@ -40,19 +40,25 @@
   },
   "about": {
     "title": "Sobre Mim",
-    "subtitle": "Minha trajetória e diferenciais",
-    "softSkillsExperience": {
+    "subtitle": "Transformo ideias em interfaces que",
+    "subtitle_2": "conectam",
+    "description": "Atualmente atuo como desenvolvedor frontend, mas tenho uma base sólida em desenvolvimento Full-Stack. Gosto de resolver problemas, escrever código limpo e estar sempre aprendendo algo novo.",
+    "softSkills1": {
       "value": "+3",
       "description": "Anos de experiência"
     },
-    "softSkillsTeamwork": {
-      "value": "85%",
-      "description": "Trabalho em Equipe",
-      "obs": "Colaboração eficaz em ambientes dinâmicos."
-    },
-    "softSkillsProblemSolving": {
-      "value": "95%",
+    "softSkills3": {
+      "value": "100%",
       "description": "Resolução de Problemas"
+    },
+    "softSkills2": {
+      "value": "90%",
+      "description": "Capacidade de Liderança"
+    },
+    "softSkills4": {
+      "value": "99%",
+      "description": "Busca por Evolução",
+      "obs": "Evoluindo todos os dias"
     }
   },
   "projects": {

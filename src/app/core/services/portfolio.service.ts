@@ -100,17 +100,21 @@ export class PortfolioService {
     subtitle: 'about.subtitle',
     softSkills: [
       {
-        value: 'about.softSkillsExperience.value',
-        description: 'about.softSkillsExperience.description'
+        value: 'about.softSkills1.value',
+        description: 'about.softSkills1.description'
       },
       {
-        value: 'about.softSkillsTeamwork.value',
-        description: 'about.softSkillsTeamwork.description',
-        obs: 'about.softSkillsTeamwork.obs'
+        value: 'about.softSkills2.value',
+        description: 'about.softSkills2.description',
       },
       {
-        value: 'about.softSkillsProblemSolving.value',
-        description: 'about.softSkillsProblemSolving.description'
+        value: 'about.softSkills3.value',
+        description: 'about.softSkills3.description'
+      },
+      {
+        value: 'about.softSkills4.value',
+        description: 'about.softSkills4.description',
+        obs: 'about.softSkills4.obs'
       }
     ]
   });

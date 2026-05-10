@@ -1,7 +1,7 @@
 @use '../../../assets/styles/mixins' as *;
 
 .header {
-  background: var(--bg-primary);
+  background: var(--color-primary);
   backdrop-filter: blur(5px);
   position: sticky;
   top: 0;
@@ -10,7 +10,7 @@
 }
 
 .header-container {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 20px;
   display: flex;
@@ -165,7 +165,7 @@
   border: 1px solid transparent;
   border-radius: 30px;
   background:
-    linear-gradient(90deg, var(--bg-primary), var(--bg-primary)) padding-box,
+    linear-gradient(90deg, var(--color-primary), var(--color-primary)) padding-box,
     linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end)) border-box;
   color: var(--text-primary);
   text-decoration: none;
@@ -190,7 +190,7 @@
     top: 60px;
     left: 0;
     right: 0;
-    background: var(--bg-primary);
+    background: var(--color-primary);
     flex-direction: column;
     padding: 0 20px;
     max-height: 0;

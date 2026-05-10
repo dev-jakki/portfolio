@@ -1,39 +1,41 @@
-<section id="about-me" class="section">
-  <div class="anime-up">
-    <h2 class="section__title">{{ about().title | translate }}</h2>
-    <p class="section__subtitle">{{ about().subtitle | translate }}</p>
-  </div>
+<section id="about-me" class="about-me section">
+  <div class="about-me__content padding-top">
+    <div class="anime-up">
+      <h2 class="section__title">{{ 'about.title' | translate }}</h2>
+      <div class="section__subtitle">
+        {{ 'about.subtitle' | translate }}
+        <span>{{ 'about.subtitle_2' | translate }}</span>
+      </div>
+      <p class="section__description">
+        {{ 'about.description' | translate }}
+      </p>
 
-  <div class="about-me__soft-skills">
-    @for (skill of about().softSkills; track skill.value) {
-      <div class="soft-skill">
-        <div class="soft-skill__value">{{ skill.value | translate }}</div>
-        <div class="soft-skill__description">{{ skill.description | translate }}</div>
-        @if (skill.obs) {
-          <div class="soft-skill__obs">{{ skill.obs | translate }}</div>
+      <div class="about-me__soft-skills">
+        @for (skill of about().softSkills; track skill.value) {
+          <div class="soft-skill">
+            <div class="soft-skill__value">{{ skill.value | translate }}</div>
+            <div class="soft-skill__description">{{ skill.description | translate }}</div>
+            
+            @if (skill.obs) {
+              <div class="soft-skill__obs">{{ skill.obs | translate }}</div>
+            }
+          </div>
         }
       </div>
-    }
+    </div>
+
+    <div class="about-me__content-code line">
+      <div class="about-me__code-header">
+        <div class="about-me__code-bullets">
+          <span class="about-me__code-bullet"></span>
+          <span class="about-me__code-bullet"></span>
+          <span class="about-me__code-bullet"></span>
+        </div>
+        <div class="about-me__code-file">about-me.ts</div>
+      </div>
+
+      <div #editor class="ace-editor"></div>
+    </div>
   </div>
 </section>
 
-<!-- <app-section id="about-me" [title]="'about.title' | translate" [subtitle]="'about.subtitle' | translate">
-  <section class="stats">
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.experienceYears' | translate }}</div>
-      <div class="stat-label">{{ 'home.experienceLabel' | translate }}</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.projectsCount' | translate }}</div>
-      <div class="stat-label">{{ 'home.projectsLabel' | translate }}</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.qualityPercentage' | translate }}</div>
-      <div class="stat-label">{{ 'home.qualityLabel' | translate }}</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">{{ 'home.infinitySymbol' | translate }}</div>
-      <div class="stat-label">{{ 'home.learningLabel' | translate }}</div>
-    </div>
-  </section>
-</app-section> -->

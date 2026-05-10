@@ -2,26 +2,16 @@
   width: 100%;
 
   &__hero {
+    max-width: var(--max-width);
+    min-height: 75dvh;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    min-height: 75dvh;
-    padding: 0 20px;
     gap: 60px;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-
-    & > div {
-      display: flex;
-      flex-direction: column;
-      row-gap: 16px;
-    }
 
     &__greeting {
       font-size: 1.1rem;
       font-weight: 600;
-      margin: 0 0 10px 0;
       
       background: linear-gradient(90deg, var(--text-primary), var(--text-secondary));
       -webkit-background-clip: text;
@@ -31,17 +21,29 @@
     }
 
     &__title {
-      font-size: 3.5rem;
-      font-weight: 900;
+      font-size: 4.5rem;
+      font-weight: 800;
       line-height: 1.2;
+      margin: 16px 0;
       color: var(--text-primary);
+
+      background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
     }
 
     &__subtitle {
+      max-width: 320px;
       display: flex;
       column-gap: 12px;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 600;
+      margin-top: 16px;
+      overflow: hidden;
+      white-space: nowrap;
+      border-right: 4px solid var(--primary-gradient-start);
     }
 
     &__job {
@@ -70,6 +72,7 @@
     }
 
     &__description {
+      margin-top: 16px;
       font-size: 1.1rem;
       color: var(--text-secondary);
       line-height: 1.6;
@@ -81,6 +84,7 @@
       display: flex;
       gap: 20px;
       flex-wrap: wrap;
+      margin-top: 40px;
     }
 
     &__visual {

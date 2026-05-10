@@ -9,7 +9,7 @@
   border: 1px solid transparent;
   border-radius: 30px;
   background: 
-    linear-gradient(90deg, var(--bg-primary), var(--bg-primary)) padding-box,
+    linear-gradient(90deg, var(--color-primary), var(--color-primary)) padding-box,
     linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end)) border-box;
   color: var(--text-primary);
   cursor: pointer;
@@ -29,7 +29,7 @@
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  background: var(--bg-primary);
+  background: var(--color-primary);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   box-shadow: 0 8px 32px var(--shadow);
@@ -58,7 +58,7 @@
   }
 
   &.active {
-    background: linear-gradient(135deg, var(--primary-gradient-start--focus), var(--primary-gradient-end--focus));
+    background: linear-gradient(135deg, var(--primary-gradient-start--alpha), var(--primary-gradient-end--alpha));
     color: var(--primary-gradient-start);
     font-weight: 600;
   }

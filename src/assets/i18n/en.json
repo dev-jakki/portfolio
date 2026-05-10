@@ -40,7 +40,9 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "My trajectory and differentials",
+    "subtitle": "I transform ideas into interfaces that",
+    "subtitle_2": "connect",
+    "description": "I currently work as a frontend developer, but I have a solid foundation in full-stack development. I enjoy solving problems, writing clean code, and always learning something new.",
     "softSkillsExperience": {
       "value": "+3",
       "description": "Years of experience"

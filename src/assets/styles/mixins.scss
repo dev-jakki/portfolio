@@ -1,8 +1,8 @@
 @mixin hover-alpha {
   &:hover,
   &:focus-visible {
-    background: linear-gradient(90deg, var(--primary-gradient-start--focus), var(--primary-gradient-end--focus)) padding-box,
+    background: linear-gradient(90deg, var(--primary-gradient-start--alpha), var(--primary-gradient-end--alpha)) padding-box,
     linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end)) border-box;
-    color: var(--bg-primary);
+    color: var(--color-primary);
   }
 }

@@ -1,11 +1,11 @@
 .footer {
-  background: var(--bg-primary);
+  background: var(--color-primary);
   border-top: 1px solid var(--border-color);
   margin-top: 60px;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: var(--max-width);
   margin: 0 auto;
   padding: 60px 40px;
 

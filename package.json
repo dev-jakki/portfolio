@@ -19,6 +19,7 @@
     "@angular/router": "^21.2.0",
     "@ngx-translate/core": "^17.0.0",
     "@ngx-translate/http-loader": "^17.0.0",
+    "ace-builds": "^1.43.6",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
