@@ -47,25 +47,25 @@ export class PortfolioService {
   ]);
 
   private readonly skills = signal<Skill[]>([
-    // Frontend
-    { name: 'HTML', category: 'frontend', icon: 'html5' },
-    { name: 'CSS', category: 'frontend', icon: 'css3' },
-    { name: 'JavaScript', category: 'frontend', icon: 'javascript' },
-    { name: 'TypeScript', category: 'frontend', icon: 'typescript' },
-    { name: 'React', category: 'frontend', icon: 'react' },
-    { name: 'Next.js', category: 'frontend', icon: 'nextjs' },
-    { name: 'TailwindCSS', category: 'frontend', icon: 'tailwindcss' },
-    { name: 'Angular', category: 'frontend', icon: 'angular' },
-    // Backend
-    { name: 'Node.js', category: 'backend', icon: 'nodejs' },
-    { name: 'Express', category: 'backend', icon: 'express' },
-    { name: 'MongoDB', category: 'backend', icon: 'mongodb' },
-    { name: 'PostgreSQL', category: 'backend', icon: 'postgresql' },
-    // Tools
-    { name: 'Git', category: 'tools', icon: 'git' },
-    { name: 'GitHub', category: 'tools', icon: 'github' },
-    { name: 'Docker', category: 'tools', icon: 'docker' },
-    { name: 'VS Code', category: 'tools', icon: 'vscode' }
+    { name: 'Angular', icon: '/assets/icons/angular.svg' },
+    { name: 'Java', icon: '/assets/icons/java.svg' },
+    { name: 'Spring Boot', icon: '/assets/icons/spring.svg' },
+    { name: 'JavaScript', icon: '/assets/icons/javascript.svg' },
+    { name: 'TypeScript', icon: '/assets/icons/typescript.svg' },
+    { name: 'Docker', icon: '/assets/icons/docker.svg' },
+    { name: 'Bootstrap', icon: '/assets/icons/bootstrap.svg' },
+    { name: 'HTML', icon: '/assets/icons/html5.svg' },
+    { name: 'CSS', icon: '/assets/icons/css3.svg' },
+    { name: 'React', icon: '/assets/icons/react.svg' },
+    { name: 'Node.js', icon: '/assets/icons/nodejs.svg' },
+    { name: 'MongoDB', icon: '/assets/icons/mongodb.svg' },
+    { name: 'MySQL', icon: '/assets/icons/mysql.svg' },
+    { name: 'PostgreSQL', icon: '/assets/icons/postgresql.svg' },
+    { name: 'Git', icon: '/assets/icons/git.svg' },
+    { name: 'GitHub', icon: '/assets/icons/github.svg' },
+    { name: 'IntelliJ IDEA', icon: '/assets/icons/intellij.svg' },
+    { name: 'Kiro IDE', icon: '/assets/icons/kiro.svg' },
+    { name: 'VS Code', icon: '/assets/icons/vscode.svg' },
   ]);
 
   private readonly experience = signal<Experience[]>([

@@ -14,18 +14,5 @@ import { PortfolioService } from '../../core/services/portfolio.service';
 })
 export class Skills {
   private portfolioService = inject(PortfolioService);
-  private skills = this.portfolioService.getSkills();
-
-  getSkillsByCategory(category: string) {
-    return this.skills().filter(s => s.category === category);
-  }
-
-  getCategoryName(category: string): string {
-    const names: { [key: string]: string } = {
-      'frontend': 'skills.frontend',
-      'backend': 'skills.backend',
-      'tools': 'skills.tools'
-    };
-    return names[category] || category;
-  }
+  public skills = this.portfolioService.getSkills();
 }
