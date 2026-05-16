@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    font-size: 1.7rem;
   }
 
   &__soft-skills {
@@ -20,21 +21,21 @@
       line-height: 1.3;
 
       &__value {
-        font-size: 1.8rem;
+        font-size: 1em;
         font-weight: 600;
         color: var(--primary-gradient-start);
         margin-bottom: 8px;
       }
 
       &__description {
-        font-size: .9rem;
+        font-size: .5em;
         color: var(--text-primary);
       }
 
       &__obs {
         opacity: .9;
         margin-top: 8px;
-        font-size: 0.7rem;
+        font-size: 0.4em;
         color: var(--text-secondary);
         font-style: italic;
       }
@@ -82,7 +83,7 @@
   }
 
   &__code-file {
-    font-size: 0.9rem;
+    font-size: 0.5em;
     color: var(--text-secondary);
     letter-spacing: 0.02em;
   }
@@ -99,18 +100,19 @@
   background: var(--color-secondary) !important;
 }
 
-// @media (max-width: $breakpoint-lg) {
-//   .about-me {
-//     &__content {
-//       display: flex;
-//       flex-direction: column;
-//       gap: 20px;
-//     }
+@media (max-width: 768px) {
+  .about-me {
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 1.4rem;
+    }
 
-//     &__soft-skills {
-//       display: grid;
-//       grid-template-columns: 1fr 1fr 1fr 1fr;
-//       gap: 20px;
-//     }
-//   }
-// }
+    &__soft-skills {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 10px;
+    }
+  }
+}

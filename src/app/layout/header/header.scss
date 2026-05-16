@@ -180,7 +180,7 @@
   @include hover-alpha;
 }
 
-@media (max-width: var(--breakpoint-md)) {
+@media (max-width: 768px) {
   .header {
     padding: 5px 0;
   }
