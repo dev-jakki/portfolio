@@ -1,14 +1,20 @@
-import { Component, ChangeDetectionStrategy, signal, HostListener, ElementRef } from '@angular/core';
+import { Component, ChangeDetectionStrategy, signal, HostListener, ElementRef, ChangeDetectorRef, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { TranslateAppService } from '../../../core/services/translate.service';
 
 @Component({
   selector: 'app-language-selector',
+  standalone: true,
+  imports: [CommonModule, TranslateModule],
   templateUrl: './language-selector.html',
   styleUrl: './language-selector.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LanguageSelectorComponent {
+export class LanguageSelectorComponent implements OnDestroy {
   languageDropdownOpen = signal(false);
+  private languageChangeSubscription?: Subscription;
 
   get languages() {
     return this.translateService.getLanguages();
@@ -16,8 +22,14 @@ export class LanguageSelectorComponent {
 
   constructor(
     public translateService: TranslateAppService,
+    private translate: TranslateService,
     private elementRef: ElementRef,
-  ) {}
+    private cdr: ChangeDetectorRef,
+  ) {
+    this.languageChangeSubscription = this.translate.onLangChange.subscribe(() => {
+      this.cdr.markForCheck();
+    });
+  }
 
   @HostListener('document:click', ['$event'])
   onDocumentClick(event: MouseEvent) {
@@ -38,13 +50,12 @@ export class LanguageSelectorComponent {
     this.languageDropdownOpen.set(false);
   }
 
-  getCurrentLanguageFlag(): string {
-    const current = this.translateService.getLanguage();
-    return this.languages.find((l) => l.code === current)?.flag || 'Language';
-  }
-
   getCurrentLanguageImage(): string {
     const current = this.translateService.getLanguage();
     return this.languages.find((l) => l.code === current)?.image || '🌐';
+  }
+
+  ngOnDestroy(): void {
+    this.languageChangeSubscription?.unsubscribe();
   }
 }

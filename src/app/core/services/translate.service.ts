@@ -40,10 +40,10 @@ export class TranslateAppService {
     return this.currentLanguage();
   }
 
-  getLanguages(): { code: string; name: string; image: string; flag: string }[] {
-		return [
-			{ code: 'pt-BR', name: this.translate.instant('languages.pt-BR.name'), image: 'assets/images/br.png', flag: this.translate.instant('languages.pt-BR.flag') },
-			{ code: 'en', name: this.translate.instant('languages.en.name'), image: 'assets/images/us.png', flag: this.translate.instant('languages.en.flag') },
-		];
-	}
+  getLanguages(): { code: string; label: string; image: string; flag: string }[] {
+    return [
+      { code: 'pt-BR', label: 'languages.pt-BR.name', image: 'assets/images/br.png', flag: 'languages.pt-BR.flag' },
+      { code: 'en', label: 'languages.en.name', image: 'assets/images/us.png', flag: 'languages.en.flag' },
+    ];
+  }
 }
