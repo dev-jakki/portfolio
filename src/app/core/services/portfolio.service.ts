@@ -10,7 +10,7 @@ export class PortfolioService {
       id: 1,
       title: 'projects.project1.title',
       description: 'projects.project1.description',
-      url: 'https://raw.githubusercontent.com/dev-jakki/url-shortening/master/design/desktop-preview.jpg',
+      url: this.getScreenshotUrl("https://url-shortening-jakkifx.netlify.app"),
       technologies: ['Angular', 'TypeScript', 'Bitly API'],
       demoUrl: 'https://url-shortening-jakkifx.netlify.app/',
       githubUrl: 'https://github.com/dev-jakki/url-shortening',
@@ -20,8 +20,8 @@ export class PortfolioService {
       id: 2,
       title: 'projects.project2.title',
       description: 'projects.project2.description',
-      url: 'https://github.com/dev-jakki/dashboard',
-      technologies: ['Next.js', 'TypeScript', 'Chart.js'],
+      url: this.getScreenshotUrl("https://nick-search-jakki.netlify.app"),
+      technologies: ['GitHub API', 'JavaScript', 'Jasmine'],
       demoUrl: '#',
       githubUrl: 'https://github.com/dev-jakki',
       featured: true
@@ -30,7 +30,7 @@ export class PortfolioService {
       id: 3,
       title: 'projects.project3.title',
       description: 'projects.project3.description',
-      url: '/assets/images/ecommerce.png',
+      url: this.getScreenshotUrl("https://todo-jakkifx.netlify.app"),
       technologies: ['React', 'Node.js', 'MongoDB'],
       demoUrl: '#',
       githubUrl: 'https://github.com/dev-jakki'
@@ -144,5 +144,9 @@ export class PortfolioService {
 
   getAbout() {
     return this.about;
+  }
+
+  getScreenshotUrl(url: string): string {
+    return `https://api.microlink.io/?url=${encodeURIComponent(url)}&screenshot=true&meta=false&embed=screenshot.url`;
   }
 }

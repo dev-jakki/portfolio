@@ -6,36 +6,41 @@
     </div>
 
     <div class="projects__grid">
-      @for (project of portfolioService.getProjects()(); track project.id) {
-        <app-card>
-          <article class="project-card">
-            <div class="project-card__image">
-              <img [src]="project.url" alt="Image project" />
+      <div class="carousel__wrapper">
+        <button class="carousel__btn carousel__btn--prev" (click)="prev()" [disabled]="!canPrev" aria-label="Previous project">
+          <i class="ph ph-caret-left"></i>
+        </button>
 
-              <div class="project-card__tech">
-                @for (tech of project.technologies; track tech) {
-                  <span class="project-card__badge">{{ tech }}</span>
-                }
+        <div class="carousel">
+          <div class="carousel__track" [style.transform]="transformPercent">
+            <app-card *ngFor="let project of projects; let i = index; trackBy: trackById">
+            <article class="project-card">
+              <div class="project-card__image">
+                <img [src]="project.url" alt="Image project" />
+
+                <div class="project-card__tech">
+                  <span class="project-card__badge" *ngFor="let tech of project.technologies">{{ tech }}</span>
+                </div>
               </div>
-            </div>
 
-            <div class="project-card__info">
-              <h3 class="project-card__title">{{ project.title | translate }}</h3>
-              <p class="project-card__description">{{ project.description | translate }}</p>
-              
-
-              <div class="project-card__links">
-                @if (project.demoUrl) {
-                  <a [href]="project.demoUrl" target="_blank">Demo →</a>
-                }
-                @if (project.githubUrl) {
-                  <a [href]="project.githubUrl" target="_blank">GitHub →</a>
-                }
+              <div class="project-card__info">
+                <h3 class="project-card__title">{{ project.title | translate }}</h3>
+                <p class="project-card__description">{{ project.description | translate }}</p>
+                
+                <div class="project-card__links">
+                  <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank">Demo →</a>
+                  <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank">GitHub →</a>
+                </div>
               </div>
-            </div>
-          </article>
-        </app-card>
-      }
+            </article>
+          </app-card>
+          </div>
+        </div>
+
+        <button class="carousel__btn carousel__btn--next" (click)="next()" [disabled]="!canNext" aria-label="Next project">
+          <i class="ph ph-caret-right"></i>
+        </button>
+      </div>
     </div>
   </div>
 </section>

@@ -66,19 +66,19 @@
     "subtitle": "Alguns trabalhos em destaque",
     "project1": {
       "title": "URL Shortening",
-      "description": "Plataforma de estudos com gerenciamento de cronograma de estudos com gráficos e análise de progresso."
+      "description": "Plataforma de encurtamento de URLs integrado ao Bitly API."
     },
     "project2": {
       "title": "GitHub Searching",
-      "description": "Dashboard interativo com gráficos em tempo real para controle de finanças pessoais."
+      "description": "Página de pesquisa por apelido usando a API do GitHub."
     },
     "project3": {
       "title": "To do",
-      "description": "Aplicação web para gerenciamento de tarefas com sincronização em tempo real."
+      "description": "Site responsivo para gerenciamento de tarefas."
     },
     "project4": {
       "title": "Loop Studios",
-      "description": "Aplicação web para gerenciamento de tarefas com sincronização em tempo real."
+      "description": "Aplicação web para gerenciamento de tarefas."
     }
   },
   "skills": {
