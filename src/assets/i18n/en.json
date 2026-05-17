@@ -60,20 +60,20 @@
   "projects": {
     "title": "Projects",
     "subtitle": "Works and professional experiences",
-    "devstudies": {
-      "title": "DevStudies",
+    "project1": {
+      "title": "URL Shortening",
       "description": "Study platform with study schedule management with charts and progress analysis."
     },
-    "dashboard": {
-      "title": "Financial Dashboard",
+    "project2": {
+      "title": "GitHub Searching",
       "description": "Interactive dashboard with real-time charts for personal finance control."
     },
-    "ecommerce": {
-      "title": "E-commerce Platform",
-      "description": "Complete e-commerce platform with payment integration and product management."
+    "project3": {
+      "title": "To do",
+      "description": "Web application for task management with real-time synchronization."
     },
-    "taskmanager": {
-      "title": "Task Manager App",
+    "project4": {
+      "title": "Loop Studios",
       "description": "Web application for task management with real-time synchronization."
     }
   },

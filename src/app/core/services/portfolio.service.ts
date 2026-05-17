@@ -8,19 +8,19 @@ export class PortfolioService {
   private readonly projects = signal<Project[]>([
     {
       id: 1,
-      title: 'projects.devstudies.title',
-      description: 'projects.devstudies.description',
-      image: '/assets/images/dev-studies.png',
-      technologies: ['React', 'TypeScript', 'TailwindCSS'],
-      demoUrl: '#',
-      githubUrl: 'https://github.com/dev-jakki',
+      title: 'projects.project1.title',
+      description: 'projects.project1.description',
+      url: 'https://raw.githubusercontent.com/dev-jakki/url-shortening/master/design/desktop-preview.jpg',
+      technologies: ['Angular', 'TypeScript', 'Bitly API'],
+      demoUrl: 'https://url-shortening-jakkifx.netlify.app/',
+      githubUrl: 'https://github.com/dev-jakki/url-shortening',
       featured: true
     },
     {
       id: 2,
-      title: 'projects.dashboard.title',
-      description: 'projects.dashboard.description',
-      image: '/assets/images/dashboard.png',
+      title: 'projects.project2.title',
+      description: 'projects.project2.description',
+      url: 'https://github.com/dev-jakki/dashboard',
       technologies: ['Next.js', 'TypeScript', 'Chart.js'],
       demoUrl: '#',
       githubUrl: 'https://github.com/dev-jakki',
@@ -28,18 +28,18 @@ export class PortfolioService {
     },
     {
       id: 3,
-      title: 'projects.ecommerce.title',
-      description: 'projects.ecommerce.description',
-      image: '/assets/images/ecommerce.png',
+      title: 'projects.project3.title',
+      description: 'projects.project3.description',
+      url: '/assets/images/ecommerce.png',
       technologies: ['React', 'Node.js', 'MongoDB'],
       demoUrl: '#',
       githubUrl: 'https://github.com/dev-jakki'
     },
     {
       id: 4,
-      title: 'projects.taskmanager.title',
-      description: 'projects.taskmanager.description',
-      image: '/assets/images/task-manager.png',
+      title: 'projects.project4.title',
+      description: 'projects.project4.description',
+      url: '/assets/images/task-manager.png',
       technologies: ['Angular', 'Firebase', 'TypeScript'],
       demoUrl: '#',
       githubUrl: 'https://github.com/dev-jakki'
@@ -47,25 +47,25 @@ export class PortfolioService {
   ]);
 
   private readonly skills = signal<Skill[]>([
-    { name: 'Angular', icon: '/assets/icons/angular.svg' },
-    { name: 'Java', icon: '/assets/icons/java.svg' },
-    { name: 'Spring Boot', icon: '/assets/icons/spring.svg' },
-    { name: 'JavaScript', icon: '/assets/icons/javascript.svg' },
-    { name: 'TypeScript', icon: '/assets/icons/typescript.svg' },
-    { name: 'Docker', icon: '/assets/icons/docker.svg' },
-    { name: 'Bootstrap', icon: '/assets/icons/bootstrap.svg' },
-    { name: 'HTML', icon: '/assets/icons/html5.svg' },
-    { name: 'CSS', icon: '/assets/icons/css3.svg' },
-    { name: 'React', icon: '/assets/icons/react.svg' },
-    { name: 'Node.js', icon: '/assets/icons/nodejs.svg' },
-    { name: 'MongoDB', icon: '/assets/icons/mongodb.svg' },
-    { name: 'MySQL', icon: '/assets/icons/mysql.svg' },
-    { name: 'PostgreSQL', icon: '/assets/icons/postgresql.svg' },
-    { name: 'Git', icon: '/assets/icons/git.svg' },
-    { name: 'GitHub', icon: '/assets/icons/github.svg' },
-    { name: 'IntelliJ IDEA', icon: '/assets/icons/intellij.svg' },
-    { name: 'Kiro IDE', icon: '/assets/icons/kiro.svg' },
-    { name: 'VS Code', icon: '/assets/icons/vscode.svg' },
+    { name: 'Angular', icon: '/assets/images/angular.png' },
+    { name: 'Java', icon: '/assets/images/java.png' },
+    { name: 'Spring Boot', icon: '/assets/images/spring.png' },
+    { name: 'JavaScript', icon: '/assets/images/javascript.png' },
+    { name: 'TypeScript', icon: '/assets/images/typescript.png' },
+    { name: 'Docker', icon: '/assets/images/docker.png' },
+    { name: 'Bootstrap', icon: '/assets/images/bootstrap.png' },
+    { name: 'HTML', icon: '/assets/images/html.png' },
+    { name: 'CSS', icon: '/assets/images/css.png' },
+    { name: 'React', icon: '/assets/images/react.png' },
+    { name: 'Node.js', icon: '/assets/images/nodejs.png' },
+    { name: 'MongoDB', icon: '/assets/images/mongodb.png' },
+    { name: 'MySQL', icon: '/assets/images/mysql.png' },
+    { name: 'PostgreSQL', icon: '/assets/images/postgresql.png' },
+    { name: 'Git', icon: '/assets/images/git.png' },
+    { name: 'GitHub', icon: '/assets/images/github.png' },
+    { name: 'IntelliJ IDEA', icon: '/assets/images/intellij.png' },
+    { name: 'Kiro IDE', icon: '/assets/images/kiro.svg' },
+    { name: 'VS Code', icon: '/assets/images/vscode.png' },
   ]);
 
   private readonly experience = signal<Experience[]>([
@@ -120,10 +120,10 @@ export class PortfolioService {
   });
 
   private readonly contact: ContactData = {
-    email: 'jackcielf@gmail.com',
+    email: 'jackcielfelix.dev@gmail.com',
     linkedin: 'https://www.linkedin.com/in/jackcielf',
     github: 'https://github.com/dev-jakki',
-    instagram: 'https://instagram.com'
+    instagram: 'https://instagram.com/dev_jakki'
   };
 
   getProjects() {

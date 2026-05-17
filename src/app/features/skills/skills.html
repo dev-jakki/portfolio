@@ -9,25 +9,21 @@
       <div class="skills__carousel" aria-label="Skills carousel">
         <div class="skills__track" role="list">
           @for (skill of skills(); track skill.name) {
-            <app-card role="listitem">
-              <div class="skill-card">
-                <div class="skill-card__icon" [title]="skill.name">
-                  <img [src]="skill.icon" [alt]="skill.name + ' logo'" />
-                </div>
-                <span class="skill-card__name">{{ skill.name }}</span>
+            <div class="skill-card">
+              <div class="skill-card__icon" [title]="skill.name">
+                <img [src]="skill.icon" [alt]="skill.name + ' logo'" />
               </div>
-            </app-card>
+              <span class="skill-card__name">{{ skill.name }}</span>
+            </div>
           }
 
           @for (skill of skills(); track skill.name) {
-            <app-card role="listitem">
-              <div class="skill-card">
-                <div class="skill-card__icon" [title]="skill.name">
-                  <img [src]="skill.icon" [alt]="skill.name + ' logo'" />
-                </div>
-                <span class="skill-card__name">{{ skill.name }}</span>
+            <div class="skill-card">
+              <div class="skill-card__icon" [title]="skill.name">
+                <img [src]="skill.icon" [alt]="skill.name + ' logo'" />
               </div>
-            </app-card>
+              <span class="skill-card__name">{{ skill.name }}</span>
+            </div>
           }
         </div>
       </div>

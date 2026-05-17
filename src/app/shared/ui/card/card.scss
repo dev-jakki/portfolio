@@ -2,8 +2,10 @@
   background: var(--bg-tertiary);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  padding: 24px;
+  // padding: 24px;
   transition: all 0.3s ease;
+  overflow: hidden;
+  max-width: 350px;
 
   &:hover {
     border-color: var(--primary-gradient-start);

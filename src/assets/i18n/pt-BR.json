@@ -62,22 +62,22 @@
     }
   },
   "projects": {
-    "title": "Projetos",
-    "subtitle": "Trabalhos e experiências profissionais",
-    "devstudies": {
-      "title": "DevStudies",
+    "title": "Meus Projetos",
+    "subtitle": "Alguns trabalhos em destaque",
+    "project1": {
+      "title": "URL Shortening",
       "description": "Plataforma de estudos com gerenciamento de cronograma de estudos com gráficos e análise de progresso."
     },
-    "dashboard": {
-      "title": "Dashboard Financeiro",
+    "project2": {
+      "title": "GitHub Searching",
       "description": "Dashboard interativo com gráficos em tempo real para controle de finanças pessoais."
     },
-    "ecommerce": {
-      "title": "E-commerce Platform",
-      "description": "Plataforma de e-commerce completa com integração de pagamentos e gerenciamento de produtos."
+    "project3": {
+      "title": "To do",
+      "description": "Aplicação web para gerenciamento de tarefas com sincronização em tempo real."
     },
-    "taskmanager": {
-      "title": "Task Manager App",
+    "project4": {
+      "title": "Loop Studios",
       "description": "Aplicação web para gerenciamento de tarefas com sincronização em tempo real."
     }
   },

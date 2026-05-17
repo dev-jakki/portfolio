@@ -1,35 +1,41 @@
-<section id="projects" class="section projects-section">
-  <div class="anime-up">
-    <h2 class="section__title">{{ 'projects.title' | translate }}</h2>
-    <p class="section__subtitle">{{ 'projects.subtitle' | translate }}</p>
-  </div>
+<section id="projects" class="projects section">
+  <div class="projects__content padding-top">
+    <div class="anime-up">
+      <h2 class="section__title">{{ 'projects.title' | translate }}</h2>
+      <p class="section__subtitle">{{ 'projects.subtitle' | translate }}</p>
+    </div>
 
-  <div class="projects-section__grid">
-    @for (project of portfolioService.getProjects()(); track project.id) {
-      <app-card>
-        <article class="project-card">
-          <div class="project-card__image">
-            <div class="project-card__placeholder"></div>
-          </div>
-          <div class="project-card__info">
-            <h3 class="project-card__title">{{ project.title | translate }}</h3>
-            <p class="project-card__description">{{ project.description | translate }}</p>
-            <div class="project-card__tech">
-              @for (tech of project.technologies; track tech) {
-                <span class="project-card__badge">{{ tech }}</span>
-              }
+    <div class="projects__grid">
+      @for (project of portfolioService.getProjects()(); track project.id) {
+        <app-card>
+          <article class="project-card">
+            <div class="project-card__image">
+              <img [src]="project.url" alt="Image project" />
+
+              <div class="project-card__tech">
+                @for (tech of project.technologies; track tech) {
+                  <span class="project-card__badge">{{ tech }}</span>
+                }
+              </div>
             </div>
-            <div class="project-card__links">
-              @if (project.demoUrl) {
-                <a [href]="project.demoUrl" target="_blank">Demo →</a>
-              }
-              @if (project.githubUrl) {
-                <a [href]="project.githubUrl" target="_blank">GitHub →</a>
-              }
+
+            <div class="project-card__info">
+              <h3 class="project-card__title">{{ project.title | translate }}</h3>
+              <p class="project-card__description">{{ project.description | translate }}</p>
+              
+
+              <div class="project-card__links">
+                @if (project.demoUrl) {
+                  <a [href]="project.demoUrl" target="_blank">Demo →</a>
+                }
+                @if (project.githubUrl) {
+                  <a [href]="project.githubUrl" target="_blank">GitHub →</a>
+                }
+              </div>
             </div>
-          </div>
-        </article>
-      </app-card>
-    }
+          </article>
+        </app-card>
+      }
+    </div>
   </div>
 </section>
