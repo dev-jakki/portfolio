@@ -1,8 +1,12 @@
 <section id="projects" class="projects section">
   <div class="projects__content padding-top">
-    <div class="anime-up">
+    <div class="anime-left">
       <h2 class="section__title">{{ 'projects.title' | translate }}</h2>
       <p class="section__subtitle">{{ 'projects.subtitle' | translate }}</p>
+      <p class="section__description">
+        {{ 'projects.description' | translate }}
+      </p>
+      <app-button variant="outline" [text]="'projects.viewAll' | translate" icon="ph ph-arrow-right"></app-button>
     </div>
 
     <div class="projects__grid">

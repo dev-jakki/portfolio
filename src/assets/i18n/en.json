@@ -60,6 +60,8 @@
   "projects": {
     "title": "Projects",
     "subtitle": "Works and professional experiences",
+    "description": "A selection of interesting projects I have done.",
+    "viewAll": "View all projects",
     "project1": {
       "title": "URL Shortening",
       "description": "Study platform with study schedule management with charts and progress analysis."
@@ -87,23 +89,35 @@
   "experience": {
     "title": "Experience",
     "subtitle": "Professional trajectory",
-    "freelancer": {
-      "company": "Frontend Developer",
-      "position": "Freelancer",
+    "toggle": "Toggle details",
+    "company1": {
+      "position": "Frontend Developer",
+      "company": "Freelancer",
       "period": "Currently",
-      "description": "Developing modern interfaces, reusable components and digital experiences with the best technologies on the market."
+      "status": "Current",
+      "description": "Developing modern interfaces, reusable components and digital experiences with the best technologies on the market.",
+      "detail1": "Developed new features using React, TypeScript and Next.js",
+      "detail2": "Maintained and refactored reusable components",
+      "detail3": "Optimized performance and user experience",
+      "detail4": "Integrated with REST and GraphQL APIs"
     },
-    "techxyz": {
-      "company": "Tech XYZ Company",
+    "company2": {
       "position": "Full Stack Developer",
+      "company": "Tech XYZ Company",
       "period": "2023 - 2024",
-      "description": "Development of scalable web applications, REST APIs and performance optimization. Working in agile team."
+      "description": "Development of scalable web applications, REST APIs and performance optimization. Working in agile team.",
+      "detail1": "Led scalable web projects using React and Node.js",
+      "detail2": "Implemented REST APIs and integrated external services",
+      "detail3": "Supported agile development in a multidisciplinary team"
     },
-    "startupabc": {
+    "company3": {
       "company": "ABC Startup",
       "position": "Frontend Developer",
       "period": "2022 - 2023",
-      "description": "Creation of responsive interfaces, reusable components and implementation of unit tests."
+      "description": "Creation of responsive interfaces, reusable components and implementation of unit tests.",
+      "detail1": "Built responsive interfaces with strong usability focus",
+      "detail2": "Developed reusable components and maintained application code",
+      "detail3": "Introduced unit testing and improved performance"
     }
   },
   "contact": {

@@ -22,7 +22,7 @@ button {
   }
 
   &:focus-visible {
-    outline: 2px solid var(--primary-gradient-start);
+    outline: 2px solid var(--color-primary-500);
     outline-offset: 2px;
   }
 
@@ -33,20 +33,20 @@ button {
 
 .btn-primary {
   background:
-    linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end)) padding-box,
-    linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end)) border-box;
+    linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500)) padding-box,
+    linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500)) border-box;
   color: white;
 
   &:hover:not(:disabled) {
-    box-shadow: 0 0 30px var(--shadow);
+    box-shadow: 0 0 30px var(--color-tertiary--alpha-300);
   }
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid var(--primary-gradient-start);
+  border: 2px solid var(--color-primary-500);
 
   &:hover:not(:disabled) {
-    background: var(--hover);
+    background: var(--color-tertiary--alpha-100);
   }
 }

@@ -16,8 +16,8 @@
       height: 100%;
       background: linear-gradient(
         135deg,
-        var(--primary-gradient-start),
-        var(--primary-gradient-end)
+        var(--color-primary-500),
+        var(--color-secondary-500)
       );
 
       @media (max-width: $breakpoint-md) {
@@ -78,7 +78,7 @@
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: var(--primary-gradient-start);
+    background: var(--color-primary-500);
     border: 3px solid var(--color-primary);
     z-index: 10;
     grid-column: 2;
@@ -118,7 +118,7 @@
 
 .experience-card__period {
   background: rgba(99, 102, 241, 0.2);
-  color: var(--primary-gradient-start);
+  color: var(--color-primary-500);
   padding: 4px 12px;
   border-radius: 20px;
   font-size: 0.85rem;

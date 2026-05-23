@@ -2,22 +2,77 @@ $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
 
 :root {
-  --primary-gradient-start: #6366F1;
-  --primary-gradient-start--alpha: #6365f13f;
-  --primary-gradient-end: #0e48e9;
-  --primary-gradient-end--alpha: #0e48e946;
-
-  --primary-gradient-start--alpha: #a955f744;
-  --primary-gradient-end--alpha: #dab3ff41;
-
-  --primary-gradient-start--alpha-2: rgba(99, 102, 241, 0.1);
-  --primary-gradient-end--alpha-2: rgba(168, 85, 247, 0.1);
-
-  --shadow: #a955f767;
-  --hover: rgba(99, 102, 241, 0.1);
-  
-  --success: #22C55E;
-
   --max-width: 1200px;
-  
+
+  // PRIMARY
+  --color-primary-50:  #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+
+  // PRIMARY ALPHAS
+  --color-primary--alpha-50:  #6366f10d;
+  --color-primary--alpha-100: #6366f11a;
+  --color-primary--alpha-200: #6366f133;
+  --color-primary--alpha-300: #6366f14d;
+  --color-primary--alpha-400: #6366f166;
+  --color-primary--alpha-500: #6366f180;
+  --color-primary--alpha-600: #6366f199;
+  --color-primary--alpha-700: #6366f1b3;
+  --color-primary--alpha-800: #6366f1cc;
+  --color-primary--alpha-900: #6366f1e6;
+
+  // SECONDARY
+  --color-secondary-50:  #edf3ff;
+  --color-secondary-100: #dbe7ff;
+  --color-secondary-200: #bfd3ff;
+  --color-secondary-300: #93b5ff;
+  --color-secondary-400: #5d8cff;
+  --color-secondary-500: #0e48e9;
+  --color-secondary-600: #0b3fd4;
+  --color-secondary-700: #0934b0;
+  --color-secondary-800: #082b8f;
+  --color-secondary-900: #07236f;
+
+  // SECONDARY ALPHAS
+  --color-secondary--alpha-50:  #0e48e90d;
+  --color-tertiary--alpha-100: #0e48e91a;
+  --color-secondary--alpha-200: #0e48e933;
+  --color-tertiary--alpha-100: #0e48e94d;
+  --color-secondary--alpha-400: #0e48e966;
+  --color-secondary--alpha-500: #0e48e980;
+  --color-secondary--alpha-600: #0e48e999;
+  --color-secondary--alpha-700: #0e48e9b3;
+  --color-secondary--alpha-800: #0e48e9cc;
+  --color-secondary--alpha-900: #0e48e9e6;
+
+  // TERTIARY
+  --color-tertiary-50:  #faf5ff;
+  --color-tertiary-100: #f3e8ff;
+  --color-tertiary-200: #e9d5ff;
+  --color-tertiary-300: #d8b4fe;
+  --color-tertiary-400: #c084fc;
+  --color-tertiary-500: #a855f7;
+  --color-tertiary-600: #9333ea;
+  --color-tertiary-700: #7e22ce;
+  --color-tertiary-800: #6b21a8;
+  --color-tertiary-900: #581c87;
+
+  // TERTIARY ALPHAS
+  --color-tertiary--alpha-50:  #a855f70d;
+  --color-tertiary--alpha-100: #a855f71a;
+  --color-tertiary--alpha-200: #a855f733;
+  --color-tertiary--alpha-300: #a855f74d;
+  --color-tertiary--alpha-400: #a855f766;
+  --color-tertiary--alpha-500: #a855f780;
+  --color-tertiary--alpha-600: #a855f799;
+  --color-tertiary--alpha-700: #a855f7b3;
+  --color-tertiary--alpha-800: #a855f7cc;
+  --color-tertiary--alpha-900: #a855f7e6;
 }

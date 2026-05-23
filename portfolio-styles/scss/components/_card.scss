@@ -6,7 +6,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-    border-color: var(--primary-gradient-start);
+    border-color: var(--color-primary-500);
     box-shadow: 0 0 20px rgba(99, 102, 241, 0.2);
   }
 }

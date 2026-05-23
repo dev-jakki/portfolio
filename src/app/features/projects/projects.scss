@@ -46,7 +46,7 @@
 .project-card__placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
+  background: linear-gradient(135deg, var(--color-primary-500), var(--color-secondary-500));
   opacity: 0.2;
 }
 
@@ -73,7 +73,8 @@
 
 .project-card__tech {
   position: absolute;
-  bottom: 0;
+  left: 1px;
+  bottom: -1px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -99,13 +100,13 @@
 }
 
 .project-card__links a {
-  color: var(--primary-gradient-start);
+  color: var(--color-primary-500);
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
 
   &:hover {
-    color: var(--primary-gradient-end);
+    color: var(--color-secondary-500);
   }
 }
 
@@ -126,7 +127,7 @@
   flex: 0 0 calc(100% / 3);
   max-width: calc(100% / 3);
   box-sizing: border-box;
-  padding: 0 12px;
+  padding: 0 8px;
 }
 
 .carousel__track {
@@ -161,7 +162,6 @@
 .carousel__wrapper {
   display: flex;
   align-items: center;
-  gap: 12px;
   width: 100%;
 }
 

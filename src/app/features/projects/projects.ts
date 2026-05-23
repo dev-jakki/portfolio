@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { CardComponent } from '../../shared/ui/card/card';
 import { PortfolioService } from '../../core/services/portfolio.service';
+import { ButtonComponent } from '../../shared/ui/button/button';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [CommonModule, TranslateModule, CardComponent],
+  imports: [CommonModule, TranslateModule, CardComponent, ButtonComponent],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

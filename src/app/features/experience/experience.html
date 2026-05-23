@@ -1,33 +1,63 @@
-<section id="experience" class="section experience-section">
-  <div class="anime-up">
-    <h2 class="section__title">{{ 'experience.title' | translate }}</h2>
-    <p class="section__subtitle">{{ 'experience.subtitle' | translate }}</p>
-  </div>
+<section id="experience" class="experience section">
+  <div class="experience__content padding-top">
+    <div class="anime-left">
+      <h2 class="section__title">{{ 'experience.title' | translate }}</h2>
+    </div>
 
-  <div class="experience-section__timeline">
-    @for (exp of portfolioService.getExperience()(); track exp.id; let i = $index) {
-      <div class="experience-section__item">
-        <div class="experience-section__dot"></div>
-        <div class="experience-section__content">
-          <app-card>
-            <article class="experience-card">
-              <header class="experience-card__header">
-                <h3 class="experience-card__company">{{ exp.company | translate }}</h3>
-                <span class="experience-card__period">{{ exp.period | translate }}</span>
-              </header>
-              <h4 class="experience-card__position">{{ exp.position | translate }}</h4>
-              <p class="experience-card__description">{{ exp.description | translate }}</p>
-              @if (exp.technologies && exp.technologies.length > 0) {
-                <div class="experience-card__technologies">
-                  @for (tech of exp.technologies; track tech) {
+    <div class="experience__timeline">
+      @for (exp of portfolioService.getExperience()(); track exp.id; let i = $index) {
+        <article class="experience-card">
+          <div class="experience-card__header">
+            <div class="experience-card__brand">
+              <div class="experience-card__icon">
+                {{ exp.position | translate | slice:0:1 }}
+              </div>
+              <div class="experience-card__title-group">
+                <h3 class="experience-card__position">{{ exp.position | translate }}</h3>
+                <p class="experience-card__company">{{ exp.company | translate }}</p>
+              </div>
+            </div>
+
+            <div class="experience-card__meta">
+              <span class="experience-card__period">{{ exp.period | translate }}</span>
+              @if (exp.status) {
+                <span class="experience-card__status">{{ exp.status | translate }}</span>
+              }
+              <button class="experience-card__toggle" type="button" aria-label="{{ 'experience.toggle' | translate }}">
+                <span class="experience-card__toggle-icon">▾</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="experience-card__body">
+            <p class="experience-card__description">{{ exp.description | translate }}</p>
+
+            @if (exp.details && exp.details.length > 0) {
+              <ul class="experience-card__details">
+                @for (detail of exp.details; track detail) {
+                  <li>{{ detail | translate }}</li>
+                }
+              </ul>
+            }
+
+            @if (exp.technologies && exp.technologies.length > 0) {
+              <div class="experience-card__technologies">
+                @for (tech of exp.technologies; track tech) {
+                  @if (getTechIcon(tech)) {
+                    <span class="experience-card__tech-tag">
+                      <img class="experience-card__tech-icon" src="{{ getTechIcon(tech) }}" alt="{{ tech }}">
+                      <span class="experience-card__tech-name">{{ tech }}</span>
+                    </span>
+                  }
+                  @if (!getTechIcon(tech)) {
                     <span class="experience-card__tech-tag">{{ tech }}</span>
                   }
-                </div>
-              }
-            </article>
-          </app-card>
-        </div>
-      </div>
-    }
+                }
+              </div>
+            }
+          </div>
+        </article>
+      }
+    </div>
   </div>
 </section>

@@ -4,17 +4,17 @@ body {
 }
 
 a {
-  color: var(--primary-gradient-start);
+  color: var(--color-primary-500);
   text-decoration: none;
   transition: color var(--transition-normal);
 
   &:hover,
   &:focus-visible {
-    color: var(--primary-gradient-end);
+    color: var(--color-secondary-500);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--primary-gradient-start);
+    outline: 2px solid var(--color-primary-500);
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -24,7 +24,7 @@ button {
   font-family: inherit;
 
   &:focus-visible {
-    outline: 2px solid var(--primary-gradient-start);
+    outline: 2px solid var(--color-primary-500);
     outline-offset: 2px;
   }
 }
@@ -35,7 +35,7 @@ select {
   font-family: inherit;
 
   &:focus-visible {
-    outline: 2px solid var(--primary-gradient-start);
+    outline: 2px solid var(--color-primary-500);
     outline-offset: 2px;
   }
 }
@@ -51,22 +51,22 @@ select {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-gradient-start);
+  background: var(--color-primary-500);
   border-radius: 5px;
 
   &:hover {
-    background: var(--primary-gradient-end);
+    background: var(--color-secondary-500);
   }
 }
 
 /* Selection Styling */
 ::selection {
-  background: var(--primary-gradient-start);
+  background: var(--color-primary-500);
   color: white;
 }
 
 ::-moz-selection {
-  background: var(--primary-gradient-start);
+  background: var(--color-primary-500);
   color: white;
 }
 
@@ -96,6 +96,6 @@ select {
 
 /* Focus visible for keyboard navigation */
 *:focus-visible {
-  outline: 2px solid var(--primary-gradient-start);
+  outline: 2px solid var(--color-primary-500);
   outline-offset: 2px;
 }

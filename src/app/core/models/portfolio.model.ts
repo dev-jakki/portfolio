@@ -20,7 +20,9 @@ export interface Experience {
   company: string;
   position: string;
   period: string;
+  status?: string;
   description: string;
+  details?: string[];
   technologies?: string[];
 }
 

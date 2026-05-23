@@ -50,7 +50,7 @@
 
       &:focus {
         outline: none;
-        border-color: var(--primary-gradient-start);
+        border-color: var(--color-primary-500);
         box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
       }
     }
@@ -82,14 +82,14 @@
     }
 
     & > a {
-      color: var(--primary-gradient-start);
+      color: var(--color-primary-500);
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
       display: inline-block;
 
       &:hover {
-        color: var(--primary-gradient-end);
+        color: var(--color-secondary-500);
       }
     }
   }

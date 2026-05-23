@@ -71,28 +71,19 @@ export class PortfolioService {
   private readonly experience = signal<Experience[]>([
     {
       id: 1,
-      company: 'experience.freelancer.company',
-      position: 'experience.freelancer.position',
-      period: 'experience.freelancer.period',
-      description: 'experience.freelancer.description',
-      technologies: ['React', 'Next.js', 'TypeScript', 'TailwindCSS']
+      company: 'experience.company1.company',
+      position: 'experience.company1.position',
+      period: 'experience.company1.period',
+      status: 'experience.company1.status',
+      description: 'experience.company1.description',
+      details: [
+        'experience.company1.detail1',
+        'experience.company1.detail2',
+        'experience.company1.detail3',
+        'experience.company1.detail4'
+      ],
+      technologies: ['React', 'TypeScript', 'Next.js', 'TailwindCSS']
     },
-    {
-      id: 2,
-      company: 'experience.techxyz.company',
-      position: 'experience.techxyz.position',
-      period: 'experience.techxyz.period',
-      description: 'experience.techxyz.description',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Docker']
-    },
-    {
-      id: 3,
-      company: 'experience.startupabc.company',
-      position: 'experience.startupabc.position',
-      period: 'experience.startupabc.period',
-      description: 'experience.startupabc.description',
-      technologies: ['React', 'TypeScript', 'Jest', 'Storybook']
-    }
   ]);
 
   private readonly about = signal<AboutData>({

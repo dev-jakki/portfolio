@@ -8,7 +8,7 @@
   height: 42px;
   border: 1px solid transparent;
   border-radius: 9999px;
-  background: linear-gradient(90deg, var(--primary-gradient-start), var(--primary-gradient-end));
+  background: linear-gradient(90deg, var(--color-primary-500), var(--color-secondary-500));
   color: var(--text-primary);
   cursor: pointer;
   display: grid;
@@ -17,7 +17,7 @@
 
   &:hover {
     transform: scale(.95);
-    box-shadow: 0 14px 30px var(--shadow);
+    box-shadow: 0 14px 30px var(--color-tertiary--alpha-300);
     opacity: .8;
   }
 

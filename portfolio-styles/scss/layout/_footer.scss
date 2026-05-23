@@ -57,17 +57,17 @@
 
     &:hover,
     &:focus-visible {
-      color: var(--primary-gradient-start);
+      color: var(--color-primary-500);
     }
   }
 
   .contact-email {
     display: inline-block;
-    color: var(--primary-gradient-start);
+    color: var(--color-primary-500);
     font-weight: 600;
 
     &:hover {
-      color: var(--primary-gradient-end);
+      color: var(--color-secondary-500);
     }
   }
 }

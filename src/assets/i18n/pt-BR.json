@@ -64,6 +64,8 @@
   "projects": {
     "title": "Meus Projetos",
     "subtitle": "Alguns trabalhos em destaque",
+    "description": "Uma seleção dos meus projetos interessantes que fiz.",
+    "viewAll": "Ver todos os projetos",
     "project1": {
       "title": "URL Shortening",
       "description": "Plataforma de encurtamento de URLs integrado ao Bitly API."
@@ -91,23 +93,17 @@
   "experience": {
     "title": "Experiência",
     "subtitle": "Trajetória profissional",
-    "freelancer": {
-      "company": "Desenvolvedor Frontend",
-      "position": "Freelancer",
-      "period": "Atualmente",
-      "description": "Desenvolvendo interfaces modernas, componentes reutilizáveis e experiências digitais com as melhores tecnologias do mercado."
-    },
-    "techxyz": {
-      "company": "Empresa Tech XYZ",
-      "position": "Desenvolvedor Full Stack",
-      "period": "2023 - 2024",
-      "description": "Desenvolvimento de aplicações web escaláveis, APIs REST e otimização de performance. Trabalhando em equipe ágil."
-    },
-    "startupabc": {
-      "company": "Startup ABC",
+    "toggle": "Alternar detalhes",
+    "company1": {
       "position": "Desenvolvedor Frontend",
-      "period": "2022 - 2023",
-      "description": "Criação de interfaces responsivas, componentes reutilizáveis e implementação de testes unitários."
+      "company": "Inforplus Sistemas",
+      "period": "Ago 2023",
+      "status": "Atual",
+      "description": "Desenvolvendo interfaces modernas, componentes reutilizáveis e experiências digitais com as melhores tecnologias do mercado.",
+      "detail1": "Desenvolvimento de novas funcionalidades utilizando React, TypeScript e Next.js",
+      "detail2": "Manutenção e refatoração de componentes reutilizáveis",
+      "detail3": "Otimização de performance e experiência do usuário",
+      "detail4": "Integração com APIs REST e GraphQL"
     }
   },
   "contact": {
