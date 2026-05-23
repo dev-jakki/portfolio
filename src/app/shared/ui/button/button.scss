@@ -19,6 +19,7 @@ button {
 
   &:hover:not(:disabled) {
     transform: scale(0.98);
+    opacity: .9;
   }
 
   &:focus-visible {

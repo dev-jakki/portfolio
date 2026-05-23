@@ -174,10 +174,10 @@
 
 .experience-card__toggle-icon {
   transition: transform 0.3s ease;
-  transform: rotate(180deg); // seta para baixo = fechado
+  transform: rotate(180deg);
 
   &--open {
-    transform: rotate(0deg); // seta para cima = aberto
+    transform: rotate(0deg);
   }
 }
 

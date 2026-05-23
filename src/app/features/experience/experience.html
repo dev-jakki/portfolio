@@ -8,15 +8,12 @@
       @for (exp of portfolioService.getExperience()(); track exp.id) {
         <article class="experience-card" [class.experience-card--expanded]="isExpanded(exp.id)">
 
-          <!-- HEADER: sempre visível -->
           <div class="experience-card__header">
 
-            <!-- Ícone da empresa -->
             <div class="experience-card__icon">
               <span>{{ exp.company | translate | slice:0:2 }}</span>
             </div>
 
-            <!-- Info principal -->
             <div class="experience-card__info">
               <div class="experience-card__top-row">
                 <h3 class="experience-card__position">
@@ -38,7 +35,6 @@
               </div>
             </div>
 
-            <!-- Tecnologias (centro/direita) -->
             @if (exp.technologies && exp.technologies.length > 0) {
               <div class="experience-card__technologies">
                 @for (tech of exp.technologies; track tech) {
@@ -52,7 +48,6 @@
               </div>
             }
 
-            <!-- Botão toggle -->
             <button
               class="experience-card__toggle"
               type="button"
@@ -78,7 +73,6 @@
 
           </div>
 
-          <!-- BODY: expansível -->
           <div class="experience-card__body">
             <div class="experience-card__body-inner">
               <p class="experience-card__description">{{ exp.description | translate }}</p>

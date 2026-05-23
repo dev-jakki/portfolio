@@ -1,117 +1,119 @@
-<section id="contact" class="section contact-section">
-  <div class="anime-up">
-    <h2 class="section__title">{{ 'contact.title' | translate }}</h2>
-    <p class="section__subtitle">{{ 'contact.subtitle' | translate }}</p>
-  </div>
-
-  <div class="contact-section__body">
-    <div class="contact-section__form">
-      <form (ngSubmit)="onSubmit()">
-        <div class="contact-section__field">
-          <label class="contact-section__label" for="name">{{ 'contact.name' | translate }}</label>
-          <input
-            class="contact-section__input"
-            type="text"
-            [ngModel]="formData().name"
-            (ngModelChange)="updateForm('name', $event)"
-            name="name"
-            required
-            [placeholder]="'contact.namePlaceholder' | translate"
-          />
-        </div>
-
-        <div class="contact-section__field">
-          <label class="contact-section__label" for="email">{{
-            'contact.email' | translate
-          }}</label>
-          <input
-            class="contact-section__input"
-            type="email"
-            [ngModel]="formData().email"
-            (ngModelChange)="updateForm('email', $event)"
-            name="email"
-            required
-            [placeholder]="'contact.emailPlaceholder' | translate"
-          />
-        </div>
-
-        <div class="contact-section__field">
-          <label class="contact-section__label" for="subject">{{
-            'contact.subject' | translate
-          }}</label>
-          <input
-            class="contact-section__input"
-            type="text"
-            [ngModel]="formData().subject"
-            (ngModelChange)="updateForm('subject', $event)"
-            name="subject"
-            required
-            [placeholder]="'contact.subjectPlaceholder' | translate"
-          />
-        </div>
-
-        <div class="contact-section__field">
-          <label class="contact-section__label" for="message">{{
-            'contact.message' | translate
-          }}</label>
-          <textarea
-            class="contact-section__textarea"
-            [ngModel]="formData().message"
-            (ngModelChange)="updateForm('message', $event)"
-            name="message"
-            required
-            [placeholder]="'contact.messagePlaceholder' | translate"
-            rows="5"
-          ></textarea>
-        </div>
-
-        <app-button variant="primary" [text]="'contact.sendMessage' | translate"></app-button>
-      </form>
+<section id="contact" class="contact section">
+  <div class="contact__content padding-top">
+    <div class="anime-left">
+      <h2 class="section__title">{{ 'contact.title' | translate }}</h2>
+      <p class="section__subtitle">{{ 'contact.subtitle' | translate }}</p>
     </div>
 
-    <aside class="contact-section__info">
-      <div class="contact-section__info-item">
-        <h3 class="contact-section__info-title">{{ 'contact.emailLabel' | translate }}</h3>
-        <a class="contact-section__info-link" [href]="'mailto:' + contact.email">{{
-          contact.email
-        }}</a>
+    <div class="contact__body">
+      <div class="contact__form">
+        <form (ngSubmit)="onSubmit()">
+          <div class="contact__field">
+            <label class="contact__label" for="name">{{ 'contact.name' | translate }}</label>
+            <input
+              class="contact__input"
+              type="text"
+              [ngModel]="formData().name"
+              (ngModelChange)="updateForm('name', $event)"
+              name="name"
+              required
+              [placeholder]="'contact.namePlaceholder' | translate"
+            />
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__label" for="email">{{
+              'contact.email' | translate
+            }}</label>
+            <input
+              class="contact__input"
+              type="email"
+              [ngModel]="formData().email"
+              (ngModelChange)="updateForm('email', $event)"
+              name="email"
+              required
+              [placeholder]="'contact.emailPlaceholder' | translate"
+            />
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__label" for="subject">{{
+              'contact.subject' | translate
+            }}</label>
+            <input
+              class="contact__input"
+              type="text"
+              [ngModel]="formData().subject"
+              (ngModelChange)="updateForm('subject', $event)"
+              name="subject"
+              required
+              [placeholder]="'contact.subjectPlaceholder' | translate"
+            />
+          </div>
+
+          <div class="contact__field">
+            <label class="contact__label" for="message">{{
+              'contact.message' | translate
+            }}</label>
+            <textarea
+              class="contact__textarea"
+              [ngModel]="formData().message"
+              (ngModelChange)="updateForm('message', $event)"
+              name="message"
+              required
+              [placeholder]="'contact.messagePlaceholder' | translate"
+              rows="5"
+            ></textarea>
+          </div>
+
+          <app-button variant="primary" [text]="'contact.sendMessage' | translate"></app-button>
+        </form>
       </div>
 
-      <div class="contact-section__info-item">
-        <h3 class="contact-section__info-title">{{ 'contact.social' | translate }}</h3>
-        <div class="contact-section__social-links">
-          <a
-            class="contact-section__social-link"
-            [href]="contact.linkedin"
-            target="_blank"
-            rel="noopener"
-            >{{ 'contact.linkedin' | translate }}</a
-          >
-          <a
-            class="contact-section__social-link"
-            [href]="contact.github"
-            target="_blank"
-            rel="noopener"
-            >{{ 'contact.github' | translate }}</a
-          >
-          @if (contact.instagram) {
+      <aside class="contact__info">
+        <div class="contact__info-item">
+          <h3 class="contact__info-title">{{ 'contact.emailLabel' | translate }}</h3>
+          <a class="contact__info-link" [href]="'mailto:' + contact.email">{{
+            contact.email
+          }}</a>
+        </div>
+
+        <div class="contact__info-item">
+          <h3 class="contact__info-title">{{ 'contact.social' | translate }}</h3>
+          <div class="contact__social-links">
             <a
-              class="contact-section__social-link"
-              [href]="contact.instagram"
+              class="contact__social-link"
+              [href]="contact.linkedin"
               target="_blank"
               rel="noopener"
-              >{{ 'contact.instagram' | translate }}</a
+              >{{ 'contact.linkedin' | translate }}</a
             >
-          }
+            <a
+              class="contact__social-link"
+              [href]="contact.github"
+              target="_blank"
+              rel="noopener"
+              >{{ 'contact.github' | translate }}</a
+            >
+            @if (contact.instagram) {
+              <a
+                class="contact__social-link"
+                [href]="contact.instagram"
+                target="_blank"
+                rel="noopener"
+                >{{ 'contact.instagram' | translate }}</a
+              >
+            }
+          </div>
         </div>
-      </div>
 
-      <div class="contact-section__info-item">
-        <h3 class="contact-section__info-title">{{ 'contact.availability' | translate }}</h3>
-        <p class="contact-section__info-text">
-          {{ 'contact.availabilityDescription' | translate }}
-        </p>
-      </div>
-    </aside>
+        <div class="contact__info-item">
+          <h3 class="contact__info-title">{{ 'contact.availability' | translate }}</h3>
+          <p class="contact__info-text">
+            {{ 'contact.availabilityDescription' | translate }}
+          </p>
+        </div>
+      </aside>
+    </div>
   </div>
 </section>
