@@ -30,6 +30,15 @@ button {
   i {
     font-size: 1.1rem;
   }
+
+  .btn__spinner {
+    animation: btn-spin 0.7s linear infinite;
+  }
+}
+
+@keyframes btn-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 .btn-primary {

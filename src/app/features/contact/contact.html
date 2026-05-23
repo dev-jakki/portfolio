@@ -3,115 +3,176 @@
     <div class="anime-left">
       <h2 class="section__title">{{ 'contact.title' | translate }}</h2>
       <p class="section__subtitle">{{ 'contact.subtitle' | translate }}</p>
+      <p class="section__description">
+        {{ 'contact.description' | translate }}
+      </p>
     </div>
 
     <div class="contact__body">
       <div class="contact__form">
-        <form (ngSubmit)="onSubmit()">
-          <div class="contact__field">
-            <label class="contact__label" for="name">{{ 'contact.name' | translate }}</label>
-            <input
-              class="contact__input"
-              type="text"
-              [ngModel]="formData().name"
-              (ngModelChange)="updateForm('name', $event)"
-              name="name"
-              required
-              [placeholder]="'contact.namePlaceholder' | translate"
-            />
+        @if (isSuccess()) {
+          <div class="contact__feedback contact__feedback--success" role="alert" aria-live="polite">
+            <i class="ph ph-check-circle contact__feedback-icon" aria-hidden="true"></i>
+            <div>
+              <strong>{{ 'contact.successTitle' | translate }}</strong>
+              <p>{{ 'contact.successMessage' | translate }}</p>
+            </div>
+          </div>
+        }
+
+        @if (isError()) {
+          <div class="contact__feedback contact__feedback--error" role="alert" aria-live="polite">
+            <i class="ph ph-x-circle contact__feedback-icon" aria-hidden="true"></i>
+            <div>
+              <strong>{{ 'contact.errorTitle' | translate }}</strong>
+              <p>{{ 'contact.errorMessage' | translate }}</p>
+            </div>
+          </div>
+        }
+
+        <form (submit)="sendEmail($event)" novalidate>
+          <div class="contact__row">
+            <div class="contact__field" [class.contact__field--error]="formErrors().name">
+              <label class="contact__label" for="contact-name">
+                {{ 'contact.name' | translate }}
+                <span class="contact__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                id="contact-name"
+                class="contact__input"
+                type="text"
+                name="name"
+                autocomplete="name"
+                [placeholder]="'contact.namePlaceholder' | translate"
+                [attr.aria-invalid]="!!formErrors().name"
+                [attr.aria-describedby]="formErrors().name ? 'name-error' : null"
+                (input)="clearError('name')"
+              />
+              @if (formErrors().name) {
+                <span id="name-error" class="contact__error" role="alert">
+                  {{ 'contact.errors.' + formErrors().name | translate }}
+                </span>
+              }
+            </div>
+
+            <div class="contact__field" [class.contact__field--error]="formErrors().email">
+              <label class="contact__label" for="contact-email">
+                {{ 'contact.email' | translate }}
+                <span class="contact__required" aria-hidden="true">*</span>
+              </label>
+              <input
+                id="contact-email"
+                class="contact__input"
+                type="email"
+                name="email"
+                autocomplete="email"
+                [placeholder]="'contact.emailPlaceholder' | translate"
+                [attr.aria-invalid]="!!formErrors().email"
+                [attr.aria-describedby]="formErrors().email ? 'email-error' : null"
+                (input)="clearError('email')"
+              />
+              @if (formErrors().email) {
+                <span id="email-error" class="contact__error" role="alert">
+                  {{ 'contact.errors.' + formErrors().email | translate }}
+                </span>
+              }
+            </div>
           </div>
 
-          <div class="contact__field">
-            <label class="contact__label" for="email">{{
-              'contact.email' | translate
-            }}</label>
-            <input
-              class="contact__input"
-              type="email"
-              [ngModel]="formData().email"
-              (ngModelChange)="updateForm('email', $event)"
-              name="email"
-              required
-              [placeholder]="'contact.emailPlaceholder' | translate"
-            />
-          </div>
-
-          <div class="contact__field">
-            <label class="contact__label" for="subject">{{
-              'contact.subject' | translate
-            }}</label>
-            <input
-              class="contact__input"
-              type="text"
-              [ngModel]="formData().subject"
-              (ngModelChange)="updateForm('subject', $event)"
-              name="subject"
-              required
-              [placeholder]="'contact.subjectPlaceholder' | translate"
-            />
-          </div>
-
-          <div class="contact__field">
-            <label class="contact__label" for="message">{{
-              'contact.message' | translate
-            }}</label>
+          <div class="contact__field" [class.contact__field--error]="formErrors().message">
+            <label class="contact__label" for="contact-message">
+              {{ 'contact.message' | translate }}
+              <span class="contact__required" aria-hidden="true">*</span>
+            </label>
             <textarea
+              id="contact-message"
               class="contact__textarea"
-              [ngModel]="formData().message"
-              (ngModelChange)="updateForm('message', $event)"
               name="message"
-              required
               [placeholder]="'contact.messagePlaceholder' | translate"
-              rows="5"
+              rows="6"
+              [attr.aria-invalid]="!!formErrors().message"
+              [attr.aria-describedby]="formErrors().message ? 'message-error' : null"
+              (input)="onMessageInput($event)"
             ></textarea>
+            <div class="contact__field-footer">
+              @if (formErrors().message) {
+                <span id="message-error" class="contact__error" role="alert">
+                  {{ 'contact.errors.' + formErrors().message | translate }}
+                </span>
+              } @else {
+                <span></span>
+              }
+              <span
+                class="contact__char-count"
+                [class.contact__char-count--warn]="charCount() > 450"
+              >{{ charCount() }}/500</span>
+            </div>
           </div>
 
-          <app-button variant="primary" [text]="'contact.sendMessage' | translate"></app-button>
+          <div class="contact__submit">
+            <app-button
+              variant="primary"
+              [text]="'contact.sendMessage' | translate"
+              icon="ph ph-paper-plane-tilt"
+              [loading]="isLoading()"
+              [disabled]="isLoading()"
+            ></app-button>
+
+            <p class="contact__required-note">
+              <span aria-hidden="true">*</span> {{ 'contact.requiredFields' | translate }}
+            </p>
+          </div>
         </form>
       </div>
 
-      <aside class="contact__info">
+      <aside class="contact__info" [attr.aria-label]="'contact.infoLabel' | translate">
         <div class="contact__info-item">
-          <h3 class="contact__info-title">{{ 'contact.emailLabel' | translate }}</h3>
-          <a class="contact__info-link" [href]="'mailto:' + contact.email">{{
-            contact.email
-          }}</a>
-        </div>
-
-        <div class="contact__info-item">
-          <h3 class="contact__info-title">{{ 'contact.social' | translate }}</h3>
-          <div class="contact__social-links">
-            <a
-              class="contact__social-link"
-              [href]="contact.linkedin"
-              target="_blank"
-              rel="noopener"
-              >{{ 'contact.linkedin' | translate }}</a
-            >
-            <a
-              class="contact__social-link"
-              [href]="contact.github"
-              target="_blank"
-              rel="noopener"
-              >{{ 'contact.github' | translate }}</a
-            >
-            @if (contact.instagram) {
-              <a
-                class="contact__social-link"
-                [href]="contact.instagram"
-                target="_blank"
-                rel="noopener"
-                >{{ 'contact.instagram' | translate }}</a
-              >
-            }
+          <div class="contact__info-icon" aria-hidden="true"><i class="ph ph-envelope"></i></div>
+          <div>
+            <h3 class="contact__info-title">{{ 'contact.emailLabel' | translate }}</h3>
+            <a class="contact__info-link" [href]="'mailto:' + contact.email">
+              {{ contact.email }}
+            </a>
           </div>
         </div>
 
         <div class="contact__info-item">
-          <h3 class="contact__info-title">{{ 'contact.availability' | translate }}</h3>
-          <p class="contact__info-text">
-            {{ 'contact.availabilityDescription' | translate }}
-          </p>
+          <div class="contact__info-icon" aria-hidden="true"><i class="ph ph-share-network"></i></div>
+          <div>
+            <h3 class="contact__info-title">{{ 'contact.social' | translate }}</h3>
+            <div class="contact__social-links">
+              <a
+                class="contact__social-link"
+                [href]="contact.linkedin"
+                target="_blank"
+                rel="noopener noreferrer"
+              >{{ 'contact.linkedin' | translate }}</a>
+              <a
+                class="contact__social-link"
+                [href]="contact.github"
+                target="_blank"
+                rel="noopener noreferrer"
+              >{{ 'contact.github' | translate }}</a>
+              @if (contact.instagram) {
+                <a
+                  class="contact__social-link"
+                  [href]="contact.instagram"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >{{ 'contact.instagram' | translate }}</a>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__info-item">
+          <div class="contact__info-icon" aria-hidden="true"><i class="ph ph-clock"></i></div>
+          <div>
+            <h3 class="contact__info-title">{{ 'contact.availability' | translate }}</h3>
+            <p class="contact__info-text">
+              {{ 'contact.availabilityDescription' | translate }}
+            </p>
+          </div>
         </div>
       </aside>
     </div>

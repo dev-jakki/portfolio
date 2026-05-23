@@ -107,7 +107,8 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Let's talk about new opportunities",
+    "subtitle": "Get in touch",
+    "description": "Do you have a project in mind or just want to exchange ideas? Let's talk!",
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
@@ -117,13 +118,25 @@
     "subjectPlaceholder": "Message subject",
     "messagePlaceholder": "Your message...",
     "sendMessage": "Send Message",
+    "sending": "Sending...",
     "emailLabel": "Email",
     "social": "Social Networks",
     "linkedin": "LinkedIn",
     "github": "GitHub",
     "instagram": "Instagram",
     "availability": "Availability",
-    "availabilityDescription": "Available for freelance projects and full-time opportunities. I respond within 24 hours."
+    "availabilityDescription": "Available for freelance projects and full-time opportunities. I respond within 24 hours.",
+    "infoLabel": "Contact information",
+    "requiredFields": "Required fields",
+    "successTitle": "Message sent!",
+    "successMessage": "Thank you for reaching out. I'll get back to you within 24 hours.",
+    "errorTitle": "Something went wrong",
+    "errorMessage": "Your message could not be sent. Please try again or contact me directly by email.",
+    "errors": {
+      "required": "This field is required.",
+      "invalid": "Please enter a valid email address.",
+      "minLength": "Message must be at least 10 characters."
+    }
   },
   "footer": {
     "title": "Let's build something together",

@@ -2,8 +2,13 @@
   [class.btn-primary]="variant() === 'primary'"
   [class.btn-secondary]="variant() === 'secondary'"
   [class.btn-outline]="variant() === 'outline'"
-  [disabled]="disabled()"
+  [disabled]="disabled() || loading()"
 >
+  @if (loading()) {
+    <i class="ph ph-circle-notch btn__spinner"></i>
+  }
   <span>{{ text() }}</span>
-  <i [class]="icon()"></i>
+  @if (!loading()) {
+    <i [class]="icon()"></i>
+  }
 </button>

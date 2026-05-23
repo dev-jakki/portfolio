@@ -11,4 +11,5 @@ export class ButtonComponent {
   icon = input('');
   variant = input<'primary' | 'secondary' | 'outline'>('primary');
   disabled = input(false);
+  loading = input(false);
 }
