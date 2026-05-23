@@ -15,7 +15,7 @@ export class Experience {
   portfolioService = inject(PortfolioService);
 
   // Track which cards are expanded (by id). First card starts expanded.
-  expandedIds = signal<Set<number>>(new Set([1]));
+  expandedIds = signal<Set<number>>(new Set([0]));
 
   private techIconMap: Record<string, string> = {
     'Angular': '/assets/images/angular.png',
@@ -56,6 +56,7 @@ export class Experience {
     } else {
       current.add(id);
     }
+
     this.expandedIds.set(current);
   }
 }
