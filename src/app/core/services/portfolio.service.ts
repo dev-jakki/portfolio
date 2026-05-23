@@ -80,9 +80,12 @@ export class PortfolioService {
         'experience.company1.detail1',
         'experience.company1.detail2',
         'experience.company1.detail3',
-        'experience.company1.detail4'
+        'experience.company1.detail4',
+        'experience.company1.detail5',
+        'experience.company1.detail6',
+        'experience.company1.detail7',
       ],
-      technologies: ['React', 'TypeScript', 'Next.js', 'TailwindCSS']
+      technologies: ['Angular', 'Java', 'Spring Boot', 'Docker', 'AWS', 'Azure DevOps']
     },
   ]);
 

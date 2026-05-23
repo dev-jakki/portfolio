@@ -91,33 +91,18 @@
     "subtitle": "Professional trajectory",
     "toggle": "Toggle details",
     "company1": {
-      "position": "Frontend Developer",
-      "company": "Freelancer",
-      "period": "Currently",
+      "position": "FullStack Developer",
+      "company": "Inforplus Sistemas",
+      "period": "Aug 2023 – Present",
       "status": "Current",
-      "description": "Developing modern interfaces, reusable components and digital experiences with the best technologies on the market.",
-      "detail1": "Developed new features using React, TypeScript and Next.js",
-      "detail2": "Maintained and refactored reusable components",
-      "detail3": "Optimized performance and user experience",
-      "detail4": "Integrated with REST and GraphQL APIs"
-    },
-    "company2": {
-      "position": "Full Stack Developer",
-      "company": "Tech XYZ Company",
-      "period": "2023 - 2024",
-      "description": "Development of scalable web applications, REST APIs and performance optimization. Working in agile team.",
-      "detail1": "Led scalable web projects using React and Node.js",
-      "detail2": "Implemented REST APIs and integrated external services",
-      "detail3": "Supported agile development in a multidisciplinary team"
-    },
-    "company3": {
-      "company": "ABC Startup",
-      "position": "Frontend Developer",
-      "period": "2022 - 2023",
-      "description": "Creation of responsive interfaces, reusable components and implementation of unit tests.",
-      "detail1": "Built responsive interfaces with strong usability focus",
-      "detail2": "Developed reusable components and maintained application code",
-      "detail3": "Introduced unit testing and improved performance"
+      "description": "Fullstack Developer working on the evolution of scalable ERP web systems with Angular on the frontend and Java with Spring Boot on the backend. Specialist in legacy system refactoring, REST API integration and multi-tenant solution implementation.",
+      "detail1": "Development and evolution of ERP web system with Angular (Single-SPA microfrontends) and REST APIs in Java (Spring Boot 3), improving performance by ~50–60%",
+      "detail2": "Implementation and maintenance of reporting APIs with export to XLSX, CSV, HTML and PDF",
+      "detail3": "Query and endpoint optimization in the backend (Java + MySQL and Oracle DB), reducing resource consumption",
+      "detail4": "Refactoring of Python scripts for report versioning, significantly reducing AWS S3 costs",
+      "detail5": "CI/CD pipeline setup with Docker and Azure DevOps, deploying to AWS (S3, CloudFront, Route 53)",
+      "detail6": "Led adoption of AI tools (ChatGPT, ClaudeCode), increasing team productivity by up to 70%",
+      "detail7": "Continuous application of best practices (SOLID, Design Patterns) and code reviews"
     }
   },
   "contact": {

@@ -95,15 +95,18 @@
     "subtitle": "Trajetória profissional",
     "toggle": "Alternar detalhes",
     "company1": {
-      "position": "Desenvolvedor Frontend",
+      "position": "Desenvolvedor FullStack",
       "company": "Inforplus Sistemas",
-      "period": "Ago 2023",
+      "period": "Ago 2023 – Presente",
       "status": "Atual",
-      "description": "Desenvolvendo interfaces modernas, componentes reutilizáveis e experiências digitais com as melhores tecnologias do mercado.",
-      "detail1": "Desenvolvimento de novas funcionalidades utilizando React, TypeScript e Next.js",
-      "detail2": "Manutenção e refatoração de componentes reutilizáveis",
-      "detail3": "Otimização de performance e experiência do usuário",
-      "detail4": "Integração com APIs REST e GraphQL"
+      "description": "Desenvolvedor Fullstack atuando na evolução de sistemas ERP web escaláveis com Angular no frontend e Java com Spring Boot no backend. Especialista em refatoração de sistemas legados, integração com APIs REST e implementação de soluções multi-tenant.",
+      "detail1": "Desenvolvimento e evolução de sistema ERP web com Angular (microfrontends Single-SPA) e APIs REST em Java (Spring Boot 3), aumentando a performance em ~50–60%",
+      "detail2": "Implementação e manutenção de APIs de relatórios com exportação em XLSX, CSV, HTML e PDF",
+      "detail3": "Otimização de queries e endpoints no backend (Java + MySQL e Oracle DB), reduzindo consumo de recursos",
+      "detail4": "Refatoração de scripts Python para versionamento de relatórios, reduzindo custos com AWS S3",
+      "detail5": "Configuração de pipelines CI/CD com Docker e Azure DevOps, com deploy em AWS (S3, CloudFront, Route 53)",
+      "detail6": "Liderança na adoção de ferramentas de IA (ChatGPT, ClaudeCode), aumentando a produtividade do time em até 70%",
+      "detail7": "Aplicação contínua de boas práticas (SOLID, Design Patterns) e code reviews"
     }
   },
   "contact": {
