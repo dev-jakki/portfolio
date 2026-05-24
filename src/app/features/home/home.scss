@@ -168,11 +168,11 @@
         object-fit: contain;
       }
 
-      &--react {
+      &--java {
         top: 30px;
         left: 10px;
         animation: float-1 4s ease-in-out infinite;
-        img { filter: drop-shadow(0 0 5px #61dafb88); }
+        img { filter: drop-shadow(0 0 5px #ED8B0088); }
       }
 
       &--ts {
@@ -187,25 +187,21 @@
         box-shadow: 0 4px 16px rgba(49, 120, 198, 0.3);
       }
 
-      &--tailwind {
+      &--spring {
         top: 50%;
         left: 0;
         transform: translateY(-50%);
         animation: float-3 5s ease-in-out infinite;
-        img { filter: drop-shadow(0 0 5px #38bdf888); }
+        img { filter: drop-shadow(0 0 5px #6DB33F88); }
 
         &:hover { transform: translateY(-50%) scale(1.1); }
       }
 
-      &--js {
+      &--aws {
         top: 55%;
         right: 0;
         animation: float-1 3.8s ease-in-out infinite;
-        background: #f7df1e;
-        border-color: rgba(247, 223, 30, 0.5);
-        color: #1a1a1a;
-        font-size: 1.1rem;
-        box-shadow: 0 4px 16px rgba(247, 223, 30, 0.25);
+        img { filter: drop-shadow(0 0 5px #FF990088); }
       }
 
       &--angular {
@@ -213,18 +209,6 @@
         left: 20px;
         animation: float-2 4.2s ease-in-out infinite;
         img { filter: drop-shadow(0 0 5px #dd003188); }
-      }
-
-      &--html {
-        bottom: 90px;
-        right: 10px;
-        animation: float-3 4.8s ease-in-out infinite;
-        font-size: 0.9rem;
-        color: var(--color-primary-500);
-        border-color: var(--color-tertiary--alpha-300);
-        box-shadow:
-          0 4px 16px rgba(0, 0, 0, 0.1),
-          0 0 10px var(--color-tertiary--alpha-200);
       }
     }
   }
@@ -241,8 +225,8 @@
   }
   50% {
     box-shadow:
-      0 0 0 2px rgba(168, 85, 247, 0.75),
-      0 0 60px 16px rgba(168, 85, 247, 0.4),
+      0 0 0 2px rgba(91, 72, 255, 0.75),
+      0 0 60px 16px rgba(88, 85, 247, 0.4),
       0 0 100px 30px rgba(99, 102, 241, 0.2),
       inset 0 0 80px 15px rgba(168, 85, 247, 0.06);
   }
@@ -298,12 +282,11 @@
 
         img { width: 24px; height: 24px; }
 
-        &--react   { top: 10px; left: 5px; }
+        &--java    { top: 10px; left: 5px; }
         &--ts      { top: 20px; right: 0; }
-        &--tailwind { left: 0; }
-        &--js      { right: 0; }
+        &--spring  { left: 0; }
+        &--aws     { right: 0; }
         &--angular { bottom: 50px; left: 10px; }
-        &--html    { bottom: 60px; right: 5px; }
       }
     }
   }
