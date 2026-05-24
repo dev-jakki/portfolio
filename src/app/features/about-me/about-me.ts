@@ -35,6 +35,8 @@ export class AboutMe implements AfterViewInit {
   about = this.portfolioService.getAbout();
 
   ngAfterViewInit() {
+    if (window.innerWidth <= 768) return;
+
     const aceEditor = ace.edit(this.editor.nativeElement, {
       mode: 'ace/mode/javascript',
       theme: 'ace/theme/one_dark',

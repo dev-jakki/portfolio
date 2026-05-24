@@ -22,7 +22,7 @@ export class PortfolioService {
       description: 'projects.project2.description',
       url: this.getScreenshotUrl("https://nick-search-jakki.netlify.app"),
       technologies: ['GitHub API', 'JavaScript', 'Jasmine'],
-      demoUrl: '#',
+      demoUrl: 'https://nick-search-jakki.netlify.app',
       githubUrl: 'https://github.com/dev-jakki',
       featured: true
     },
@@ -31,17 +31,17 @@ export class PortfolioService {
       title: 'projects.project3.title',
       description: 'projects.project3.description',
       url: this.getScreenshotUrl("https://todo-jakkifx.netlify.app"),
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      demoUrl: '#',
+      technologies: ['Angular', 'Bootstrap', 'Local Storage'],
+      demoUrl: 'https://todo-jakkifx.netlify.app',
       githubUrl: 'https://github.com/dev-jakki'
     },
     {
       id: 4,
       title: 'projects.project4.title',
       description: 'projects.project4.description',
-      url: '/assets/images/task-manager.png',
-      technologies: ['Angular', 'Firebase', 'TypeScript'],
-      demoUrl: '#',
+      url: this.getScreenshotUrl("https://chat-illustration-jakki.netlify.app"),
+      technologies: ['Angular', 'Sass', 'Responsive'],
+      demoUrl: 'https://chat-illustration-jakki.netlify.app',
       githubUrl: 'https://github.com/dev-jakki'
     }
   ]);

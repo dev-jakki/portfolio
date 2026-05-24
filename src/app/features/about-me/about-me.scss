@@ -100,6 +100,19 @@
   background: var(--color-secondary) !important;
 }
 
+@media (max-width: 1024px) {
+  .about-me {
+    &__content {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    &__soft-skills {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
 @media (max-width: 768px) {
   .about-me {
     &__content {
@@ -110,8 +123,24 @@
     }
 
     &__soft-skills {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+
+      .soft-skill {
+        padding: 12px;
+      }
+    }
+
+    &__content-code {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about-me {
+    &__soft-skills {
+      grid-template-columns: repeat(2, 1fr);
       gap: 10px;
     }
   }

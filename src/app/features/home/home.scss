@@ -83,7 +83,6 @@
       margin-top: 40px;
     }
 
-    // ─── Visual side ──────────────────────────────────────────────────────────
     &__visual {
       position: relative;
       height: 480px;
@@ -92,7 +91,6 @@
       justify-content: center;
     }
 
-    // ─── Neon glow ring ───────────────────────────────────────────────────────
     &__glow-ring {
       position: absolute;
       width: 340px;
@@ -102,7 +100,6 @@
       z-index: 0;
     }
 
-    // ─── Profile photo ────────────────────────────────────────────────────────
     &__photo-wrapper {
       position: absolute;
       bottom: 0;
@@ -113,7 +110,6 @@
       z-index: 1;
       overflow: hidden;
 
-      // Fade bottom edge into page background
       &::after {
         content: '';
         position: absolute;
@@ -134,7 +130,6 @@
       border-radius: 0;
     }
 
-    // ─── Floating tech icons ──────────────────────────────────────────────────
     &__tech-icon {
       position: absolute;
       width: 56px;
@@ -144,7 +139,6 @@
       align-items: center;
       justify-content: center;
 
-      // Theme-aware base — uses design system tokens
       background: var(--bg-tertiary);
       border: 1px solid var(--border-color);
       color: var(--text-primary);
@@ -171,7 +165,6 @@
         object-fit: contain;
       }
 
-      // React — top left
       &--react {
         top: 30px;
         left: 10px;
@@ -179,7 +172,6 @@
         img { filter: drop-shadow(0 0 5px #61dafb88); }
       }
 
-      // TypeScript — top right
       &--ts {
         top: 40px;
         right: 0;
@@ -192,7 +184,6 @@
         box-shadow: 0 4px 16px rgba(49, 120, 198, 0.3);
       }
 
-      // Tailwind — middle left
       &--tailwind {
         top: 50%;
         left: 0;
@@ -203,7 +194,6 @@
         &:hover { transform: translateY(-50%) scale(1.1); }
       }
 
-      // JavaScript — middle right
       &--js {
         top: 55%;
         right: 0;
@@ -215,7 +205,6 @@
         box-shadow: 0 4px 16px rgba(247, 223, 30, 0.25);
       }
 
-      // Angular — bottom left
       &--angular {
         bottom: 80px;
         left: 20px;
@@ -223,7 +212,6 @@
         img { filter: drop-shadow(0 0 5px #dd003188); }
       }
 
-      // HTML/Code — bottom right
       &--html {
         bottom: 90px;
         right: 10px;
@@ -239,7 +227,6 @@
   }
 }
 
-// ─── Keyframes ────────────────────────────────────────────────────────────────
 
 @keyframes ring-pulse {
   0%, 100% {
@@ -258,7 +245,6 @@
   }
 }
 
-// Float animations — each has a different offset so they don't sync
 @keyframes float-1 {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-10px); }
@@ -274,7 +260,6 @@
   50%       { transform: translateY(-8px); }
 }
 
-// ─── Responsive ───────────────────────────────────────────────────────────────
 
 @media (max-width: 768px) {
   .home {
