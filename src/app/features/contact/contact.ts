@@ -4,14 +4,13 @@ import {
   inject,
   signal,
   computed,
-  viewChild,
-  ElementRef,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ButtonComponent } from '../../shared/ui/button/button';
 import { PortfolioService } from '../../core/services/portfolio.service';
 import { EmailJsService } from '../../core/services/emailjs.service';
+import { ToastService } from '../../core/services/toast.service';
 
 type FormStatus = 'idle' | 'loading' | 'success' | 'error';
 
@@ -32,18 +31,16 @@ interface FormErrors {
 export class Contact {
   private portfolioService = inject(PortfolioService);
   private emailJsService = inject(EmailJsService);
+  private toastService = inject(ToastService);
+  private translate = inject(TranslateService);
 
   contact = this.portfolioService.getContact();
-
-  formRef = viewChild<ElementRef<HTMLFormElement>>('contactForm');
 
   formErrors = signal<FormErrors>({});
   formStatus = signal<FormStatus>('idle');
   charCount = signal(0);
 
   isLoading = computed(() => this.formStatus() === 'loading');
-  isSuccess = computed(() => this.formStatus() === 'success');
-  isError = computed(() => this.formStatus() === 'error');
 
   onMessageInput(event: Event) {
     this.charCount.set((event.target as HTMLTextAreaElement).value.length);
@@ -80,7 +77,7 @@ export class Contact {
 
   async sendEmail(event: Event) {
     event.preventDefault();
-    const form = (event.target as HTMLFormElement);
+    const form = event.target as HTMLFormElement;
 
     if (!this.validate(form)) return;
 
@@ -88,14 +85,24 @@ export class Contact {
 
     try {
       await this.emailJsService.sendForm(form);
-      this.formStatus.set('success');
+      this.formStatus.set('idle');
       form.reset();
       this.charCount.set(0);
       this.formErrors.set({});
-      setTimeout(() => this.formStatus.set('idle'), 5000);
+
+      this.toastService.show(
+        'success',
+        this.translate.instant('contact.successTitle'),
+        this.translate.instant('contact.successMessage'),
+      );
     } catch {
-      this.formStatus.set('error');
-      setTimeout(() => this.formStatus.set('idle'), 5000);
+      this.formStatus.set('idle');
+
+      this.toastService.show(
+        'error',
+        this.translate.instant('contact.errorTitle'),
+        this.translate.instant('contact.errorMessage'),
+      );
     }
   }
 }

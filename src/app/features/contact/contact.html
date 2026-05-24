@@ -10,26 +10,6 @@
 
     <div class="contact__body">
       <div class="contact__form">
-        @if (isSuccess()) {
-          <div class="contact__feedback contact__feedback--success" role="alert" aria-live="polite">
-            <i class="ph ph-check-circle contact__feedback-icon" aria-hidden="true"></i>
-            <div>
-              <strong>{{ 'contact.successTitle' | translate }}</strong>
-              <p>{{ 'contact.successMessage' | translate }}</p>
-            </div>
-          </div>
-        }
-
-        @if (isError()) {
-          <div class="contact__feedback contact__feedback--error" role="alert" aria-live="polite">
-            <i class="ph ph-x-circle contact__feedback-icon" aria-hidden="true"></i>
-            <div>
-              <strong>{{ 'contact.errorTitle' | translate }}</strong>
-              <p>{{ 'contact.errorMessage' | translate }}</p>
-            </div>
-          </div>
-        }
-
         <form (submit)="sendEmail($event)" novalidate>
           <div class="contact__row">
             <div class="contact__field" [class.contact__field--error]="formErrors().name">

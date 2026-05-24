@@ -7,11 +7,12 @@ import { Experience } from '../../features/experience/experience';
 import { Projects } from '../../features/projects/projects';
 import { Skills } from '../../features/skills/skills';
 import { AboutMe } from '../../features/about-me/about-me';
+import { ToastComponent } from '../../shared/ui/toast/toast';
 
 @Component({
   selector: 'app-main-layout',
   standalone: true,
-  imports: [Header, Home, AboutMe, Projects, Skills, Experience, Contact, Footer],
+  imports: [Header, Home, AboutMe, Projects, Skills, Experience, Contact, Footer, ToastComponent],
   templateUrl: './main-layout.html',
   styleUrl: './main-layout.scss',
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -141,44 +141,7 @@
     margin: 0;
   }
 
-  &__feedback {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 16px 18px;
-    border-radius: 10px;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    animation: feedbackIn 0.3s ease;
-
-    p {
-      margin: 4px 0 0;
-      color: inherit;
-      opacity: 0.85;
-    }
-
-    strong {
-      display: block;
-    }
-
-    &--success {
-      background: rgba(34, 197, 94, 0.12);
-      border: 1px solid rgba(34, 197, 94, 0.35);
-      color: #16a34a;
-    }
-
-    &--error {
-      background: rgba(239, 68, 68, 0.1);
-      border: 1px solid rgba(239, 68, 68, 0.3);
-      color: #dc2626;
-    }
-  }
-
-  &__feedback-icon {
-    font-size: 1.2rem;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
+  // feedback styles removed — now handled by global ToastComponent
 
   &__info {
     display: flex;
@@ -258,13 +221,4 @@
   }
 }
 
-@keyframes feedbackIn {
-  from {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+// (feedbackIn keyframe removed — feedback is now a global toast)
