@@ -1,0 +1,48 @@
+<div class="modal-backdrop" (click)="close()"></div>
+
+<div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <button class="modal-close" (click)="close()" aria-label="Close">
+    <i class="ph ph-x"></i>
+  </button>
+
+  <div class="modal-header">
+    <i class="ph ph-file-arrow-down modal-icon"></i>
+    <h2 id="modal-title">{{ 'cvModal.title' | translate }}</h2>
+    <p>{{ 'cvModal.subtitle' | translate }}</p>
+  </div>
+
+  <div class="modal-options">
+    <button class="cv-option" (click)="downloadFrontend()">
+      <div class="cv-option-icon">
+        <i class="ph ph-browser"></i>
+      </div>
+      <div class="cv-option-info">
+        <span class="cv-option-title">{{ 'cvModal.frontend' | translate }}</span>
+        <span class="cv-option-desc">{{ 'cvModal.frontendDesc' | translate }}</span>
+      </div>
+      <i class="ph ph-arrow-line-down cv-option-arrow"></i>
+    </button>
+
+    <button class="cv-option" (click)="downloadFullstack()">
+      <div class="cv-option-icon">
+        <i class="ph ph-stack"></i>
+      </div>
+      <div class="cv-option-info">
+        <span class="cv-option-title">{{ 'cvModal.fullstack' | translate }}</span>
+        <span class="cv-option-desc">{{ 'cvModal.fullstackDesc' | translate }}</span>
+      </div>
+      <i class="ph ph-arrow-line-down cv-option-arrow"></i>
+    </button>
+
+    <button class="cv-option cv-option--letter" (click)="downloadCoverLetter()">
+      <div class="cv-option-icon">
+        <i class="ph ph-envelope-simple-open"></i>
+      </div>
+      <div class="cv-option-info">
+        <span class="cv-option-title">{{ 'cvModal.coverLetter' | translate }}</span>
+        <span class="cv-option-desc">{{ 'cvModal.coverLetterDesc' | translate }}</span>
+      </div>
+      <i class="ph ph-arrow-line-down cv-option-arrow"></i>
+    </button>
+  </div>
+</div>

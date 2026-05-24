@@ -13,6 +13,16 @@
     "pt": "Portuguese",
     "en": "English"
   },
+  "cvModal": {
+    "title": "Download Documents",
+    "subtitle": "Choose which document you'd like to download",
+    "frontend": "Frontend Angular CV",
+    "frontendDesc": "Angular, TypeScript, RxJS, SCSS",
+    "fullstack": "Fullstack Angular + Java CV",
+    "fullstackDesc": "Angular, Java, Spring Boot, REST APIs",
+    "coverLetter": "Cover Letter",
+    "coverLetterDesc": "My story, motivations and goals"
+  },
   "home": {
     "greeting": "Hello, I am",
     "name": "Jackciel Felix",

@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateAppService } from '../../core/services/translate.service';
 import { ThemeButtonComponent } from '../../shared/ui/theme-button/theme-button';
 import { LanguageSelectorComponent } from '../../shared/ui/language-selector/language-selector';
+import { CvDownloadModalComponent } from '../../shared/ui/cv-download-modal/cv-download-modal';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,7 @@ import { LanguageSelectorComponent } from '../../shared/ui/language-selector/lan
     TranslateModule,
     ThemeButtonComponent,
     LanguageSelectorComponent,
+    CvDownloadModalComponent,
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
@@ -21,9 +23,18 @@ import { LanguageSelectorComponent } from '../../shared/ui/language-selector/lan
 })
 export class Header {
   menuOpen = signal(false);
+  cvModalOpen = signal(false);
   activeSection: string = '';
 
   constructor(public translateService: TranslateAppService) {}
+
+  openCvModal() {
+    this.cvModalOpen.set(true);
+  }
+
+  closeCvModal() {
+    this.cvModalOpen.set(false);
+  }
 
   @HostListener('window:scroll', [])
   onScroll() {
