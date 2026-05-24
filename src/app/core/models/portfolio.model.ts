@@ -23,6 +23,10 @@ export interface Experience {
   status?: string;
   description: string;
   details?: string[];
+  frontendDescription?: string;
+  frontendDetails?: string[];
+  backendDescription?: string;
+  backendDetails?: string[];
   technologies?: string[];
 }
 

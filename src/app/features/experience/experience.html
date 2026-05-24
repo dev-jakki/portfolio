@@ -77,7 +77,44 @@
             <div class="experience-card__body-inner">
               <p class="experience-card__description">{{ exp.description | translate }}</p>
 
-              @if (exp.details && exp.details.length > 0) {
+              <!-- Frontend Section -->
+              @if (exp.frontendDetails && exp.frontendDetails.length > 0) {
+                <div class="experience-card__stack-section">
+                  <h4 class="experience-card__stack-title experience-card__stack-title--frontend">
+                    <i class="ph ph-layout"></i>
+                    {{ 'experience.frontendLabel' | translate }}
+                  </h4>
+                  @if (exp.frontendDescription) {
+                    <p class="experience-card__stack-description">{{ exp.frontendDescription | translate }}</p>
+                  }
+                  <ul class="experience-card__details">
+                    @for (detail of exp.frontendDetails; track detail) {
+                      <li>{{ detail | translate }};</li>
+                    }
+                  </ul>
+                </div>
+              }
+
+              <!-- Backend Section -->
+              @if (exp.backendDetails && exp.backendDetails.length > 0) {
+                <div class="experience-card__stack-section">
+                  <h4 class="experience-card__stack-title experience-card__stack-title--backend">
+                    <i class="ph ph-database"></i>
+                    {{ 'experience.backendLabel' | translate }}
+                  </h4>
+                  @if (exp.backendDescription) {
+                    <p class="experience-card__stack-description">{{ exp.backendDescription | translate }}</p>
+                  }
+                  <ul class="experience-card__details">
+                    @for (detail of exp.backendDetails; track detail) {
+                      <li>{{ detail | translate }};</li>
+                    }
+                  </ul>
+                </div>
+              }
+
+              <!-- Fallback para experiências sem separação frontend/backend -->
+              @if (exp.details && exp.details.length > 0 && !exp.frontendDetails && !exp.backendDetails) {
                 <ul class="experience-card__details">
                   @for (detail of exp.details; track detail) {
                     <li>{{ detail | translate }};</li>
