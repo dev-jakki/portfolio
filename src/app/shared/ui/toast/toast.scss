@@ -1,0 +1,22 @@
+.toast-container {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+
+  app-toast-item {
+    pointer-events: all;
+  }
+}
+
+@media (max-width: 480px) {
+  .toast-container {
+    top: 16px;
+    right: 12px;
+    left: 12px;
+  }
+}

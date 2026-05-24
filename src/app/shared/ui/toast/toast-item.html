@@ -1,0 +1,35 @@
+<div
+  class="toast toast--{{ toast().type }}"
+  [class.toast--leaving]="leaving()"
+  role="alert"
+  aria-live="polite"
+  (click)="close()"
+>
+  <div class="toast__icon">
+    @if (toast().type === 'success') {
+      <i class="ph ph-check-circle"></i>
+    } @else {
+      <i class="ph ph-x-circle"></i>
+    }
+  </div>
+
+  <div class="toast__body">
+    <strong class="toast__title">{{ toast().title }}</strong>
+    <p class="toast__message">{{ toast().message }}</p>
+  </div>
+
+  <button
+    class="toast__close"
+    aria-label="Fechar"
+    (click)="$event.stopPropagation(); close()"
+  >
+    <i class="ph ph-x"></i>
+  </button>
+
+  <div class="toast__progress">
+    <div
+      class="toast__progress-bar"
+      [style.animation-duration.ms]="toast().duration"
+    ></div>
+  </div>
+</div>

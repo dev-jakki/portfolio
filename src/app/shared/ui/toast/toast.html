@@ -1,0 +1,5 @@
+<div class="toast-container" aria-label="Notificações">
+  @for (t of toastService.toasts(); track t.id) {
+    <app-toast-item [toast]="t" (dismissed)="toastService.dismiss($event)" />
+  }
+</div>
