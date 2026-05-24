@@ -26,51 +26,34 @@
     </div>
 
     <div class="home__hero__visual">
-      <div class="home__hero__glow-circle anime-float"></div>
+      <div class="home__hero__glow-ring"></div>
+
+      <div class="home__hero__photo-wrapper">
+        <img
+          class="home__hero__photo"
+          src="assets/images/profile.png"
+          alt="Jackciel Felix"
+        />
+      </div>
+
+      <div class="home__hero__tech-icon home__hero__tech-icon--react">
+        <img src="assets/images/tech/react.svg" alt="React" />
+      </div>
+      <div class="home__hero__tech-icon home__hero__tech-icon--ts">
+        <span>TS</span>
+      </div>
+      <div class="home__hero__tech-icon home__hero__tech-icon--tailwind">
+        <img src="assets/images/tech/tailwind.svg" alt="Tailwind" />
+      </div>
+      <div class="home__hero__tech-icon home__hero__tech-icon--js">
+        <span>JS</span>
+      </div>
+      <div class="home__hero__tech-icon home__hero__tech-icon--angular">
+        <img src="assets/images/tech/angular.svg" alt="Angular" />
+      </div>
+      <div class="home__hero__tech-icon home__hero__tech-icon--html">
+        <span>&lt;/&gt;</span>
+      </div>
     </div>
   </section>
-
-  <!-- Featured Projects -->
-  <!-- <app-section [title]="'home.featuredProjects' | translate">
-    <div class="projects-grid">
-      @for (project of portfolioService.getProjects()(); track project.id; let i = $index) {
-        @if (i < 3) {
-          <app-card>
-            <div class="project-card">
-              <div class="project-image">
-                <div class="placeholder-image"></div>
-              </div>
-              <div class="project-info">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
-                <div class="project-tech">
-                  @for (tech of project.technologies; track tech) {
-                    <span class="tech-badge">{{ tech }}</span>
-                  }
-                </div>
-                <div class="project-links">
-                  @if (project.demoUrl) {
-                    <a [href]="project.demoUrl" target="_blank">Demo</a>
-                  }
-                  @if (project.githubUrl) {
-                    <a [href]="project.githubUrl" target="_blank">GitHub</a>
-                  }
-                </div>
-              </div>
-            </div>
-          </app-card>
-        }
-      }
-    </div>
-    <div class="view-all-projects">
-      <app-button variant="secondary">{{ 'home.viewAllProjects' | translate }}</app-button>
-    </div>
-  </app-section> -->
-
-  <!-- CTA Section -->
-  <!-- <section class="cta">
-    <h2>{{ 'home.ctaTitle' | translate }}</h2>
-    <p>{{ 'home.ctaDescription' | translate }}</p>
-    <app-button variant="primary">{{ 'home.getInTouch' | translate }}</app-button>
-  </section> -->
 </div>

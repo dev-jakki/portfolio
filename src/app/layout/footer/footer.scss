@@ -1,16 +1,23 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  background: var(--color-primary);
-  border-top: 1px solid var(--border-color);
-  padding: 12px 0;
-  margin-top: 60px;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    background: var(--color-primary);
+    padding: 12px 0;
+    border-top: 1px solid var(--border-color);
+  
+    p {
+      color: var(--text-tertiary);
+    }
+  
+    strong {
+      font-weight: 500;
 
-  p {
-    color: var(--text-tertiary);
-  }
-
-  strong {
-    font-weight: 500;
+      background: linear-gradient(90deg, var(--text-primary), var(--text-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
   }
 }
