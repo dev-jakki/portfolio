@@ -25,10 +25,13 @@
       </div>
     </div>
 
-    <div class="home__hero__visual">
-      <div class="home__hero__glow-ring"></div>
+    <div class="home__hero__visual"
+      #heroVisual
+      (mousemove)="onVisualMouseMove($event)"
+      (mouseleave)="onVisualMouseLeave()">
+      <div class="home__hero__glow-ring" [style.transform]="glowTransform()"></div>
 
-      <div class="home__hero__photo-wrapper">
+      <div class="home__hero__photo-wrapper" [style.transform]="'translateX(-50%) ' + photoTransform()">
         <img
           class="home__hero__photo"
           src="assets/images/profile.png"
@@ -36,22 +39,22 @@
         />
       </div>
 
-      <div class="home__hero__tech-icon home__hero__tech-icon--react">
+      <div class="home__hero__tech-icon home__hero__tech-icon--react" [style.transform]="'translateY(0) ' + iconsTransform()">
         <img src="assets/images/tech/react.svg" alt="React" />
       </div>
-      <div class="home__hero__tech-icon home__hero__tech-icon--ts">
+      <div class="home__hero__tech-icon home__hero__tech-icon--ts" [style.transform]="iconsTransform()">
         <span>TS</span>
       </div>
-      <div class="home__hero__tech-icon home__hero__tech-icon--tailwind">
+      <div class="home__hero__tech-icon home__hero__tech-icon--tailwind" [style.transform]="'translateY(-50%) ' + iconsTransform()">
         <img src="assets/images/tech/tailwind.svg" alt="Tailwind" />
       </div>
-      <div class="home__hero__tech-icon home__hero__tech-icon--js">
+      <div class="home__hero__tech-icon home__hero__tech-icon--js" [style.transform]="iconsTransform()">
         <span>JS</span>
       </div>
-      <div class="home__hero__tech-icon home__hero__tech-icon--angular">
+      <div class="home__hero__tech-icon home__hero__tech-icon--angular" [style.transform]="iconsTransform()">
         <img src="assets/images/tech/angular.svg" alt="Angular" />
       </div>
-      <div class="home__hero__tech-icon home__hero__tech-icon--html">
+      <div class="home__hero__tech-icon home__hero__tech-icon--html" [style.transform]="iconsTransform()">
         <span>&lt;/&gt;</span>
       </div>
     </div>
