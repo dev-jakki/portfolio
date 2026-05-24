@@ -20,8 +20,8 @@
       </p>
 
       <div class="home__hero__buttons">
-        <app-button variant="primary" [text]="'home.viewProjects' | translate" icon="ph ph-arrow-right"></app-button>
-        <app-button variant="outline" [text]="'home.getInTouch' | translate" icon="ph ph-paper-plane-tilt"></app-button>
+        <app-button variant="primary" [text]="'home.viewProjects' | translate" icon="ph ph-arrow-right" (click)="scrollTo('projects')"></app-button>
+        <app-button variant="outline" [text]="'home.getInTouch' | translate" icon="ph ph-paper-plane-tilt" (click)="scrollTo('contact')"></app-button>
       </div>
     </div>
 

@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, inject, HostListener, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, HostListener, OnInit, signal, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { CardComponent } from '../../shared/ui/card/card';
@@ -15,18 +15,37 @@ import { ButtonComponent } from '../../shared/ui/button/button';
 })
 export class Projects implements OnInit {
   portfolioService = inject(PortfolioService);
-  projects = this.portfolioService.getProjects()();
-  currentIndex = 0;
+
+  private readonly sourceProjects = this.portfolioService.getProjects()();
+
+  /** Triple the list so we always have items on both sides for infinite wrap */
+  projects = [
+    ...this.sourceProjects,
+    ...this.sourceProjects,
+    ...this.sourceProjects,
+  ];
+
   visibleCount = 3;
+
+  /** Start in the middle copy so we can go left immediately */
+  currentIndex = signal(this.sourceProjects.length);
+
+  /** Disable CSS transition briefly when we silently jump */
+  animated = signal(true);
 
   ngOnInit() {
     this.updateVisibleCount();
+    // Start at the middle copy
+    this.currentIndex.set(this.sourceProjects.length);
   }
 
   @HostListener('window:resize')
   onResize() {
-    this.currentIndex = 0;
     this.updateVisibleCount();
+    // Reset to middle copy on resize
+    this.animated.set(false);
+    this.currentIndex.set(this.sourceProjects.length);
+    requestAnimationFrame(() => this.animated.set(true));
   }
 
   private updateVisibleCount() {
@@ -42,28 +61,57 @@ export class Projects implements OnInit {
     }
   }
 
-  get canPrev() {
-    return this.currentIndex > 0;
-  }
-
-  get canNext() {
-    return this.currentIndex < (this.projects?.length ?? 0) - this.visibleCount;
-  }
+  // Always enabled — infinite scroll
+  get canPrev() { return true; }
+  get canNext() { return true; }
 
   prev() {
-    if (this.canPrev) this.currentIndex--;
+    this.currentIndex.update(i => i - 1);
+    this.checkWrap();
   }
 
   next() {
-    if (this.canNext) this.currentIndex++;
+    this.currentIndex.update(i => i + 1);
+    this.checkWrap();
+  }
+
+  /**
+   * After the CSS transition ends, silently jump back to the middle copy
+   * so the user never reaches the real start/end of the array.
+   */
+  private checkWrap() {
+    const len = this.sourceProjects.length;
+    const idx = this.currentIndex();
+
+    // Moved into the last copy → jump to equivalent position in middle copy
+    if (idx >= len * 2) {
+      setTimeout(() => {
+        this.animated.set(false);
+        this.currentIndex.set(idx - len);
+        requestAnimationFrame(() => this.animated.set(true));
+      }, 420); // slightly after the 0.4s transition
+    }
+
+    // Moved into the first copy → jump to equivalent position in middle copy
+    if (idx < len) {
+      setTimeout(() => {
+        this.animated.set(false);
+        this.currentIndex.set(idx + len);
+        requestAnimationFrame(() => this.animated.set(true));
+      }, 420);
+    }
   }
 
   get transformPercent() {
-    const translatePercent = (this.currentIndex * 100) / this.visibleCount;
+    const translatePercent = (this.currentIndex() * 100) / this.visibleCount;
     return `translateX(-${translatePercent}%)`;
   }
 
   trackById(_index: number, project: any) {
     return project.id;
+  }
+
+  openGithub(): void {
+    window.open(this.portfolioService.getContact().github, '_blank');
   }
 }

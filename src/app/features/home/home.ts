@@ -39,4 +39,12 @@ export class Home {
   getActiveSubtitleKey() {
     return this.subtitleKeys[this.currentSubtitleIndex()];
   }
+
+  scrollTo(sectionId: string): void {
+    const el = document.getElementById(sectionId);
+    
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

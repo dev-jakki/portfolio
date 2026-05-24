@@ -6,17 +6,19 @@
       <p class="section__description">
         {{ 'projects.description' | translate }}
       </p>
-      <app-button variant="outline" [text]="'projects.viewAll' | translate" icon="ph ph-arrow-right"></app-button>
+      <app-button variant="outline" [text]="'projects.viewAll' | translate" icon="ph ph-arrow-right" (click)="openGithub()"></app-button>
     </div>
 
     <div class="projects__grid">
       <div class="carousel__wrapper">
-        <button class="carousel__btn carousel__btn--prev" (click)="prev()" [disabled]="!canPrev" aria-label="Previous project">
+        <button class="carousel__btn carousel__btn--prev" (click)="prev()" aria-label="Previous project">
           <i class="ph ph-caret-left"></i>
         </button>
 
         <div class="carousel">
-          <div class="carousel__track" [style.transform]="transformPercent">
+          <div class="carousel__track"
+               [style.transform]="transformPercent"
+               [style.transition]="animated() ? 'transform 0.4s cubic-bezier(.22,.9,.33,1)' : 'none'">
             <app-card *ngFor="let project of projects; let i = index; trackBy: trackById">
             <article class="project-card">
               <div class="project-card__image">
@@ -41,7 +43,7 @@
           </div>
         </div>
 
-        <button class="carousel__btn carousel__btn--next" (click)="next()" [disabled]="!canNext" aria-label="Next project">
+        <button class="carousel__btn carousel__btn--next" (click)="next()" aria-label="Next project">
           <i class="ph ph-caret-right"></i>
         </button>
       </div>
