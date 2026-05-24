@@ -83,7 +83,7 @@
       margin-top: 40px;
     }
 
-    // ─── Visual side ───────────────────────────────────────────────
+    // ─── Visual side ──────────────────────────────────────────────────────────
     &__visual {
       position: relative;
       height: 480px;
@@ -92,24 +92,17 @@
       justify-content: center;
     }
 
-    // Neon glow ring behind the person
+    // ─── Neon glow ring ───────────────────────────────────────────────────────
     &__glow-ring {
       position: absolute;
       width: 340px;
       height: 340px;
       border-radius: 50%;
-      border: 2px solid transparent;
-      background: transparent;
-      box-shadow:
-        0 0 0 2px rgba(99, 102, 241, 0.6),
-        0 0 40px 8px rgba(99, 102, 241, 0.35),
-        0 0 80px 20px rgba(168, 85, 247, 0.2),
-        inset 0 0 60px 10px rgba(99, 102, 241, 0.08);
       animation: ring-pulse 3s ease-in-out infinite;
       z-index: 0;
     }
 
-    // Profile photo wrapper — green-screen removal via CSS
+    // ─── Profile photo ────────────────────────────────────────────────────────
     &__photo-wrapper {
       position: absolute;
       bottom: 0;
@@ -120,7 +113,7 @@
       z-index: 1;
       overflow: hidden;
 
-      // Fade out the bottom edge so the person blends with the page
+      // Fade bottom edge into page background
       &::after {
         content: '';
         position: absolute;
@@ -139,19 +132,9 @@
       object-fit: cover;
       object-position: top center;
       border-radius: 0;
-      // Green-screen removal on dark background:
-      // multiply makes the green (bright) areas transparent against dark bg
-      mix-blend-mode: multiply;
-      filter: contrast(1.15) brightness(1.05);
-
-      // On light theme, switch to luminosity to keep the person visible
-      body.light-theme & {
-        mix-blend-mode: luminosity;
-        filter: contrast(1.1) brightness(0.9) saturate(0.8);
-      }
     }
 
-    // ─── Floating tech icons ────────────────────────────────────────
+    // ─── Floating tech icons ──────────────────────────────────────────────────
     &__tech-icon {
       position: absolute;
       width: 56px;
@@ -160,14 +143,27 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(15, 23, 42, 0.85);
-      border: 1px solid rgba(99, 102, 241, 0.3);
+
+      // Theme-aware base — uses design system tokens
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      color: var(--text-primary);
+      box-shadow:
+        0 4px 16px rgba(0, 0, 0, 0.12),
+        0 0 0 1px var(--border-color);
+
       backdrop-filter: blur(8px);
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(99, 102, 241, 0.2);
       z-index: 3;
       font-weight: 800;
       font-size: 1rem;
-      color: #fff;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow:
+          0 8px 24px rgba(0, 0, 0, 0.18),
+          0 0 12px rgba(99, 102, 241, 0.25);
+      }
 
       img {
         width: 32px;
@@ -180,7 +176,7 @@
         top: 30px;
         left: 10px;
         animation: float-1 4s ease-in-out infinite;
-        img { filter: drop-shadow(0 0 6px #61dafb); }
+        img { filter: drop-shadow(0 0 5px #61dafb88); }
       }
 
       // TypeScript — top right
@@ -188,10 +184,12 @@
         top: 40px;
         right: 0;
         animation: float-2 4.5s ease-in-out infinite;
-        background: rgba(49, 120, 198, 0.9);
-        border-color: rgba(49, 120, 198, 0.6);
+        background: #3178c6;
+        border-color: rgba(49, 120, 198, 0.5);
+        color: #fff;
         font-size: 1.1rem;
         letter-spacing: -0.5px;
+        box-shadow: 0 4px 16px rgba(49, 120, 198, 0.3);
       }
 
       // Tailwind — middle left
@@ -200,7 +198,9 @@
         left: 0;
         transform: translateY(-50%);
         animation: float-3 5s ease-in-out infinite;
-        img { filter: drop-shadow(0 0 6px #38bdf8); }
+        img { filter: drop-shadow(0 0 5px #38bdf888); }
+
+        &:hover { transform: translateY(-50%) scale(1.1); }
       }
 
       // JavaScript — middle right
@@ -208,10 +208,11 @@
         top: 55%;
         right: 0;
         animation: float-1 3.8s ease-in-out infinite;
-        background: rgba(234, 179, 8, 0.9);
-        border-color: rgba(234, 179, 8, 0.6);
-        color: #000;
+        background: #f7df1e;
+        border-color: rgba(247, 223, 30, 0.5);
+        color: #1a1a1a;
         font-size: 1.1rem;
+        box-shadow: 0 4px 16px rgba(247, 223, 30, 0.25);
       }
 
       // Angular — bottom left
@@ -219,7 +220,7 @@
         bottom: 80px;
         left: 20px;
         animation: float-2 4.2s ease-in-out infinite;
-        img { filter: drop-shadow(0 0 6px #dd0031); }
+        img { filter: drop-shadow(0 0 5px #dd003188); }
       }
 
       // HTML/Code — bottom right
@@ -229,45 +230,51 @@
         animation: float-3 4.8s ease-in-out infinite;
         font-size: 0.9rem;
         color: var(--color-primary-500);
-        border-color: rgba(99, 102, 241, 0.5);
+        border-color: var(--color-tertiary--alpha-300);
+        box-shadow:
+          0 4px 16px rgba(0, 0, 0, 0.1),
+          0 0 10px var(--color-tertiary--alpha-200);
       }
     }
   }
 }
 
-// ─── Keyframes ──────────────────────────────────────────────────────────────
+// ─── Keyframes ────────────────────────────────────────────────────────────────
 
 @keyframes ring-pulse {
   0%, 100% {
     box-shadow:
-      0 0 0 2px rgba(99, 102, 241, 0.6),
-      0 0 40px 8px rgba(99, 102, 241, 0.35),
-      0 0 80px 20px rgba(168, 85, 247, 0.2);
+      0 0 0 2px rgba(99, 102, 241, 0.55),
+      0 0 40px 8px rgba(99, 102, 241, 0.3),
+      0 0 80px 20px rgba(168, 85, 247, 0.15),
+      inset 0 0 60px 10px rgba(99, 102, 241, 0.06);
   }
   50% {
     box-shadow:
-      0 0 0 2px rgba(168, 85, 247, 0.8),
-      0 0 60px 16px rgba(168, 85, 247, 0.45),
-      0 0 100px 30px rgba(99, 102, 241, 0.25);
+      0 0 0 2px rgba(168, 85, 247, 0.75),
+      0 0 60px 16px rgba(168, 85, 247, 0.4),
+      0 0 100px 30px rgba(99, 102, 241, 0.2),
+      inset 0 0 80px 15px rgba(168, 85, 247, 0.06);
   }
 }
 
+// Float animations — each has a different offset so they don't sync
 @keyframes float-1 {
-  0%, 100% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-10px); }
 }
 
 @keyframes float-2 {
-  0%, 100% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-14px); }
 }
 
 @keyframes float-3 {
-  0%, 100% { transform: translateY(0px); }
+  0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(-8px); }
 }
 
-// ─── Responsive ─────────────────────────────────────────────────────────────
+// ─── Responsive ───────────────────────────────────────────────────────────────
 
 @media (max-width: 768px) {
   .home {
@@ -277,18 +284,14 @@
       padding-top: 40px;
       gap: 40px;
 
-      &__title {
-        font-size: 2.5rem;
-      }
+      &__title { font-size: 2.5rem; }
 
       &__buttons {
         flex-direction: column;
         button { width: 100%; }
       }
 
-      &__visual {
-        height: 360px;
-      }
+      &__visual { height: 360px; }
 
       &__glow-ring {
         width: 240px;
@@ -308,12 +311,12 @@
 
         img { width: 24px; height: 24px; }
 
-        &--react  { top: 10px; left: 5px; }
-        &--ts     { top: 20px; right: 0; }
+        &--react   { top: 10px; left: 5px; }
+        &--ts      { top: 20px; right: 0; }
         &--tailwind { left: 0; }
-        &--js     { right: 0; }
+        &--js      { right: 0; }
         &--angular { bottom: 50px; left: 10px; }
-        &--html   { bottom: 60px; right: 5px; }
+        &--html    { bottom: 60px; right: 5px; }
       }
     }
   }
