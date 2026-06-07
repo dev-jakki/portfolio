@@ -34,11 +34,11 @@ export class CvDownloadModalComponent {
   }
 
   downloadFrontend() {
-    this.downloadFile('cv-frontend-angular.pdf');
+    this.downloadFile('curriculo-frontend-angular.pdf');
   }
 
   downloadFullstack() {
-    this.downloadFile('cv-fullstack-angular-java.pdf');
+    this.downloadFile('curriculo-fullstack-angular-java.pdf');
   }
 
   downloadCoverLetter() {
