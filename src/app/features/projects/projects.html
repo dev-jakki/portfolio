@@ -34,8 +34,12 @@
                 <p class="project-card__description">{{ project.description | translate }}</p>
                 
                 <div class="project-card__links">
-                  <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank">Demo →</a>
-                  <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank">GitHub →</a>
+                  <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" rel="noopener noreferrer"
+                     [attr.tabindex]="isVisible(i) ? null : -1"
+                     [attr.aria-hidden]="isVisible(i) ? null : true">Demo →</a>
+                  <a *ngIf="project.githubUrl" [href]="project.githubUrl" target="_blank" rel="noopener noreferrer"
+                     [attr.tabindex]="isVisible(i) ? null : -1"
+                     [attr.aria-hidden]="isVisible(i) ? null : true">GitHub →</a>
                 </div>
               </div>
             </article>

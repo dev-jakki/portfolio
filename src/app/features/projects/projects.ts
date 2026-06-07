@@ -95,6 +95,11 @@ export class Projects implements OnInit {
     return `translateX(-${translatePercent}%)`;
   }
 
+  isVisible(index: number): boolean {
+    const start = this.currentIndex();
+    return index >= start && index < start + this.visibleCount;
+  }
+
   trackById(_index: number, project: any) {
     return project.id;
   }
