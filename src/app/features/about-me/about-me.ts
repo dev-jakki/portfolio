@@ -1,25 +1,12 @@
-import { Component, ChangeDetectionStrategy, inject, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy, inject, ViewChild, ElementRef, AfterViewInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { PortfolioService } from '../../core/services/portfolio.service';
+import { Subscription } from 'rxjs';
 import ace from 'ace-builds';
 import 'ace-builds/src-noconflict/ext-language_tools';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-one_dark';
-
-const code = `const Jakki = {
-    nome: "Jackciel Felix",
-    idade: 21,
-    formacao: "Engenharia de Software",
-    foco: "Análise e Desenvolvimento",
-    paixoes: ["Resolver problemas", "API", "UI/UX"],
-    tecnologias: ["Angular", "TypeScript", "Java", "Spring Boot 3"],
-    objetivo: "Criar soluções que fazem a diferença"
-}
-
-
-// Vamos construir algo incrível juntos? 🚀
-`;
 
 @Component({
   selector: 'app-about-me',
@@ -29,15 +16,40 @@ const code = `const Jakki = {
   styleUrl: './about-me.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AboutMe implements AfterViewInit {
+export class AboutMe implements AfterViewInit, OnDestroy {
   @ViewChild('editor') private editor!: ElementRef<HTMLElement>;
+
   portfolioService = inject(PortfolioService);
+  private translate = inject(TranslateService);
+
   about = this.portfolioService.getAbout();
+  readonly yearsOfExperience = new Date().getFullYear() - 2023 || 1;
+
+  private aceEditor: ace.Ace.Editor | null = null;
+  private langSub: Subscription | null = null;
+
+  private buildCode(): string {
+    const t = (key: string) => this.translate.instant(`about.codeBlock.${key}`);
+
+    return `const Jakki = {
+    ${t('nome')}: "Jackciel Felix",
+    ${t('idade')}: 21,
+    ${t('formacao')}: "${t('formacaoValue')}",
+    ${t('foco')}: "${t('focoValue')}",
+    ${t('paixoes')}: ${t('paixoesValue')},
+    ${t('tecnologias')}: ["Angular", "TypeScript", "Java", "Spring Boot 3"],
+    ${t('objetivo')}: "${t('objetivoValue')}"
+}
+
+
+${t('comment')}
+`;
+  }
 
   ngAfterViewInit() {
     if (window.innerWidth <= 768) return;
 
-    const aceEditor = ace.edit(this.editor.nativeElement, {
+    this.aceEditor = ace.edit(this.editor.nativeElement, {
       mode: 'ace/mode/javascript',
       theme: 'ace/theme/one_dark',
       readOnly: false,
@@ -51,6 +63,14 @@ export class AboutMe implements AfterViewInit {
       useWorker: false
     });
 
-    aceEditor.setValue(code, -1);
+    this.aceEditor.setValue(this.buildCode(), -1);
+
+    this.langSub = this.translate.onLangChange.subscribe(() => {
+      this.aceEditor?.setValue(this.buildCode(), -1);
+    });
+  }
+
+  ngOnDestroy() {
+    this.langSub?.unsubscribe();
   }
 }

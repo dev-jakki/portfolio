@@ -93,7 +93,6 @@ export class PortfolioService {
         'experience.company1.backendDetail4',
         'experience.company1.backendDetail5',
         'experience.company1.backendDetail6',
-        'experience.company1.backendDetail7',
       ],
       technologies: ['Angular', 'Java', 'Spring Boot', 'Docker', 'AWS', 'Azure DevOps']
     },
@@ -127,6 +126,7 @@ export class PortfolioService {
     email: 'jackcielfelix.dev@gmail.com',
     linkedin: 'https://www.linkedin.com/in/jackcielf',
     github: 'https://github.com/dev-jakki',
+    github_repos: 'https://github.com/dev-jakki?tab=repositories',
     instagram: 'https://instagram.com/dev_jakki'
   };
 

@@ -33,7 +33,7 @@
     "description": "Full Stack Developer by training, passionate about creating modern, accessible and high-performance web experiences.",
     "viewProjects": "View Projects",
     "getInTouch": "Get In Touch",
-    "experienceYears": "2+",
+    "experienceYears": "{{ years }}+",
     "experienceLabel": "Years of experience",
     "projectsCount": "10+",
     "projectsLabel": "Projects completed",
@@ -52,33 +52,51 @@
     "title": "About Me",
     "subtitle": "I transform ideas into interfaces that",
     "subtitle_2": "connect",
-    "description": "I currently work as a frontend developer, but I have a solid foundation in full-stack development. I enjoy solving problems, writing clean code, and always learning something new.",
-    "softSkillsExperience": {
-      "value": "+3",
+    "description": "I primarily work as a Frontend Developer, with experience in Backend. I enjoy creating features, writing clean and well-structured code.",
+    "softSkills1": {
+      "value": "+{{ years }}",
       "description": "Years of experience"
     },
-    "softSkillsTeamwork": {
-      "value": "85%",
-      "description": "Teamwork",
-      "obs": "Effective collaboration in dynamic environments."
+    "softSkills2": {
+      "value": "90%",
+      "description": "Leadership Skills"
     },
-    "softSkillsProblemSolving": {
-      "value": "95%",
+    "softSkills3": {
+      "value": "100%",
       "description": "Problem Solving"
+    },
+    "softSkills4": {
+      "value": "99%",
+      "description": "Drive for Growth",
+      "obs": "Evolving every day"
+    },
+    "codeBlock": {
+      "nome": "name",
+      "idade": "age",
+      "formacao": "degree",
+      "foco": "focus",
+      "paixoes": "passions",
+      "tecnologias": "technologies",
+      "objetivo": "objective",
+      "formacaoValue": "Software Engineering",
+      "focoValue": "Analysis and Development",
+      "paixoesValue": "[\"Solving problems\", \"API\", \"UI/UX\"]",
+      "objetivoValue": "Create solutions that make a difference",
+      "comment": "// Let's build something amazing together? 🚀"
     }
   },
   "projects": {
     "title": "Projects",
-    "subtitle": "Works and professional experiences",
-    "description": "A selection of interesting projects I have done.",
+    "subtitle": "Some featured works",
+    "description": "A selection of interesting projects I did at the beginning of my journey.",
     "viewAll": "View all projects",
     "project1": {
       "title": "URL Shortening",
-      "description": "Study platform with study schedule management with charts and progress analysis."
+      "description": "URL shortening platform integrated with the Bitly API."
     },
     "project2": {
       "title": "GitHub Searching",
-      "description": "Interactive dashboard with real-time charts for personal finance control."
+      "description": "Search page by nickname using the GitHub API."
     },
     "project3": {
       "title": "To do",
@@ -107,22 +125,21 @@
       "company": "Inforplus Sistemas",
       "period": "Aug 2023 – Present",
       "status": "Current",
-      "description": "Frontend Developer with 3 years of experience in Angular and TypeScript, working on the evolution of scalable ERP web systems. Experience in legacy system refactoring, REST API integration and multi-tenant solution implementation. Focus on performance, usability and code quality, with hands-on experience in AWS, Docker and CI/CD to support the development and deployment cycle.",
-      "frontendDescription": "Implemented legacy system refactoring that enabled a multi-tenant (white-label) architecture, increasing ERP scalability and enabling new clients and revenue. Worked on the analysis and definition of architecture for strategic integrations, including ERP with Zoho CRM and the Gupshup API (WhatsApp), enabling user synchronization and messaging process automation.",
-      "frontendDetail1": "Development and evolution of ERP web applications with Angular, improving performance by approximately 50–60%",
+      "description": "Frontend Developer with {{ years }} years of experience in Angular and TypeScript, working on the evolution of scalable ERP web systems. Experience in legacy system refactoring, REST API integration and multi-tenant solution implementation. Focus on performance, usability and code quality, with hands-on experience in AWS, Docker and CI/CD to support the development and deployment cycle.",
+      "frontendDescription": "I prototyped, implemented and refactored several screens in the legacy ERP system (white-label), adding value to the ERP and enabling new clients and revenue. I worked on the analysis and definition of architecture for strategic integrations, including ERP x Zoho CRM and ERP x Gupshup API (WhatsApp), enabling user management and messaging process automation.",
+      "frontendDetail1": "Development and evolution of ERP web applications with Angular, improving performance by up to 60%",
       "frontendDetail2": "Experience with microfrontend architecture using Single-SPA for composition and decoupling of Angular applications",
-      "frontendDetail3": "Integration of Angular applications with REST APIs built in .NET",
-      "frontendDetail4": "Configuration and maintenance of CI/CD pipelines with Docker on Azure DevOps, deploying to AWS (S3, CloudFront, Route 53)",
+      "frontendDetail3": "Integration of Angular applications with REST APIs built in .NET and Spring Boot 3",
+      "frontendDetail4": "Configuration and maintenance of CI/CD pipelines with Docker on Azure DevOps, deploying to AWS (S3, CloudFront, Route 53, Lambda)",
       "frontendDetail5": "Consistent practice of Code Reviews in the development process, following SOLID principles and Design Patterns, always ensuring code quality",
       "frontendDetail6": "Led adoption of new tools and AI for development automation (e.g. ClaudeCode, ChatGPT), increasing team productivity by up to 70%",
-      "backendDescription": "On the backend, I maintained an API for generating reports that can be exported in XLSX, CSV, HTML and PDF. With the updates I implemented, users noticed greater integration with tools like Excel (XLSX and CSV) and the browser itself (PDF).",
+      "backendDescription": "On the backend, I maintained a report generation API, and among the updates I implemented was the ability to also export reports in XLSX and HTML. Users noticed greater integration with tools like Excel (XLSX) and the browser itself (HTML), as well as enabling interactive reports with drill-down visualization.",
       "backendDetail1": "Development and evolution of ERP web system using Angular (microfrontends with Single-SPA) and REST APIs in Java (Spring Boot 3), improving application performance by approximately 50–60% after structural optimizations",
       "backendDetail2": "Implementation and maintenance of reporting APIs with export to XLSX, CSV, HTML and PDF, expanding integration with external tools and improving user experience",
       "backendDetail3": "Query and endpoint optimization in the backend (Java + MySQL and Oracle databases), enabling higher concurrent user volume and reducing resource consumption",
       "backendDetail4": "Refactoring of Python scripts responsible for report versioning and storage, eliminating duplications and significantly reducing AWS S3 costs",
       "backendDetail5": "Configuration and automation of CI/CD pipelines with Docker and Azure DevOps, deploying to AWS (S3, CloudFront, Route 53) and accelerating the delivery cycle",
-      "backendDetail6": "Led adoption of AI tools (ChatGPT, ClaudeCode), increasing team productivity by up to 70%",
-      "backendDetail7": "Continuous application of best practices (SOLID, Design Patterns) and code reviews, raising code quality and maintainability"
+      "backendDetail6": "Continuously ran CRUD commands, FOR UPDATE, JOINS, etc. on Oracle DB to manage ERP menus"
     }
   },
   "contact": {

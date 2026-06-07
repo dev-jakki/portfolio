@@ -15,21 +15,20 @@ import { PortfolioService } from '../../core/services/portfolio.service';
 export class Home {
   portfolioService = inject(PortfolioService);
 
+  readonly yearsOfExperience = new Date().getFullYear() - 2023 || 1;
+
   @ViewChild('heroVisual') heroVisual!: ElementRef<HTMLDivElement>;
 
-  // Parallax transform signals
   readonly photoTransform = signal('translate(0px, 0px)');
   readonly iconsTransform = signal('translate(0px, 0px)');
   readonly glowTransform = signal('translate(0px, 0px)');
 
-  // Subtitles keys for rotation
   readonly subtitleKeys = [
     'home.subtitle_jog_1',
     'home.subtitle_jog_2',
     'home.subtitle_jog_3',
   ];
 
-  // Signal to track the current subtitle index
   readonly currentSubtitleIndex = signal(1);
 
   constructor() {
@@ -46,17 +45,11 @@ export class Home {
     const el = this.heroVisual.nativeElement;
     const rect = el.getBoundingClientRect();
 
-    // Normalized position from -1 to 1
     const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
     const y = ((event.clientY - rect.top) / rect.height - 0.5) * 2;
 
-    // Photo moves subtly in the same direction as the cursor
     this.photoTransform.set(`translate(${x * 10}px, ${y * 8}px)`);
-
-    // Icons move a bit more, in opposite direction (depth effect)
     this.iconsTransform.set(`translate(${x * -16}px, ${y * -12}px)`);
-
-    // Glow follows the cursor gently
     this.glowTransform.set(`translate(${x * 20}px, ${y * 16}px)`);
   }
 

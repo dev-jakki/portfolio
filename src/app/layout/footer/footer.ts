@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { PortfolioService } from '../../core/services/portfolio.service';
 
-// i18n support
-
 @Component({
   selector: 'app-footer',
   standalone: true,

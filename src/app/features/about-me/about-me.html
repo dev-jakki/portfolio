@@ -13,7 +13,7 @@
       <div class="about-me__soft-skills">
         @for (skill of about().softSkills; track skill.value) {
           <div class="soft-skill">
-            <div class="soft-skill__value">{{ skill.value | translate }}</div>
+            <div class="soft-skill__value">{{ skill.value | translate: { years: yearsOfExperience } }}</div>
             <div class="soft-skill__description">{{ skill.description | translate }}</div>
             
             @if (skill.obs) {

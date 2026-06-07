@@ -75,9 +75,8 @@
 
           <div class="experience-card__body">
             <div class="experience-card__body-inner">
-              <p class="experience-card__description">{{ exp.description | translate }}</p>
+              <p class="experience-card__description">{{ exp.description | translate: { years: yearsOfExperience } }}</p>
 
-              <!-- Frontend Section -->
               @if (exp.frontendDetails && exp.frontendDetails.length > 0) {
                 <div class="experience-card__stack-section">
                   <h4 class="experience-card__stack-title experience-card__stack-title--frontend">
@@ -95,7 +94,6 @@
                 </div>
               }
 
-              <!-- Backend Section -->
               @if (exp.backendDetails && exp.backendDetails.length > 0) {
                 <div class="experience-card__stack-section">
                   <h4 class="experience-card__stack-title experience-card__stack-title--backend">
@@ -113,7 +111,6 @@
                 </div>
               }
 
-              <!-- Fallback para experiências sem separação frontend/backend -->
               @if (exp.details && exp.details.length > 0 && !exp.frontendDetails && !exp.backendDetails) {
                 <ul class="experience-card__details">
                   @for (detail of exp.details; track detail) {

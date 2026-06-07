@@ -11,8 +11,6 @@ import {
 import { CommonModule } from '@angular/common';
 import { Toast, ToastService } from '../../../core/services/toast.service';
 
-// ─── Single toast item ────────────────────────────────────────────────────────
-
 @Component({
   selector: 'app-toast-item',
   standalone: true,
@@ -39,12 +37,9 @@ export class ToastItemComponent implements OnInit, OnDestroy {
   close(): void {
     if (this.leaving()) return;
     this.leaving.set(true);
-    // Wait for the leave animation before removing from DOM
     setTimeout(() => this.dismissed.emit(this.toast().id), 350);
   }
 }
-
-// ─── Toast container (placed once in main-layout) ─────────────────────────────
 
 @Component({
   selector: 'app-toast',

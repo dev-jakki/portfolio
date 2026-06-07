@@ -39,7 +39,7 @@ export class Header {
   @HostListener('window:scroll', [])
   onScroll() {
     const sections = document.querySelectorAll('section');
-    const headerHeight = 200; // Altura para detectar a seção ativa
+    const headerHeight = 200;
 
     let current = '';
 

@@ -141,8 +141,6 @@
     margin: 0;
   }
 
-  // feedback styles removed — now handled by global ToastComponent
-
   &__info {
     display: flex;
     flex-direction: column;
@@ -220,5 +218,3 @@
     }
   }
 }
-
-// (feedbackIn keyframe removed — feedback is now a global toast)

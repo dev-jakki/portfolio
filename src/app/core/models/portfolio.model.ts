@@ -34,6 +34,7 @@ export interface ContactData {
   email: string;
   linkedin: string;
   github: string;
+  github_repos: string;
   instagram?: string;
 }
 

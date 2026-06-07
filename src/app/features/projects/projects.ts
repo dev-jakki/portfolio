@@ -18,7 +18,6 @@ export class Projects implements OnInit {
 
   private readonly sourceProjects = this.portfolioService.getProjects()();
 
-  /** Triple the list so we always have items on both sides for infinite wrap */
   projects = [
     ...this.sourceProjects,
     ...this.sourceProjects,
@@ -27,22 +26,18 @@ export class Projects implements OnInit {
 
   visibleCount = 3;
 
-  /** Start in the middle copy so we can go left immediately */
   currentIndex = signal(this.sourceProjects.length);
 
-  /** Disable CSS transition briefly when we silently jump */
   animated = signal(true);
 
   ngOnInit() {
     this.updateVisibleCount();
-    // Start at the middle copy
     this.currentIndex.set(this.sourceProjects.length);
   }
 
   @HostListener('window:resize')
   onResize() {
     this.updateVisibleCount();
-    // Reset to middle copy on resize
     this.animated.set(false);
     this.currentIndex.set(this.sourceProjects.length);
     requestAnimationFrame(() => this.animated.set(true));
@@ -61,7 +56,6 @@ export class Projects implements OnInit {
     }
   }
 
-  // Always enabled — infinite scroll
   get canPrev() { return true; }
   get canNext() { return true; }
 
@@ -75,24 +69,18 @@ export class Projects implements OnInit {
     this.checkWrap();
   }
 
-  /**
-   * After the CSS transition ends, silently jump back to the middle copy
-   * so the user never reaches the real start/end of the array.
-   */
   private checkWrap() {
     const len = this.sourceProjects.length;
     const idx = this.currentIndex();
 
-    // Moved into the last copy → jump to equivalent position in middle copy
     if (idx >= len * 2) {
       setTimeout(() => {
         this.animated.set(false);
         this.currentIndex.set(idx - len);
         requestAnimationFrame(() => this.animated.set(true));
-      }, 420); // slightly after the 0.4s transition
+      }, 420);
     }
 
-    // Moved into the first copy → jump to equivalent position in middle copy
     if (idx < len) {
       setTimeout(() => {
         this.animated.set(false);
@@ -112,6 +100,6 @@ export class Projects implements OnInit {
   }
 
   openGithub(): void {
-    window.open(this.portfolioService.getContact().github, '_blank');
+    window.open(this.portfolioService.getContact().github_repos, '_blank');
   }
 }

@@ -13,9 +13,9 @@ import { PortfolioService } from '../../core/services/portfolio.service';
 })
 export class Experience {
   portfolioService = inject(PortfolioService);
-
-  // Track which cards are expanded (by id). First card starts expanded.
   expandedIds = signal<Set<number>>(new Set([1]));
+
+  readonly yearsOfExperience = new Date().getFullYear() - 2023 || 1;
 
   private techIconMap: Record<string, string> = {
     'Angular': '/assets/images/angular.png',
