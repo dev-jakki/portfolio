@@ -68,6 +68,36 @@ export class PortfolioService {
     { name: 'VS Code', icon: '/assets/images/vscode.png' },
   ]);
 
+  private readonly skillsFrontend = signal<Skill[]>([
+    { name: 'Angular', icon: '/assets/images/svg/angular.svg', premium: true },
+    { name: 'JavaScript', icon: '/assets/images/svg/javascript.svg' },
+    { name: 'TypeScript', icon: '/assets/images/svg/typescript.svg', premium: true },
+    { name: 'React', icon: '/assets/images/svg/react.svg' },
+    { name: 'HTML', icon: '/assets/images/svg/html5.svg' },
+    { name: 'CSS', icon: '/assets/images/svg/css.svg' },
+    { name: 'Bootstrap', icon: '/assets/images/svg/bootstrap.svg' },
+  ]);
+
+  private readonly skillsBackend = signal<Skill[]>([
+    { name: 'Java', icon: '/assets/images/svg/java.svg' },
+    { name: 'Spring Boot', icon: '/assets/images/svg/spring.svg', premium: true },
+    { name: 'Node.js', icon: '/assets/images/svg/nodedotjs.svg' },
+    { name: 'MongoDB', icon: '/assets/images/svg/mongodb.svg' },
+    { name: 'MySQL', icon: '/assets/images/svg/mysql.svg' },
+    { name: 'PostgreSQL', icon: '/assets/images/svg/postgresql.svg' },
+    { name: 'Docker', icon: '/assets/images/svg/docker.svg', premium: true },
+    { name: 'AWS', icon: '/assets/images/svg/aws.svg', premium: true },
+    { name: 'Azure DevOps', icon: '/assets/images/svg/azure.svg' },
+  ]);
+
+  private readonly skillsTools = signal<Skill[]>([
+    { name: 'Git', icon: '/assets/images/svg/git.svg' },
+    { name: 'GitHub', icon: '/assets/images/svg/github.svg' },
+    { name: 'IntelliJ IDEA', icon: '/assets/images/svg/intellijidea.svg' },
+    { name: 'VS Code', icon: '/assets/images/svg/vscode.svg' },
+    { name: 'Kiro IDE', icon: '/assets/images/svg/kiro.svg' },
+  ]);
+
   private readonly experience = signal<Experience[]>([
     {
       id: 1,
@@ -136,6 +166,18 @@ export class PortfolioService {
 
   getSkills() {
     return this.skills;
+  }
+
+  getSkillsFrontend() {
+    return this.skillsFrontend;
+  }
+
+  getSkillsBackend() {
+    return this.skillsBackend;
+  }
+
+  getSkillsTools() {
+    return this.skillsTools;
   }
 
   getExperience() {

@@ -168,18 +168,18 @@
         object-fit: contain;
       }
 
-      &--java {
+      &--docker {
         top: 30px;
         left: 10px;
         animation: float-1 4s ease-in-out infinite;
-        img { filter: drop-shadow(0 0 5px #ED8B0088); }
+        img { filter: drop-shadow(0 0 5px #007aed88); }
       }
 
       &--ts {
         top: 40px;
         right: 0;
         animation: float-2 4.5s ease-in-out infinite;
-        background: #3178c6;
+        background: #3b91ec;
         border-color: rgba(49, 120, 198, 0.5);
         color: #fff;
         font-size: 1.1rem;
@@ -282,7 +282,7 @@
 
         img { width: 24px; height: 24px; }
 
-        &--java    { top: 10px; left: 5px; }
+        &--docker    { top: 10px; left: 5px; }
         &--ts      { top: 20px; right: 0; }
         &--spring  { left: 0; }
         &--aws     { right: 0; }

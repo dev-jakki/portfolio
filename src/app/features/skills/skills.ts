@@ -14,4 +14,7 @@ import { PortfolioService } from '../../core/services/portfolio.service';
 export class Skills {
   private portfolioService = inject(PortfolioService);
   public skills = this.portfolioService.getSkills();
+  public skillsFrontend = this.portfolioService.getSkillsFrontend();
+  public skillsBackend = this.portfolioService.getSkillsBackend();
+  public skillsTools = this.portfolioService.getSkillsTools();
 }

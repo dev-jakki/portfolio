@@ -13,6 +13,7 @@ export interface Skill {
   name: string;
   icon: string;
   level?: number;
+  premium?: boolean;
 }
 
 export interface Experience {
