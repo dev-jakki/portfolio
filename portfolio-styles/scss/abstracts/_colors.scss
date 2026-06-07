@@ -9,6 +9,8 @@ body.light-theme {
   --text-secondary: #475569;
   --text-tertiary: #64748B;
   --border-color: #CBD5E1;
+
+  --skill-icon-filter: brightness(0) saturate(100%);
 }
 
 body.dark-theme {
@@ -22,4 +24,6 @@ body.dark-theme {
   --text-secondary: #9CA3AF;
   --text-tertiary: #6B7280;
   --border-color: #1F2937;
+
+  --skill-icon-filter: brightness(0) invert(1);
 }

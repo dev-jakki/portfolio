@@ -14,6 +14,11 @@ body.light-theme {
   --text-tertiary: #64748B;
   --border-color: #CBD5E1;
 
+  --skill-icon-filter: brightness(0) saturate(100%);
+
+  --skill-premium-mid: #7a4f00;
+  --skill-premium-icon-filter: brightness(0) sepia(1) saturate(3) hue-rotate(5deg) brightness(0.6);
+
   // Cards
   --card-border: #e2e8f0;
   --card-border-hover: var(--color-primary-400);
@@ -49,6 +54,11 @@ body.dark-theme {
   --text-secondary: #9CA3AF;
   --text-tertiary: #6B7280;
   --border-color: #1F2937;
+
+  --skill-icon-filter: brightness(0) invert(1);
+
+  --skill-premium-mid: #fffbe6;
+  --skill-premium-icon-filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(1.1);
 
   // Cards
   --card-border: rgba(148, 163, 184, 0.1);

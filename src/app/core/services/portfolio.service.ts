@@ -124,7 +124,7 @@ export class PortfolioService {
         'experience.company1.backendDetail5',
         'experience.company1.backendDetail6',
       ],
-      technologies: ['Angular', 'Java', 'Spring Boot', 'Docker', 'AWS', 'Azure DevOps']
+      technologies: ['Angular', 'TypeScript', 'Spring Boot', 'Docker', 'AWS', 'Azure DevOps']
     },
   ]);
 

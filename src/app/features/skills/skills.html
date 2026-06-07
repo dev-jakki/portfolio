@@ -9,15 +9,31 @@
       <div class="skills__carousel" aria-label="Frontend skills">
         <div class="skills__track skills__track--right" role="list">
           @for (skill of skillsFrontend(); track skill.name) {
-            <div class="skill-pill" [class.skill-pill--premium]="skill.premium" role="listitem">
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              [title]="skill.premium ? (skill.name + ' — ' + ('skills.expertLabel' | translate)) : skill.name"
+              [attr.aria-label]="skill.premium ? (skill.name + ' — ' + ('skills.expertLabel' | translate)) : skill.name"
+              role="listitem"
+            >
               <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
               <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge" aria-hidden="true">★</span>
+              }
             </div>
           }
           @for (skill of skillsFrontend(); track skill.name) {
-            <div class="skill-pill" [class.skill-pill--premium]="skill.premium" aria-hidden="true">
-              <img class="skill-pill__icon" [src]="skill.icon" [alt]="" />
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              aria-hidden="true"
+            >
+              <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
               <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge">★</span>
+              }
             </div>
           }
         </div>
@@ -26,32 +42,90 @@
       <div class="skills__carousel" aria-label="Backend skills">
         <div class="skills__track skills__track--left" role="list">
           @for (skill of skillsBackend(); track skill.name) {
-            <div class="skill-pill" [class.skill-pill--premium]="skill.premium" role="listitem">
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              [title]="skill.premium ? (skill.name + ' — ' + ('skills.expertLabel' | translate)) : skill.name"
+              [attr.aria-label]="skill.premium ? (skill.name + ' — ' + ('skills.expertLabel' | translate)) : skill.name"
+              role="listitem"
+            >
               <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
               <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge" aria-hidden="true">★</span>
+              }
             </div>
           }
           @for (skill of skillsBackend(); track skill.name) {
-            <div class="skill-pill" [class.skill-pill--premium]="skill.premium" aria-hidden="true">
-              <img class="skill-pill__icon" [src]="skill.icon" [alt]="" />
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              aria-hidden="true"
+            >
+              <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
               <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge">★</span>
+              }
             </div>
           }
         </div>
       </div>
 
       <div class="skills__carousel" aria-label="Architecture and IDEs">
-        <div class="skills__track skills__track--right" role="list">
+        <div class="skills__track skills__track--right-quad" role="list">
           @for (skill of skillsTools(); track skill.name) {
-            <div class="skill-pill" [class.skill-pill--premium]="skill.premium" role="listitem">
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              [title]="skill.premium ? (skill.name + ' — ' + ('skills.expertLabel' | translate)) : skill.name"
+              [attr.aria-label]="skill.premium ? (skill.name + ' — ' + ('skills.expertLabel' | translate)) : skill.name"
+              role="listitem"
+            >
               <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
               <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge" aria-hidden="true">★</span>
+              }
             </div>
           }
           @for (skill of skillsTools(); track skill.name) {
-            <div class="skill-pill" [class.skill-pill--premium]="skill.premium" aria-hidden="true">
-              <img class="skill-pill__icon" [src]="skill.icon" [alt]="" />
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              aria-hidden="true"
+            >
+              <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
               <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge">★</span>
+              }
+            </div>
+          }
+          @for (skill of skillsTools(); track skill.name) {
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              aria-hidden="true"
+            >
+              <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
+              <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge">★</span>
+              }
+            </div>
+          }
+          @for (skill of skillsTools(); track skill.name) {
+            <div
+              class="skill-pill"
+              [class.skill-pill--premium]="skill.premium"
+              aria-hidden="true"
+            >
+              <img class="skill-pill__icon" [src]="skill.icon" [alt]="skill.name" />
+              <span class="skill-pill__name">{{ skill.name }}</span>
+              @if (skill.premium) {
+                <span class="skill-pill__badge">★</span>
+              }
             </div>
           }
         </div>

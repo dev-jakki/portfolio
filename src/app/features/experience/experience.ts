@@ -18,11 +18,11 @@ export class Experience {
   readonly yearsOfExperience = new Date().getFullYear() - 2023 || 1;
 
   private techIconMap: Record<string, string> = {
-    'Angular': '/assets/images/angular.png',
+    'Angular': '/assets/images/svg/angular.svg',
     'Java': '/assets/images/java.png',
-    'Spring Boot': '/assets/images/spring.png',
+    'Spring Boot': '/assets/images/svg/spring.svg',
     'React': '/assets/images/react.png',
-    'TypeScript': '/assets/images/typescript.png',
+    'TypeScript': '/assets/images/svg/typescript.svg',
     'Next.js': '/assets/images/nextjs.png',
     'TailwindCSS': '/assets/images/tailwindcss.png',
     'Node.js': '/assets/images/nodejs.png',
@@ -30,13 +30,12 @@ export class Experience {
     'JavaScript': '/assets/images/javascript.png',
     'HTML5': '/assets/images/html.png',
     'CSS3': '/assets/images/css.png',
-    'Docker': '/assets/images/docker.png',
+    'Docker': '/assets/images/svg/docker.svg',
     'MongoDB': '/assets/images/mongodb.png',
     'MySQL': '/assets/images/mysql.png',
     'PostgreSQL': '/assets/images/postgresql.png',
     'Git': '/assets/images/git.png',
     'GitHub': '/assets/images/github.png',
-    'Vue.js': '/assets/images/vuejs.png',
     'AWS': '/assets/images/aws.png',
     'Azure DevOps': '/assets/images/azure.png',
   };

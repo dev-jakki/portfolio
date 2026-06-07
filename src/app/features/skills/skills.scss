@@ -29,12 +29,12 @@
 
     &::before {
       left: 0;
-      background: linear-gradient(to right, var(--bg-primary, #0d1117), transparent);
+      background: linear-gradient(to right, var(--color-primary), transparent);
     }
 
     &::after {
       right: 0;
-      background: linear-gradient(to left, var(--bg-primary, #0d1117), transparent);
+      background: linear-gradient(to left, var(--color-primary), transparent);
     }
   }
 
@@ -53,13 +53,15 @@
       animation: skills-scroll-left 30s linear infinite;
     }
 
+    &--right-quad {
+      animation: skills-scroll-right-quad 30s linear infinite;
+    }
+
     &:hover {
       animation-play-state: paused;
     }
   }
 }
-
-// ─── Pill base ────────────────────────────────────────────────────────────────
 
 .skill-pill {
   display: inline-flex;
@@ -67,14 +69,13 @@
   gap: 10px;
   padding: 10px 20px;
   border-radius: 999px;
-  border: 2px solid var(--color-primary, #e91e8c);
   background: transparent;
   white-space: nowrap;
   cursor: default;
   transition: background 0.2s, transform 0.2s;
 
   &:hover {
-    background: rgba(233, 30, 140, 0.08);
+    background: color-mix(in srgb, var(--color-primary-500) 8%, transparent);
     transform: translateY(-2px);
   }
 
@@ -83,39 +84,35 @@
     height: 22px;
     object-fit: contain;
     flex-shrink: 0;
-    filter: brightness(0) invert(1);
-    opacity: 0.55;
+    filter: var(--skill-icon-filter);
+    opacity: 0.7;
   }
 
   &__name {
     font-size: 0.9rem;
     font-weight: 600;
-    color: var(--text-primary, #fff);
+    color: var(--text-primary);
     letter-spacing: 0.3px;
-    opacity: 0.55;
+    opacity: 0.75;
   }
 }
-
-// ─── Pill premium (gold) ──────────────────────────────────────────────────────
 
 .skill-pill--premium {
   border: none;
   background: transparent;
 
   &:hover {
-    background: rgba(245, 200, 66, 0.07);
+    background: color-mix(in srgb, var(--color-secondary-500) 7%, transparent);
     transform: translateY(-2px);
   }
 
-  // ícone: dourado (sobrescreve o branco do base)
   .skill-pill__icon {
-    filter: brightness(0) invert(1) sepia(1) saturate(3) hue-rotate(5deg) brightness(1.1);
+    filter: var(--skill-premium-icon-filter);
     opacity: 1;
   }
 
-  // nome: texto com degradê dourado
   .skill-pill__name {
-    background: linear-gradient(135deg, #f5c842 0%, #fffbe6 45%, #c8952a 100%);
+    background: linear-gradient(135deg, #f5c842 0%, var(--skill-premium-mid) 45%, #c8952a 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -123,21 +120,34 @@
     font-weight: 700;
     opacity: 1;
   }
-}
 
-// ─── Animations ───────────────────────────────────────────────────────────────
+  .skill-pill__badge {
+    font-size: 0.65rem;
+    line-height: 1;
+    background: linear-gradient(135deg, #f5c842 0%, var(--skill-premium-mid) 45%, #c8952a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    opacity: 0.85;
+    margin-left: -4px;
+  }
+}
 
 @keyframes skills-scroll-right {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
+@keyframes skills-scroll-right-quad {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
+}
+
 @keyframes skills-scroll-left {
   0%   { transform: translateX(-50%); }
   100% { transform: translateX(0); }
 }
-
-// ─── Responsive ───────────────────────────────────────────────────────────────
 
 @media (max-width: 768px) {
   .skills {
@@ -150,7 +160,8 @@
       gap: 10px;
 
       &--right,
-      &--left {
+      &--left,
+      &--right-quad {
         animation-duration: 22s;
       }
     }
