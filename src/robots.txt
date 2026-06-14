@@ -1,0 +1,13 @@
+# robots.txt — https://dev-jakki.vercel.app/
+# https://www.robotstxt.org/
+
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Block build artifacts and internal paths
+Disallow: /.angular/
+Disallow: /node_modules/
+
+# Sitemap location
+Sitemap: https://dev-jakki.vercel.app/sitemap.xml
