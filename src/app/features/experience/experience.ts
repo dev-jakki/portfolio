@@ -13,7 +13,7 @@ import { PortfolioService } from '../../core/services/portfolio.service';
 })
 export class Experience {
   portfolioService = inject(PortfolioService);
-  expandedIds = signal<Set<number>>(new Set([1]));
+  expandedIds = signal<Set<number>>(new Set([2]));
 
   readonly yearsOfExperience = new Date().getFullYear() - 2023 || 1;
 
@@ -38,6 +38,7 @@ export class Experience {
     'GitHub': '/assets/images/github.png',
     'AWS': '/assets/images/aws.png',
     'Azure DevOps': '/assets/images/azure.png',
+    'Quarkus': '/assets/images/quarkus.png',
   };
 
   getTechIcon(tech: string): string | null {

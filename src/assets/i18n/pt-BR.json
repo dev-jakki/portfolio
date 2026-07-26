@@ -121,11 +121,17 @@
     "toggle": "Alternar detalhes",
     "frontendLabel": "Frontend",
     "backendLabel": "Backend",
+    "company2": {
+      "position": "Desenvolvedor FullStack",
+      "company": "Getronics",
+      "period": "Jul 2026 – Presente",
+      "status": "Atual",
+      "description": "Nenhuma descrição no momento..."
+    },
     "company1": {
       "position": "Desenvolvedor FullStack",
       "company": "Inforplus Sistemas",
-      "period": "Ago 2023 – Presente",
-      "status": "Atual",
+      "period": "Ago 2023 – Jul 2026",
       "description": "Desenvolvedor Frontend com {{ years }} anos de experiência em Angular e TypeScript, atuando na evolução de sistemas ERP web escaláveis. Experiência em refatoração de sistemas legados, integração com APIs REST e implementação de soluções multi-tenant. Foco em performance, usabilidade e qualidade de código, com vivência em AWS, Docker e CI/CD para suporte ao ciclo de desenvolvimento e deploy.",
       "frontendDescription": "Prototipei, implementei e refatorei diversas telas no sistema ERP legado (white-label), agredando valor ao ERP e viabilizando novos clientes e receita. Atuei na análise e definição de arquitetura para integrações estratégicas, incluindo ERP x Zoho CRM e ERP x Gupshup API (WhatsApp), permitindo o gerenciamento de usuários e a automação de processos de mensageria.",
       "frontendDetail1": "Desenvolvimento e evolução de aplicações ERP web com Angular, melhorando performance em até 60%",

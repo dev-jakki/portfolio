@@ -121,11 +121,17 @@
     "toggle": "Toggle details",
     "frontendLabel": "Frontend",
     "backendLabel": "Backend",
+    "company2": {
+      "position": "FullStack Developer",
+      "company": "Getronics",
+      "period": "Jul 2026 – Present",
+      "status": "Current",
+      "description": "Nenhuma descrição no momento..."
+    },
     "company1": {
       "position": "FullStack Developer",
       "company": "Inforplus Sistemas",
-      "period": "Aug 2023 – Present",
-      "status": "Current",
+      "period": "Aug 2023 – Jul 2026",
       "description": "Frontend Developer with {{ years }} years of experience in Angular and TypeScript, working on the evolution of scalable ERP web systems. Experience in legacy system refactoring, REST API integration and multi-tenant solution implementation. Focus on performance, usability and code quality, with hands-on experience in AWS, Docker and CI/CD to support the development and deployment cycle.",
       "frontendDescription": "I prototyped, implemented and refactored several screens in the legacy ERP system (white-label), adding value to the ERP and enabling new clients and revenue. I worked on the analysis and definition of architecture for strategic integrations, including ERP x Zoho CRM and ERP x Gupshup API (WhatsApp), enabling user management and messaging process automation.",
       "frontendDetail1": "Development and evolution of ERP web applications with Angular, improving performance by up to 60%",

@@ -10,7 +10,7 @@
 
           <div class="experience-card__header">
 
-            <div class="experience-card__icon">
+            <div class="experience-card__icon" [attr.data-company-id]="exp.id">
               <span>{{ exp.company | translate | slice:0:2 }}</span>
             </div>
 

@@ -51,6 +51,32 @@
     text-transform: uppercase;
     letter-spacing: -0.02em;
   }
+
+  // Inforplus — azul
+  &[data-company-id="1"] {
+    background: linear-gradient(135deg, rgba(51, 167, 223, 0.15) 0%, rgba(51, 167, 223, 0.05) 100%);
+    border-color: rgba(51, 167, 223, 0.3);
+
+    span {
+      background: linear-gradient(135deg, #33a7df 0%, #1a7fb8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
+
+  // Getronics — verde neon
+  &[data-company-id="2"] {
+    background: linear-gradient(135deg, rgba(2, 224, 0, 0.12) 0%, rgba(2, 224, 0, 0.04) 100%);
+    border-color: rgba(2, 224, 0, 0.3);
+
+    span {
+      background: linear-gradient(135deg, #02e000 0%, #019e00 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  }
 }
 
 .experience-card__info {

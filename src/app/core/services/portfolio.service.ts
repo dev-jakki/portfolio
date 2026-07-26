@@ -81,6 +81,7 @@ export class PortfolioService {
   private readonly skillsBackend = signal<Skill[]>([
     { name: 'Java', icon: '/assets/images/svg/java.svg' },
     { name: 'Spring Boot', icon: '/assets/images/svg/spring.svg', premium: true },
+    { name: 'Quarkus', icon: '/assets/images/svg/quarkus.svg' },
     { name: 'Node.js', icon: '/assets/images/svg/nodedotjs.svg' },
     { name: 'MongoDB', icon: '/assets/images/svg/mongodb.svg' },
     { name: 'MySQL', icon: '/assets/images/svg/mysql.svg' },
@@ -100,11 +101,19 @@ export class PortfolioService {
 
   private readonly experience = signal<Experience[]>([
     {
+      id: 2,
+      company: 'experience.company2.company',
+      position: 'experience.company2.position',
+      period: 'experience.company2.period',
+      status: 'experience.company2.status',
+      description: 'experience.company2.description',
+      technologies: ['Angular', 'TypeScript', 'Quarkus', 'Azure DevOps']
+    },
+    {
       id: 1,
       company: 'experience.company1.company',
       position: 'experience.company1.position',
       period: 'experience.company1.period',
-      status: 'experience.company1.status',
       description: 'experience.company1.description',
       frontendDescription: 'experience.company1.frontendDescription',
       frontendDetails: [
