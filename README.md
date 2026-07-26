@@ -2,7 +2,7 @@
 Aplicação desenvolvida com Angular 20 para apresentar meus projetos, habilidades e experiência como desenvolvedor de software e full-stack.
 
 ## 🌐 Acesse
-👉 https://meu-portfolio.com
+👉 https://dev-jakki.vercel.app
 
 # Estrutura
 Baseado em feature-based (por funcionalidade).
